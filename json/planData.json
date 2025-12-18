@@ -1,0 +1,264 @@
+{
+  "ui": {
+    "tabs": [
+      { "id": "internet_only", "label": "인터넷 단독", "icon": "pc" },
+      { "id": "internet_tv", "label": "인터넷+TV", "icon": "tv" },
+      { "id": "internet_sim", "label": "인터넷+유심", "icon": "wifi" }
+    ],
+    "options": [
+      {
+        "id": "wifi",
+        "label": "WiFi",
+        "type": "toggle",
+        "description": "공유기 임대/제공 옵션"
+      },
+      {
+        "id": "mobile_bundle",
+        "label": "휴대폰 결합",
+        "type": "toggle",
+        "description": "휴대폰 결합 할인/추가요금 반영"
+      }
+    ]
+  },
+
+  "data": {
+    "internet_only": {
+      "title": "인터넷 단독",
+      "cards": [
+        {
+          "id": "internet-slim-100m",
+          "badge": "최대 할인",
+          "name": "인터넷 슬림 100M",
+          "base": {
+            "finalMonthly": 22000,
+            "finalMonthlyText": "월 22,000원",
+            "breakdown": {
+              "basePrice": 39600,
+              "contractDiscount": -17600,
+              "bundleDiscount": 0,
+              "totalDiscount": -17600
+            }
+          },
+          "optionAdjustments": {
+            "wifi": {
+              "deltaMonthly": 1100,
+              "deltaBreakdown": { "wifiFee": 1100 },
+              "badgeOverride": null
+            },
+            "mobile_bundle": {
+              "deltaMonthly": -3300,
+              "deltaBreakdown": { "bundleDiscount": -3300 },
+              "badgeOverride": null
+            },
+            "wifi+mobile_bundle": {
+              "deltaMonthly": -2200,
+              "deltaBreakdown": { "wifiFee": 1100, "bundleDiscount": -3300 },
+              "badgeOverride": null
+            }
+          },
+          "cta": { "label": "상담문의", "action": "contact" }
+        },
+
+        {
+          "id": "internet-basic-500m",
+          "badge": "혜담 추천",
+          "name": "인터넷 베이직 500M",
+          "base": {
+            "finalMonthly": 33000,
+            "finalMonthlyText": "월 33,000원",
+            "breakdown": {
+              "basePrice": 46200,
+              "contractDiscount": -13200,
+              "bundleDiscount": 0,
+              "totalDiscount": -13200
+            }
+          },
+          "optionAdjustments": {
+            "wifi": {
+              "deltaMonthly": 1100,
+              "deltaBreakdown": { "wifiFee": 1100 }
+            },
+            "mobile_bundle": {
+              "deltaMonthly": -5500,
+              "deltaBreakdown": { "bundleDiscount": -5500 }
+            },
+            "wifi+mobile_bundle": {
+              "deltaMonthly": -4400,
+              "deltaBreakdown": { "wifiFee": 1100, "bundleDiscount": -5500 }
+            }
+          },
+          "cta": { "label": "상담문의", "action": "contact" }
+        },
+
+        {
+          "id": "internet-essence-1g",
+          "badge": "최대 혜택",
+          "name": "인터넷 에센스 1G",
+          "base": {
+            "finalMonthly": 38500,
+            "finalMonthlyText": "월 38,500원",
+            "breakdown": {
+              "basePrice": 55000,
+              "contractDiscount": -16500,
+              "bundleDiscount": 0,
+              "totalDiscount": -16500
+            }
+          },
+          "optionAdjustments": {
+            "wifi": {
+              "deltaMonthly": 1100,
+              "deltaBreakdown": { "wifiFee": 1100 }
+            },
+            "mobile_bundle": {
+              "deltaMonthly": -7700,
+              "deltaBreakdown": { "bundleDiscount": -7700 }
+            },
+            "wifi+mobile_bundle": {
+              "deltaMonthly": -6600,
+              "deltaBreakdown": { "wifiFee": 1100, "bundleDiscount": -7700 }
+            }
+          },
+          "cta": { "label": "상담문의", "action": "contact" }
+        }
+      ]
+    },
+
+    "internet_tv": {
+      "title": "인터넷+TV",
+      "cards": [
+        {
+          "id": "internet100_tv_basic",
+          "badge": "인기",
+          "name": "100M + TV 베이직",
+          "base": {
+            "finalMonthly": 38500,
+            "finalMonthlyText": "월 38,500원",
+            "breakdown": {
+              "basePrice": 59400,
+              "contractDiscount": -20900,
+              "bundleDiscount": 0,
+              "totalDiscount": -20900
+            }
+          },
+          "optionAdjustments": {
+            "wifi": {
+              "deltaMonthly": 1100,
+              "deltaBreakdown": { "wifiFee": 1100 }
+            },
+            "mobile_bundle": {
+              "deltaMonthly": -4400,
+              "deltaBreakdown": { "bundleDiscount": -4400 }
+            },
+            "wifi+mobile_bundle": {
+              "deltaMonthly": -3300,
+              "deltaBreakdown": { "wifiFee": 1100, "bundleDiscount": -4400 }
+            }
+          },
+          "cta": { "label": "상담문의", "action": "contact" }
+        },
+        {
+          "id": "internet500_tv_basic",
+          "badge": "추천",
+          "name": "500M + TV 베이직",
+          "base": {
+            "finalMonthly": 44000,
+            "finalMonthlyText": "월 44,000원",
+            "breakdown": {
+              "basePrice": 66000,
+              "contractDiscount": -22000,
+              "bundleDiscount": 0,
+              "totalDiscount": -22000
+            }
+          },
+          "optionAdjustments": {
+            "wifi": {
+              "deltaMonthly": 1100,
+              "deltaBreakdown": { "wifiFee": 1100 }
+            },
+            "mobile_bundle": {
+              "deltaMonthly": -6600,
+              "deltaBreakdown": { "bundleDiscount": -6600 }
+            },
+            "wifi+mobile_bundle": {
+              "deltaMonthly": -5500,
+              "deltaBreakdown": { "wifiFee": 1100, "bundleDiscount": -6600 }
+            }
+          },
+          "cta": { "label": "상담문의", "action": "contact" }
+        }
+      ]
+    },
+
+    "internet_sim": {
+      "title": "인터넷+유심",
+      "cards": [
+        {
+          "id": "internet100_sim",
+          "badge": "가성비",
+          "name": "100M + 유심",
+          "base": {
+            "finalMonthly": 27500,
+            "finalMonthlyText": "월 27,500원",
+            "breakdown": {
+              "basePrice": 39600,
+              "contractDiscount": -12100,
+              "bundleDiscount": 0,
+              "totalDiscount": -12100
+            }
+          },
+          "optionAdjustments": {
+            "wifi": {
+              "deltaMonthly": 1100,
+              "deltaBreakdown": { "wifiFee": 1100 }
+            },
+            "mobile_bundle": {
+              "deltaMonthly": -2200,
+              "deltaBreakdown": { "bundleDiscount": -2200 }
+            },
+            "wifi+mobile_bundle": {
+              "deltaMonthly": -1100,
+              "deltaBreakdown": { "wifiFee": 1100, "bundleDiscount": -2200 }
+            }
+          },
+          "cta": { "label": "상담문의", "action": "contact" }
+        },
+        {
+          "id": "internet500_sim",
+          "badge": "추천",
+          "name": "500M + 유심",
+          "base": {
+            "finalMonthly": 35200,
+            "finalMonthlyText": "월 35,200원",
+            "breakdown": {
+              "basePrice": 46200,
+              "contractDiscount": -11000,
+              "bundleDiscount": 0,
+              "totalDiscount": -11000
+            }
+          },
+          "optionAdjustments": {
+            "wifi": {
+              "deltaMonthly": 1100,
+              "deltaBreakdown": { "wifiFee": 1100 }
+            },
+            "mobile_bundle": {
+              "deltaMonthly": -3300,
+              "deltaBreakdown": { "bundleDiscount": -3300 }
+            },
+            "wifi+mobile_bundle": {
+              "deltaMonthly": -2200,
+              "deltaBreakdown": { "wifiFee": 1100, "bundleDiscount": -3300 }
+            }
+          },
+          "cta": { "label": "상담문의", "action": "contact" }
+        }
+      ]
+    }
+  },
+
+  "rules": {
+    "optionKeyJoiner": "+",
+    "optionKeyOrder": ["wifi", "mobile_bundle"],
+    "priceTextFormat": "KRW_MONTHLY"
+  }
+}

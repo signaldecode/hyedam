@@ -1,0 +1,5 @@
+@media (max-width: 767px) {
+  .card_wrap {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,1288 +1,1444 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- App favicon -->
+    <link rel="icon" href="images/favicon_size04.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="fonts/pretendard/pretendard.css" />
+    <link rel="stylesheet" href="css/style_pc.css" />
+    <link rel="stylesheet" href="css/style_tab.css" />
+    <link rel="stylesheet" href="css/style_mob.css" />
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
 
-    <head>
-        <meta charset="utf-8"/>
-        <title></title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- App favicon -->
-        <link rel="icon" href="images/favicon_size04.svg" type="image/x-icon"/>
-        <link rel="stylesheet" href="fonts/pretendard/pretendard.css">
-        <link rel="stylesheet" href="css/style_pc.css">
-        <link rel="stylesheet" href="css/style_tab.css">
-        <link rel="stylesheet" href="css/style_mob.css">
-        <link rel="stylesheet" href="css/swiper-bundle.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    </head>
-
-    <body>
-        <div id="wrap">
-            <header id="header">
-                <div class="inner">
-                    <h1>
-                        <a href="#">
-                            <figure>
-                                <img src="images/header_logo_pc.svg" alt="혜담로고">
-                                <figcaption>혜담로고</figcaption>
-                            </figure>
-                        </a>
-                    </h1>
-                    <nav id="gnb">
-                        <ul>
-                            <li>
-                                <a href="#">KT</a>
-                                <div class="info">
-                                    <em>(비교원 요금) 월 요금 : 1,100원</em>
-                                    <em>(서울통신) 유심 : 1100원</em>
-                                </div>
-                            </li>
-                            <li>
-                                <a href="#">LG</a>
-                                <div class="info">
-                                    <em>(비교원 요금) 월 요금 : 1,100원</em>
-                                    <em>(서울통신) 유심 : 1100원</em>
-                                </div>
-                            </li>
-                            <li>
-                                <a href="#">SK</a>
-                                <div class="info">
-                                    <em>(비교원 요금) 월 요금 : 1,100원</em>
-                                    <em>(서울통신) 유심 : 1100원</em>
-                                </div>
-                            </li>
-                            <li>
-                                <a href="#">알뜰인터넷</a>
-                                <div class="info">
-                                    <em>(비교원 요금) 월 요금 : 1,100원</em>
-                                    <em>(서울통신) 유심 : 1100원</em>
-                                </div>
-                            </li>
-                            <li>
-                                <a href="#">회사소개</a>
-                            </li>
-                        </ul>
-                    </nav><!--nav-->
-                    <a href="#" class="call">
-                        <figure>
-                            <img src="images/header_icon01_pc.svg" alt="전화 아이콘">
-                            <figcaption>전화 아이콘</figcaption>
-                        </figure>
-                        <em>1588-2637</em>
-                    </a>
-                </div><!--inner-->
-            </header><!--header-->
-            <div id="mob_header">
-                <a class="mob_header" href="#">
-                    <figure>
-                        <img src="images/header_logo_pc.svg" alt="">
-                        <figcaption></figcaption>
-                    </figure>
-                </a>
-                <button></button>
-            </div>
-            <main>
-                <div id="visual_wrap">
-                    <div class="visual_slide swiper">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <figure>
-                                    <figcaption>인터넷만 바꿔도 최대 120만 원 지원</figcaption>
-                                    <img src="images/main_visual01_pc.jpg" alt="인터넷만 바꿔도 최대 120만 원 지원">
-                                    <div class="pc_img" style="height: 777px; background: url('images/main_visual01_pc.jpg')center/cover no-repeat;"></div>
-                                </figure>
-                                <div class="visual_txt visual_txt01">
-                                    <div class="inner">
-                                        <em>
-                                            인터넷만 바꿔도<br>
-                                            <strong>최대 120만 원 지원</strong>
-                                        </em> 
-                                        <b>설치 <span>당일 입금</span> · 입금 누락 사고 <span>0건</span></b>
-                                        <p>선택은 순간이지만, 신뢰는 오래갑니다. 혜담은 그 긴 시간을 책임집니다.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide"> 
-                                <figure>
-                                    <figcaption>인터넷만 바꿔도 최대 120만 원 지원</figcaption>
-                                    <img src="images/main_visual02_pc.jpg" alt="인터넷만 바꿔도 최대 120만 원 지원">
-                                    <div style="height: 777px; background: url('images/main_visual02_pc.jpg')center/cover no-repeat;"></div>
-                                </figure>
-                                <div class="visual_txt visual_txt02">
-                                    <div class="inner">
-                                        <em>
-                                            부모님댁 인터넷+TV,<br>
-                                            <span>현금 <strong>최대 56만원</strong> 지원</span>
-                                        </em>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div><!--visual_slide-->
-                </div><!--visual_wrap-->
-                <section id="section01">
-                    <div class="inner">
-                        <div class="sec01_txt">
-                            <h2>
-                                <em>BEST</em><br>
-                                통신사별 <span>추천</span> 요금제!
-                            </h2>
-                            <p>
-                                <span>요금, 결합, 혜택</span>까지 <br>
-                                한눈에 비교해 보세요.
-                            </p>
-                            <a href="#">
-                                <em>요금제 전체보기</em>
-                                <span></span>
-                            </a>
-                        </div>
-                        <div class="sec01_slider_wrap">
-                            <div class="sec01_slider swiper">
-                                <div class="swiper-wrapper">
-                                    <div class="sec01_slide swiper-slide">
-                                        <article>
-                                            <div class="img_wrap">
-                                                <figure>
-                                                    <img src="images/main_sec01_logo01.svg" alt="sk텔레콤 로고">
-                                                    <figcaption>sk텔레콤 로고</figcaption>
-                                                </figure>
-                                            </div>
-                                            <div class="txt">
-                                                <strong>500M + TV</strong>
-                                                <i>
-                                                    +스탠다드 채널<br>
-                                                    +47만 원<br>
-                                                    +비밀 지원금
-                                                </i> 
-                                                <div class="price">
-                                                    <b>월 71,500원</b>
-                                                    <div class="arrow"></div>
-                                                    <em>월 <span>35,200</span>원</em>
-                                                </div>
-                                            </div>
-                                            <div class="btn_wrap">
-                                                <a href="#"><span>상품보기</span></a>
-                                                <a href="#"><span>빠른가입신청</span></a>
-                                            </div>
-                                            <small>※ 3년 약정, 휴대폰 결합 기준, VAT 포함</small>
-                                        </article>
-                                    </div>
-                                    <div class="sec01_slide swiper-slide">
-                                        <article>
-                                            <div class="img_wrap">
-                                                <figure>
-                                                    <img src="images/main_sec01_logo02.svg" alt="LG U+ 로고">
-                                                    <figcaption>LG U+ 로고</figcaption>
-                                                </figure>
-                                            </div>
-                                            <div class="txt">
-                                                <strong>500M + TV</strong>
-                                                <i>
-                                                    +실속형 채널<br>
-                                                    +47만 원<br>
-                                                    +비밀 지원금
-                                                </i> 
-                                                <div class="price">
-                                                    <b>월 78,100원</b>
-                                                    <div class="arrow"></div>
-                                                    <em>월 <span>34,100</span>원</em>
-                                                </div>
-                                            </div>
-                                            <div class="btn_wrap">
-                                                <a href="#"><span>상품보기</span></a>
-                                                <a href="#"><span>빠른가입신청</span></a>
-                                            </div>
-                                            <small>※ 3년 약정, 휴대폰 결합 기준, VAT 포함</small>
-                                        </article>
-                                    </div>
-                                    <div class="sec01_slide swiper-slide">
-                                        <article>
-                                            <div class="img_wrap">
-                                                <figure>
-                                                    <img src="images/main_sec01_logo03.svg" alt="KT로고">
-                                                    <figcaption>KT로고</figcaption>
-                                                </figure>
-                                            </div>
-                                            <div class="txt">
-                                                <strong>500M + TV</strong>
-                                                <i>
-                                                    +모든 G채널<br>
-                                                    +45만 원<br>
-                                                    +비밀 지원금
-                                                </i> 
-                                                <div class="price">
-                                                    <b>월 72,930원</b>
-                                                    <div class="arrow"></div>
-                                                    <em>월 <span>44,000</span>원</em>
-                                                </div>
-                                            </div>
-                                            <div class="btn_wrap">
-                                                <a href="#"><span>상품보기</span></a>
-                                                <a href="#"><span>빠른가입신청</span></a>
-                                            </div>
-                                            <small>※ 3년 약정, 휴대폰 결합 기준, VAT 포함</small>
-                                        </article>
-                                    </div>
-                                    <div class="sec01_slide swiper-slide">
-                                        <article>
-                                            <div class="img_wrap">
-                                                <figure>
-                                                    <img src="images/main_sec01_logo04.svg" alt="KT스카이라이프 로고">
-                                                    <figcaption>KT스카이라이프 로고</figcaption>
-                                                </figure>
-                                            </div>
-                                            <div class="txt">
-                                                <strong>200M + TV</strong>
-                                                <i>
-                                                    +플러스 IPTV 채널<br>
-                                                    +45만 원<br>
-                                                    +비밀 지원금
-                                                </i> 
-                                                <div class="price">
-                                                    <b>월 58,300원</b>
-                                                    <div class="arrow"></div>
-                                                    <em>월 <span>33,000</span>원</em>
-                                                </div>
-                                            </div>
-                                            <div class="btn_wrap">
-                                                <a href="#"><span>상품보기</span></a>
-                                                <a href="#"><span>빠른가입신청</span></a>
-                                            </div>
-                                            <small>※ 3년 약정, 휴대폰 결합 기준, VAT 포함</small>
-                                        </article>
-                                    </div>
-                                    <div class="sec01_slide swiper-slide">
-                                        <article>
-                                            <div class="img_wrap">
-                                                <figure>
-                                                    <img src="images/main_sec01_logo05.svg" alt="LG헬로비젼 로고">
-                                                    <figcaption>LG헬로비젼 로고</figcaption>
-                                                </figure>
-                                            </div>
-                                            <div class="txt">
-                                                <strong>1G + TV</strong>
-                                                <i>
-                                                    +프로 라이트 IPTV 채널<br>
-                                                    +40만 원<br>
-                                                    +비밀 지원금
-                                                </i> 
-                                                <div class="price">
-                                                    <b>월 66,000원</b>
-                                                    <div class="arrow"></div>
-                                                    <em>월 <span>35,640</span>원</em>
-                                                </div>
-                                            </div>
-                                            <div class="btn_wrap">
-                                                <a href="#"><span>상품보기</span></a>
-                                                <a href="#"><span>빠른가입신청</span></a>
-                                            </div>
-                                            <small>※ 3년 약정, 휴대폰 결합 기준, VAT 포함</small>
-                                        </article>
-                                    </div>
-                                    <div class="sec01_slide swiper-slide">
-                                        <article>
-                                            <div class="img_wrap">
-                                                <figure>
-                                                    <img src="images/main_sec01_logo01.svg" alt="sk텔레콤 로고">
-                                                    <figcaption>sk텔레콤 로고</figcaption>
-                                                </figure>
-                                            </div>
-                                            <div class="txt">
-                                                <strong>500M + TV</strong>
-                                                <i>
-                                                    +스탠다드 채널<br>
-                                                    +47만 원<br>
-                                                    +비밀 지원금
-                                                </i> 
-                                                <div class="price">
-                                                    <b>월 71,500원</b>
-                                                    <div class="arrow"></div>
-                                                    <em>월 <span>35,200</span>원</em>
-                                                </div>
-                                            </div>
-                                            <div class="btn_wrap">
-                                                <a href="#"><span>상품보기</span></a>
-                                                <a href="#"><span>빠른가입신청</span></a>
-                                            </div>
-                                            <small>※ 3년 약정, 휴대폰 결합 기준, VAT 포함</small>
-                                        </article>
-                                    </div>
-                                    <div class="sec01_slide swiper-slide">
-                                        <article>
-                                            <div class="img_wrap">
-                                                <figure>
-                                                    <img src="images/main_sec01_logo02.svg" alt="LG U+ 로고">
-                                                    <figcaption>LG U+ 로고</figcaption>
-                                                </figure>
-                                            </div>
-                                            <div class="txt">
-                                                <strong>500M + TV</strong>
-                                                <i>
-                                                    +실속형 채널<br>
-                                                    +47만 원<br>
-                                                    +비밀 지원금
-                                                </i> 
-                                                <div class="price">
-                                                    <b>월 78,100원</b>
-                                                    <div class="arrow"></div>
-                                                    <em>월 <span>34,100</span>원</em>
-                                                </div>
-                                            </div>
-                                            <div class="btn_wrap">
-                                                <a href="#"><span>상품보기</span></a>
-                                                <a href="#"><span>빠른가입신청</span></a>
-                                            </div>
-                                            <small>※ 3년 약정, 휴대폰 결합 기준, VAT 포함</small>
-                                        </article>
-                                    </div>
-                                    <div class="sec01_slide swiper-slide">
-                                        <article>
-                                            <div class="img_wrap">
-                                                <figure>
-                                                    <img src="images/main_sec01_logo03.svg" alt="KT로고">
-                                                    <figcaption>KT로고</figcaption>
-                                                </figure>
-                                            </div>
-                                            <div class="txt">
-                                                <strong>500M + TV</strong>
-                                                <i>
-                                                    +모든 G채널<br>
-                                                    +45만 원<br>
-                                                    +비밀 지원금
-                                                </i> 
-                                                <div class="price">
-                                                    <b>월 72,930원</b>
-                                                    <div class="arrow"></div>
-                                                    <em>월 <span>44,000</span>원</em>
-                                                </div>
-                                            </div>
-                                            <div class="btn_wrap">
-                                                <a href="#"><span>상품보기</span></a>
-                                                <a href="#"><span>빠른가입신청</span></a>
-                                            </div>
-                                            <small>※ 3년 약정, 휴대폰 결합 기준, VAT 포함</small>
-                                        </article>
-                                    </div>
-                                    <div class="sec01_slide swiper-slide">
-                                        <article>
-                                            <div class="img_wrap">
-                                                <figure>
-                                                    <img src="images/main_sec01_logo04.svg" alt="KT스카이라이프 로고">
-                                                    <figcaption>KT스카이라이프 로고</figcaption>
-                                                </figure>
-                                            </div>
-                                            <div class="txt">
-                                                <strong>200M + TV</strong>
-                                                <i>
-                                                    +플러스 IPTV 채널<br>
-                                                    +45만 원<br>
-                                                    +비밀 지원금
-                                                </i> 
-                                                <div class="price">
-                                                    <b>월 58,300원</b>
-                                                    <div class="arrow"></div>
-                                                    <em>월 <span>33,000</span>원</em>
-                                                </div>
-                                            </div>
-                                            <div class="btn_wrap">
-                                                <a href="#"><span>상품보기</span></a>
-                                                <a href="#"><span>빠른가입신청</span></a>
-                                            </div>
-                                            <small>※ 3년 약정, 휴대폰 결합 기준, VAT 포함</small>
-                                        </article>
-                                    </div>
-                                    <div class="sec01_slide swiper-slide">
-                                        <article>
-                                            <div class="img_wrap">
-                                                <figure>
-                                                    <img src="images/main_sec01_logo05.svg" alt="LG헬로비젼 로고">
-                                                    <figcaption>LG헬로비젼 로고</figcaption>
-                                                </figure>
-                                            </div>
-                                            <div class="txt">
-                                                <strong>1G + TV</strong>
-                                                <i>
-                                                    +프로 라이트 IPTV 채널<br>
-                                                    +40만 원<br>
-                                                    +비밀 지원금
-                                                </i> 
-                                                <div class="price">
-                                                    <b>월 66,000원</b>
-                                                    <div class="arrow"></div>
-                                                    <em>월 <span>35,640</span>원</em>
-                                                </div>
-                                            </div>
-                                            <div class="btn_wrap">
-                                                <a href="#"><span>상품보기</span></a>
-                                                <a href="#"><span>빠른가입신청</span></a>
-                                            </div>
-                                            <small>※ 3년 약정, 휴대폰 결합 기준, VAT 포함</small>
-                                        </article>
-                                    </div>
-                                </div> 
-                            </div><!--//sec01_slider -->
-                        </div><!--//sec01_slider_wrap -->
-                    </div><!--//inner -->
-                </section><!--//section01 -->
-                <section id="section02">
-                    <div class="inner">
-                        <div class="sec02_txt">
-                            <h2 class="tit">가입 절차</h2>
-                            <em>인터넷 가입, 복잡하게 느껴지시나요?<br>신속하고 정확하게 처리해 드립니다.</em>
-                        </div>
-                        <article>
-                            <ol> 
-                                <li>
-                                    <figure>
-                                        <img src="images/main_sec02_icon01_pc.png " alt="가입상담 아이콘">
-                                        <figcaption>가입상담 아이콘</figcaption>
-                                    </figure>
-                                    <i>STEP 01</i>
-                                    <div class="txt">
-                                        <em>가입상담</em>
-                                        <p>1:1 전문상담사<br>부담 없는 착한 설명</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <figure>
-                                        <img src="images/main_sec02_icon02_pc.png " alt="본사 긴급접수 아이콘">
-                                        <figcaption>본사 긴급접수 아이콘</figcaption>
-                                    </figure>
-                                    <i>STEP 02</i>
-                                    <div class="txt">
-                                        <em>본사 긴급접수</em>
-                                        <p>상담 후 2시간 이내</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <figure>
-                                        <img src="images/main_sec02_icon03_pc.png " alt="설치 일정 조율 아이콘">
-                                        <figcaption>설치 일정 조율 아이콘</figcaption>
-                                    </figure>
-                                    <i>STEP 03</i>
-                                    <div class="txt">
-                                        <em>설치 일정 조율</em>
-                                        <p>상담 후 3시간 이내</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <figure>
-                                        <img src="images/main_sec02_icon04_pc.png " alt="설치완료 아이콘">
-                                        <figcaption>설치완료 아이콘</figcaption>
-                                    </figure>
-                                    <i>STEP 04</i>
-                                    <div class="txt">
-                                        <em>설치완료</em>
-                                        <p>신청 후 1~2일 소요</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <figure>
-                                        <img src="images/main_sec02_icon05_pc.png " alt="현금입금 아이콘">
-                                        <figcaption>설치 후 당일지급 아이콘</figcaption>
-                                    </figure>
-                                    <i>STEP 05</i>
-                                    <div class="txt">
-                                        <em>설치 후 당일지급</em>
-                                        <p>설치 완료 확인 후<br>지원금은 당일 지급을 원칙으로 합니다.</p>
-                                    </div>
-                                </li>
-                            </ol>
-                        </article>
-                    </div><!--//inner -->
-                </section><!--//section02 -->
-                <section id="section03">
-                    <div class="inner">
-                        <h2>
-                            혜담을 <br>
-                            <strong>선택할 수밖에 없는 이유?</strong> 
-                        </h2>
-                        <ul>
-                            <li>
-                                <article>
-                                    <figure>
-                                        <img src="images/main_sec03_icon01_pc.svg" alt="">
-                                        <figcaption>매월 3,000건 이상 처리, 누락 사고 ‘0건’의 신뢰도 이미지</figcaption>
-                                    </figure>
-                                    <div class="txt">
-                                        <em>매월 3,000건 이상 처리, 누락 사고 ‘0건’의 신뢰도</em>
-                                        <p>
-                                            혜담은 매달 3,000건이 넘는 접수를 진행하지만 지원금 누락 사고는 단 한 번도 없었습니다. 정확한 내부 검수 시스템으로 안내드린 금액을 100% 정확하게 지급합니다.
-                                        </p>
-                                    </div>
-                                </article>
-                            </li>
-                            <li>
-                                <article>
-                                    <figure>
-                                        <img src="images/main_sec03_icon02_pc.svg" alt="">
-                                        <figcaption>설치 당일 바로 지급되는 빠른 지원금 이미지</figcaption>
-                                    </figure>
-                                    <div class="txt">
-                                        <em>설치 당일 바로 지급되는 빠른 지원금</em>
-                                        <p>
-                                            설치가 완료되면 당일 바로 입금을 원칙으로 합니다. 또한 안내 금액과 실제 지급 금액이 다를 경우 차액의 120%를 보상하는 안전 정책을 운영합니다. 고객님이 가장 유리한 혜택을 받아 가실 수 있도록 끝까지 책임집니다.
-                                        </p>
-                                    </div>
-                                </article>
-                            </li>
-                            <li>
-                                <article>
-                                    <figure>
-                                        <img src="images/main_sec03_icon03_pc.svg" alt="">
-                                        <figcaption>불필요한 부가상품 권유 No! 이미지</figcaption>
-                                    </figure>
-                                    <div class="txt">
-                                        <em>불필요한 부가상품 권유 No!</em>
-                                        <p>
-                                            혜담은 필요 없는 부가 서비스를 절대 권유하지 않습니다. 설치 이후 불필요한 비용이 발생하지 않도록 실제로 도움이 되는 구성만 안내드립니다.
-                                        </p>
-                                    </div>
-                                </article>
-                            </li>
-                            <li>
-                                <article>
-                                    <figure>
-                                        <img src="images/main_sec03_icon04_pc.svg" alt="">
-                                        <figcaption>10년 이상 경력의 유선 전문 상담팀 이미지</figcaption>
-                                    </figure>
-                                    <div class="txt">
-                                        <em>10년 이상 경력의 유선 전문 상담팀</em>
-                                        <p>
-                                            유선통신 상담 경력 10년 이상의 베테랑 상담진이 고객님의 상황을 세밀하게 분석합니다. 가장 유리한 통신사 · 요금제 · 혜택 조합을 정확하게 추천드립니다.
-                                        </p>
-                                    </div>
-                                </article>
-                            </li>
-                        </ul>
-                    </div><!--//inner -->
-                </section><!--//section03 -->
-                <section id="section04">
-                    <div class="inner">  
-                        <div class="sec04_con_wrap">
-                            <div class="tit">
-                                <em>지연 없는 <span>빠른 처리, 실시간 데이터</span></em>
-                                <h2>지금도 계속 개통되고 있어요</h2>
-                            </div>
-                            <div class="item">
-                                <article class="sec04_con">
-                                    <strong>실시간 <span>신청</span> 현황</strong>
-                                    <div class="slide_top">
-                                        <em>접수일</em>
-                                        <em>이름</em>
-                                        <em>신청현황</em>
-                                    </div>
-                                    <div class="sec04_slide_wrap">
-                                        <div class="sec04_slide swiper">
-                                            <div class="swiper-wrapper">
-                                                <div class="sec04_item swiper-slide">
-                                                    <div class="txt">
-                                                        <b>2025-12-02</b>
-                                                        <b>홍길동</b>
-                                                        <b>완료</b>
-                                                    </div>
-                                                </div>
-                                                <div class="sec04_item swiper-slide">
-                                                    <div class="txt">
-                                                        <b>2025-12-02</b>
-                                                        <b>홍길동</b>
-                                                        <b>완료</b>
-                                                    </div>
-                                                </div>
-                                                <div class="sec04_item swiper-slide">
-                                                    <div class="txt">
-                                                        <b>2025-12-02</b>
-                                                        <b>홍길동</b>
-                                                        <b>완료</b>
-                                                    </div>
-                                                </div>
-                                                <div class="sec04_item swiper-slide">
-                                                    <div class="txt">
-                                                        <b>2025-12-02</b>
-                                                        <b>홍길동</b>
-                                                        <b>완료</b>
-                                                    </div>
-                                                </div>
-                                                <div class="sec04_item swiper-slide">
-                                                    <div class="txt">
-                                                        <b>2025-12-02</b>
-                                                        <b>홍길동</b>
-                                                        <b>완료</b>
-                                                    </div>
-                                                </div>
-                                                <div class="sec04_item swiper-slide">
-                                                    <div class="txt">
-                                                        <b>2025-12-02</b>
-                                                        <b>홍길동</b>
-                                                        <b>완료</b>
-                                                    </div>
-                                                </div>
-                                                <div class="sec04_item swiper-slide">
-                                                    <div class="txt">
-                                                        <b>2025-12-02</b>
-                                                        <b>홍길동</b>
-                                                        <b>완료</b>
-                                                    </div>
-                                                </div>
-                                                <div class="sec04_item swiper-slide">
-                                                    <div class="txt">
-                                                        <b>2025-12-02</b>
-                                                        <b>홍길동</b>
-                                                        <b>완료</b>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div><!--//sec04_slide -->
-                                    </div><!--//sec04_slide_wrap -->
-                                </article>
-                                <article class="sec04_con">
-                                    <strong>실시간 <span>입금</span> 현황</strong>
-                                    <div class="slide_top">
-                                        <em>접수일</em>
-                                        <em>이름</em>
-                                        <em>신청현황</em>
-                                    </div>
-                                    <div class="sec04_slide_wrap">
-                                        <div class="sec04_slide swiper">
-                                            <div class="swiper-wrapper">
-                                                <div class="sec04_item swiper-slide">
-                                                    <div class="txt">
-                                                        <b>2025-12-02</b>
-                                                        <b>홍길동</b>
-                                                        <b>완료</b>
-                                                    </div>
-                                                </div>
-                                                <div class="sec04_item swiper-slide">
-                                                    <div class="txt">
-                                                        <b>2025-12-02</b>
-                                                        <b>홍길동</b>
-                                                        <b>완료</b>
-                                                    </div>
-                                                </div>
-                                                <div class="sec04_item swiper-slide">
-                                                    <div class="txt">
-                                                        <b>2025-12-02</b>
-                                                        <b>홍길동</b>
-                                                        <b>완료</b>
-                                                    </div>
-                                                </div>
-                                                <div class="sec04_item swiper-slide">
-                                                    <div class="txt">
-                                                        <b>2025-12-02</b>
-                                                        <b>홍길동</b>
-                                                        <b>완료</b>
-                                                    </div>
-                                                </div>
-                                                <div class="sec04_item swiper-slide">
-                                                    <div class="txt">
-                                                        <b>2025-12-02</b>
-                                                        <b>홍길동</b>
-                                                        <b>완료</b>
-                                                    </div>
-                                                </div>
-                                                <div class="sec04_item swiper-slide">
-                                                    <div class="txt">
-                                                        <b>2025-12-02</b>
-                                                        <b>홍길동</b>
-                                                        <b>완료</b>
-                                                    </div>
-                                                </div>
-                                                <div class="sec04_item swiper-slide">
-                                                    <div class="txt">
-                                                        <b>2025-12-02</b>
-                                                        <b>홍길동</b>
-                                                        <b>완료</b>
-                                                    </div>
-                                                </div>
-                                                <div class="sec04_item swiper-slide">
-                                                    <div class="txt">
-                                                        <b>2025-12-02</b>
-                                                        <b>홍길동</b>
-                                                        <b>완료</b>
-                                                    </div>
-                                                </div>
-                                                <div class="sec04_item swiper-slide">
-                                                    <div class="txt">
-                                                        <b>2025-12-02</b>
-                                                        <b>홍길동</b>
-                                                        <b>완료</b>
-                                                    </div>
-                                                </div>
-                                                <div class="sec04_item swiper-slide">
-                                                    <div class="txt">
-                                                        <b>2025-12-02</b>
-                                                        <b>홍길동</b>
-                                                        <b>완료</b>
-                                                    </div>
-                                                </div>
-                                                <div class="sec04_item swiper-slide">
-                                                    <div class="txt">
-                                                        <b>2025-12-02</b>
-                                                        <b>홍길동</b>
-                                                        <b>완료</b>
-                                                    </div>
-                                                </div>
-                                                <div class="sec04_item swiper-slide">
-                                                    <div class="txt">
-                                                        <b>2025-12-02</b>
-                                                        <b>홍길동</b>
-                                                        <b>완료</b>
-                                                    </div>
-                                                </div>
-                                                <div class="sec04_item swiper-slide">
-                                                    <div class="txt">
-                                                        <b>2025-12-02</b>
-                                                        <b>홍길동</b>
-                                                        <b>완료</b>
-                                                    </div>
-                                                </div>
-                                                <div class="sec04_item swiper-slide">
-                                                    <div class="txt">
-                                                        <b>2025-12-02</b>
-                                                        <b>홍길동</b>
-                                                        <b>완료</b>
-                                                    </div>
-                                                </div>
-                                                <div class="sec04_item swiper-slide">
-                                                    <div class="txt">
-                                                        <b>2025-12-02</b>
-                                                        <b>홍길동</b>
-                                                        <b>완료</b>
-                                                    </div>
-                                                </div>
-                                                <div class="sec04_item swiper-slide">
-                                                    <div class="txt">
-                                                        <b>2025-12-02</b>
-                                                        <b>홍길동</b>
-                                                        <b>완료</b>
-                                                    </div>
-                                                </div>
-                                                <div class="sec04_item swiper-slide">
-                                                    <div class="txt">
-                                                        <b>2025-12-02</b>
-                                                        <b>홍길동</b>
-                                                        <b>완료</b>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div><!--//sec04_slide -->
-                                    </div><!--//sec04_slide_wrap -->
-                                </article>
-                            </div>
-                        </div><!--//sec04_con_wrap -->
-                    </div><!--//inner -->
-                </section><!--//section04 -->
-                <section id="section05">
-                    <div class="inner">
-                        <div class="sub_form_wrap">
-                            <div class="tit">
-                                <h2>
-                                    지금보다<br>
-                                    <span>얼마나 더 혜택</span>을 받을 수 있을까요?
-                                </h2>
-                                <em>혜담을 통해 실제 지원금과 요금을 정확히 안내받아보세요.</em>
-                                <strong>
-                                    혜담은 매 월 3,000건 이상의 접수 경험을 기반으로, <br>고객님께 가장 유리한 조건만 빠르고 정확하게 안내드립니다.
-                                </strong>
-                            </div>
-                            <div class="sub_form">
-                                <ul>
-                                    <li>
-                                        <label>어떤 고민이 있으신가요?</label>
-                                        <div class="form_item">
-                                            <select>
-                                                <option hidden="" disabled="disabled" selected="selected" value="">선택해주세요</option>
-                                                <option value="선택해주세요">선택해주세요1</option>
-                                                <option value="선택해주세요">선택해주세요2</option>
-                                            </select>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <label>이름</label>
-                                        <div class="form_item">
-                                            <input type="text">
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <label>연락처</label>
-                                        <div class="form_item">
-                                            <input type="tel">
-                                        </div>
-                                        <p>※ 정확한 지원금 안내를 위해 연락 가능한 번호를 입력해주세요.</p>
-                                    </li>
-                                    <li>
-                                        <label>어떤 방법으로 연락드릴까요?</label>
-                                        <div class="form_item">
-                                            <select>
-                                                <option hidden="" disabled="disabled" selected="selected" value="">선택해주세요</option>
-                                                <option value="선택해주세요">선택해주세요1</option>
-                                                <option value="선택해주세요">선택해주세요2</option>
-                                            </select>
-                                        </div>
-                                    </li>
-                                </ul>
-                                <div class="agreement">
-                                    <label>
-                                        <input type="checkbox">
-                                        <span>개인정보 수집·이용 동의 문구</span>
-                                    </label>
-                                    <p>혜담은 상담 진행을 위해 최소한의 개인정보만 수집하며, 해당 정보는 상담 목적 외에는 사용되지 않습니다.</p>
-                                </div>
-                                <button class="submit">
-                                    <span>상담 신청하기</span>
-                                </button>
-                            </div>
-                            <ul class="chk_list">
-                                <li>
-                                    <div class="icon"></div>
-                                    <em>
-                                        설치 완료 시 <span>당일 입금</span> 원칙
-                                    </em>
-                                </li>
-                                <li>
-                                    <div class="icon"></div>
-                                    <em>
-                                        불필요한 부가상품 <span>절대 권유하지 않음</span>
-                                    </em>
-                                </li>
-                                <li>
-                                    <div class="icon"></div>
-                                    <em>
-                                        단 1원도 빠지지 않는 <span>정확한 지원금 안내</span>
-                                    </em>
-                                </li>
-                                <li>
-                                    <div class="icon"></div>
-                                    <em>
-                                        <span>매 월 3,000건 이상</span> 진행한 전문 상담팀 제공
-                                    </em>
-                                </li>
-                            </ul>
-                        </div><!--//sub_form_wrap -->
-                    </div><!--//inner -->
-                </section><!--//section05 -->
-                <section id="section06">
-                    <div class="inner">
-                        <figure>
-                            <img src="images/sec06_img_pc.png" alt="">
-                            <figcaption></figcaption>
-                        </figure>
-                    </div><!--//inner -->
-                </section><!--//section06 -->
-                <section id="section07">
-                    <div class="inner">
-                        <div class="tit">
-                            <em>고객님들이 직접 증명한 Hyedam 만족도</em>
-                            <h2>조작 없는 <span>찐 후기</span>, 바로 확인하세요.</h2>
-                        </div>
-                        <div class="sec07_list swiper">
-                            <div class="swiper-wrapper">
-                                <div class="review swiper-slide">
-                                    <article>
-                                        <div class="star">
-                                            <div class="icon"></div>
-                                            <em>5.0</em>
-                                        </div>
-                                        <p>
-                                            부모님댁에 몇 년동안 헬로비전 이용하다가 급하게 인터넷 와이파이 설치가 필요해서 문의드렸는데 다음날 바로 설치! 빠르고 깔끔했습니다.
-                                        </p>
-                                        <i>최*지 / 100M + 헬로tv · <span>2024.07.12</span></i>
-                                    </article>
-                                </div>
-                                <div class="review swiper-slide">
-                                    <article>
-                                        <div class="star">
-                                            <div class="icon"></div>
-                                            <em>5.0</em>
-                                        </div>
-                                        <p>
-                                            부모님댁에 몇 년동안 헬로비전 이용하다가 급하게 인터넷 와이파이 설치가 필요해서 문의드렸는데 다음날 바로 설치! 빠르고 깔끔했습니다.
-                                        </p>
-                                        <i>최*지 / 100M + 헬로tv · <span>2024.07.12</span></i>
-                                    </article>
-                                </div>
-                                <div class="review swiper-slide">
-                                    <article>
-                                        <div class="star">
-                                            <div class="icon"></div>
-                                            <em>5.0</em>
-                                        </div>
-                                        <p>
-                                            부모님댁에 몇 년동안 헬로비전 이용하다가 급하게 인터넷 와이파이 설치가 필요해서 문의드렸는데 다음날 바로 설치! 빠르고 깔끔했습니다.
-                                        </p>
-                                        <i>최*지 / 100M + 헬로tv · <span>2024.07.12</span></i>
-                                    </article>
-                                </div>
-                                <div class="review swiper-slide">
-                                    <article>
-                                        <div class="star">
-                                            <div class="icon"></div>
-                                            <em>5.0</em>
-                                        </div>
-                                        <p>
-                                            부모님댁에 몇 년동안 헬로비전 이용하다가 급하게 인터넷 와이파이 설치가 필요해서 문의드렸는데 다음날 바로 설치! 빠르고 깔끔했습니다.
-                                        </p>
-                                        <i>최*지 / 100M + 헬로tv · <span>2024.07.12</span></i>
-                                    </article>
-                                </div>
-                                <div class="review swiper-slide">
-                                    <article>
-                                        <div class="star">
-                                            <div class="icon"></div>
-                                            <em>5.0</em>
-                                        </div>
-                                        <p>
-                                            부모님댁에 몇 년동안 헬로비전 이용하다가 급하게 인터넷 와이파이 설치가 필요해서 문의드렸는데 다음날 바로 설치! 빠르고 깔끔했습니다.
-                                        </p>
-                                        <i>최*지 / 100M + 헬로tv · <span>2024.07.12</span></i>
-                                    </article>
-                                </div>
-                                <div class="review swiper-slide">
-                                    <article>
-                                        <div class="star">
-                                            <div class="icon"></div>
-                                            <em>5.0</em>
-                                        </div>
-                                        <p>
-                                            부모님댁에 몇 년동안 헬로비전 이용하다가 급하게 인터넷 와이파이 설치가 필요해서 문의드렸는데 다음날 바로 설치! 빠르고 깔끔했습니다.
-                                        </p>
-                                        <i>최*지 / 100M + 헬로tv · <span>2024.07.12</span></i>
-                                    </article>
-                                </div>
-                                <div class="review swiper-slide">
-                                    <article>
-                                        <div class="star">
-                                            <div class="icon"></div>
-                                            <em>5.0</em>
-                                        </div>
-                                        <p>
-                                            부모님댁에 몇 년동안 헬로비전 이용하다가 급하게 인터넷 와이파이 설치가 필요해서 문의드렸는데 다음날 바로 설치! 빠르고 깔끔했습니다.
-                                        </p>
-                                        <i>최*지 / 100M + 헬로tv · <span>2024.07.12</span></i>
-                                    </article>
-                                </div>
-                                <div class="review swiper-slide">
-                                    <article>
-                                        <div class="star">
-                                            <div class="icon"></div>
-                                            <em>5.0</em>
-                                        </div>
-                                        <p>
-                                            부모님댁에 몇 년동안 헬로비전 이용하다가 급하게 인터넷 와이파이 설치가 필요해서 문의드렸는데 다음날 바로 설치! 빠르고 깔끔했습니다.
-                                        </p>
-                                        <i>최*지 / 100M + 헬로tv · <span>2024.07.12</span></i>
-                                    </article>
-                                </div>
-                                <div class="review swiper-slide">
-                                    <article>
-                                        <div class="star">
-                                            <div class="icon"></div>
-                                            <em>5.0</em>
-                                        </div>
-                                        <p>
-                                            부모님댁에 몇 년동안 헬로비전 이용하다가 급하게 인터넷 와이파이 설치가 필요해서 문의드렸는데 다음날 바로 설치! 빠르고 깔끔했습니다.
-                                        </p>
-                                        <i>최*지 / 100M + 헬로tv · <span>2024.07.12</span></i>
-                                    </article>
-                                </div>
-                                <div class="review swiper-slide">
-                                    <article>
-                                        <div class="star">
-                                            <div class="icon"></div>
-                                            <em>5.0</em>
-                                        </div>
-                                        <p>
-                                            부모님댁에 몇 년동안 헬로비전 이용하다가 급하게 인터넷 와이파이 설치가 필요해서 문의드렸는데 다음날 바로 설치! 빠르고 깔끔했습니다.
-                                        </p>
-                                        <i>최*지 / 100M + 헬로tv · <span>2024.07.12</span></i>
-                                    </article>
-                                </div>
-                                <div class="review swiper-slide">
-                                    <article>
-                                        <div class="star">
-                                            <div class="icon"></div>
-                                            <em>5.0</em>
-                                        </div>
-                                        <p>
-                                            부모님댁에 몇 년동안 헬로비전 이용하다가 급하게 인터넷 와이파이 설치가 필요해서 문의드렸는데 다음날 바로 설치! 빠르고 깔끔했습니다.
-                                        </p>
-                                        <i>최*지 / 100M + 헬로tv · <span>2024.07.12</span></i>
-                                    </article>
-                                </div>
-                                <div class="review swiper-slide">
-                                    <article>
-                                        <div class="star">
-                                            <div class="icon"></div>
-                                            <em>5.0</em>
-                                        </div>
-                                        <p>
-                                            부모님댁에 몇 년동안 헬로비전 이용하다가 급하게 인터넷 와이파이 설치가 필요해서 문의드렸는데 다음날 바로 설치! 빠르고 깔끔했습니다.
-                                        </p>
-                                        <i>최*지 / 100M + 헬로tv · <span>2024.07.12</span></i>
-                                    </article>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <div class="fix_form_wrap">
-                    <div class="fix_form">
-                        <div class="inner">
-                            <div class="txt">
-                                <p>내가 받을 수 있는 최대 혜택은 얼마나 될까?</p>
-                                <em>지금 바로 맞춤 요금 상담 받아보세요!</em>
-                            </div>
-                            <div class="fix_item">
-                                <input type="text" placeholder="이름">
-                                <input type="tel" placeholder="연락처">
-                                <div class="btn_wrap">
-                                    <button>
-                                        <span>빠른 견적 신청!</span>
-                                    </button>
-                                    <div class="agreement">
-                                        <label>
-                                            <input type="checkbox">
-                                            <span>개인정보 수집 및 활용 동의</span>
-                                        </label>
-                                        <a href="#" target="_blank">보기</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+  <body>
+    <div id="wrap">
+      <header id="header">
+        <div class="inner">
+          <h1>
+            <a href="#">
+              <figure>
+                <img src="images/header_logo_pc.svg" alt="혜담로고" />
+                <figcaption>혜담로고</figcaption>
+              </figure>
+            </a>
+          </h1>
+          <nav id="gnb">
+            <ul>
+              <li>
+                <a href="/pages/kt/ktInternet.html">KT</a>
+                <div class="info">
+                  <em>(비교원 요금) 월 요금 : 1,100원</em>
+                  <em>(서울통신) 유심 : 1100원</em>
                 </div>
-                <div class="quick_menu">
-                    <ul>
-                        <li>
-                            <a href="#">
-                                <figure>
-                                    <img src="images/quick_icon01.svg" alt="카카오톡 아이콘">
-                                    <figcaption>카카오톡 아이콘</figcaption>
-                                </figure>
-                                <em>카톡문의</em>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <figure>
-                                    <img src="images/quick_icon02.svg" alt="카카오톡 아이콘">
-                                    <figcaption>카카오톡 아이콘</figcaption>
-                                </figure>
-                                <em>빠르게<br>견적받기</em>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <figure>
-                                    <img src="images/quick_icon03.svg" alt="카카오톡 아이콘">
-                                    <figcaption>카카오톡 아이콘</figcaption>
-                                </figure>
-                                <em>유튜브</em>
-                            </a>
-                        </li>
-                    </ul>
-                    <button class="scroll_top">TOP<span></span>↑</button>
+              </li>
+              <li>
+                <a href="#">LG</a>
+                <div class="info">
+                  <em>(비교원 요금) 월 요금 : 1,100원</em>
+                  <em>(서울통신) 유심 : 1100원</em>
                 </div>
-            </main><!--//main --> 
-            <footer id="footer">
-                <div class="f_top">
-                    <div class="inner">
-                        <strong>대표전화</strong>
-                        <a href="tel:1588-2637">1588-2637</a>
-                        <div class="txt">
-                            <p>
-                                <em>영업시간안내</em><br>
-                                평일 10:00 ~ 18:00│점심 13:00 ~ 14:00 <span>│</span>휴무 : 일요일, 국가지정공휴일
-                            </p>
-                        </div>
-                    </div>
+              </li>
+              <li>
+                <a href="#">SK</a>
+                <div class="info">
+                  <em>(비교원 요금) 월 요금 : 1,100원</em>
+                  <em>(서울통신) 유심 : 1100원</em>
                 </div>
-                <div class="f_bot">
-                    <div class="inner">
-                        <a class="foot_logo" href="#">
-                            <figure>
-                                <img src="images/footer_logo_pc.svg" alt="">
-                                <figcaption>혜담 푸터 로고</figcaption>
-                            </figure>
-                        </a>
-                        <address>
-                            <a href="#">회사소개</a>│<a href="#">이용약관</a>│<a href="#">개인정보처리방침</a>│<a href="#">사업자정보확인</a><br>
-                            <br>
-                            주식회사 혜담│대표 : 김재일│사업자등록번호 : 307-88-03380<br>
-                            사업자등록주소 : 서울특별시 영등포구 영등포로 150 생각공장│대표번호 : 1588-2637 (유료)│메일 : marketing@ludam.net<br>
-                            <br>
-                            개인정보책임관리자 : 배세열
-                        </address>
-                        <p class="copyright">ⓒ 2025 HYEDAM.All rights reserved.</p>
-                    </div>
+              </li>
+              <li>
+                <a href="#">알뜰인터넷</a>
+                <div class="info">
+                  <em>(비교원 요금) 월 요금 : 1,100원</em>
+                  <em>(서울통신) 유심 : 1100원</em>
                 </div>
-            </footer>
+              </li>
+              <li>
+                <a href="#">회사소개</a>
+              </li>
+            </ul>
+          </nav>
+          <!--nav-->
+          <a href="#" class="call">
+            <figure>
+              <img src="images/header_icon01_pc.svg" alt="전화 아이콘" />
+              <figcaption>전화 아이콘</figcaption>
+            </figure>
+            <em>1588-2637</em>
+          </a>
         </div>
-        <!--//wrap -->
-        <script src="js/jquery-3.7.1.min.js"></script>
-        <script src="js/swiper-bundle.min.js"></script>
-        <script src="js/main.js"></script>
-        <!-- <script type="text/javascript" src="css/js/smoothwheel.js"></script> -->
-        <script>
-            const $dates = $('.review span');
-            const today = new Date();
-            const maxDays = 5;
+        <!--inner-->
+      </header>
+      <!--header-->
+      <div id="mob_header">
+        <a class="mob_header" href="#">
+          <figure>
+            <img src="images/header_logo_pc.svg" alt="" />
+            <figcaption></figcaption>
+          </figure>
+        </a>
+        <button></button>
+      </div>
+      <main>
+        <div id="visual_wrap">
+          <div class="visual_slide swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <figure>
+                  <figcaption>인터넷만 바꿔도 최대 120만 원 지원</figcaption>
+                  <img
+                    src="images/main_visual01_pc.jpg"
+                    alt="인터넷만 바꿔도 최대 120만 원 지원"
+                  />
+                  <div
+                    class="pc_img"
+                    style="
+                      height: 777px;
+                      background: url('images/main_visual01_pc.jpg')
+                        center/cover no-repeat;
+                    "
+                  ></div>
+                </figure>
+                <div class="visual_txt visual_txt01">
+                  <div class="inner">
+                    <em>
+                      인터넷만 바꿔도<br />
+                      <strong>최대 120만 원 지원</strong>
+                    </em>
+                    <b
+                      >설치 <span>당일 입금</span> · 입금 누락 사고
+                      <span>0건</span></b
+                    >
+                    <p>
+                      선택은 순간이지만, 신뢰는 오래갑니다. 혜담은 그 긴 시간을
+                      책임집니다.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <figure>
+                  <figcaption>인터넷만 바꿔도 최대 120만 원 지원</figcaption>
+                  <img
+                    src="images/main_visual02_pc.jpg"
+                    alt="인터넷만 바꿔도 최대 120만 원 지원"
+                  />
+                  <div
+                    style="
+                      height: 777px;
+                      background: url('images/main_visual02_pc.jpg')
+                        center/cover no-repeat;
+                    "
+                  ></div>
+                </figure>
+                <div class="visual_txt visual_txt02">
+                  <div class="inner">
+                    <em>
+                      부모님댁 인터넷+TV,<br />
+                      <span>현금 <strong>최대 56만원</strong> 지원</span>
+                    </em>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--visual_slide-->
+        </div>
+        <!--visual_wrap-->
+        <section id="section01">
+          <div class="inner">
+            <div class="sec01_txt">
+              <h2>
+                <em>BEST</em><br />
+                통신사별 <span>추천</span> 요금제!
+              </h2>
+              <p>
+                <span>요금, 결합, 혜택</span>까지 <br />
+                한눈에 비교해 보세요.
+              </p>
+              <a href="#">
+                <em>요금제 전체보기</em>
+                <span></span>
+              </a>
+            </div>
+            <div class="sec01_slider_wrap">
+              <div class="sec01_slider swiper">
+                <div class="swiper-wrapper">
+                  <div class="sec01_slide swiper-slide">
+                    <article>
+                      <div class="img_wrap">
+                        <figure>
+                          <img
+                            src="images/main_sec01_logo01.svg"
+                            alt="sk텔레콤 로고"
+                          />
+                          <figcaption>sk텔레콤 로고</figcaption>
+                        </figure>
+                      </div>
+                      <div class="txt">
+                        <strong>500M + TV</strong>
+                        <i>
+                          +스탠다드 채널<br />
+                          +47만 원<br />
+                          +비밀 지원금
+                        </i>
+                        <div class="price">
+                          <b>월 71,500원</b>
+                          <div class="arrow"></div>
+                          <em>월 <span>35,200</span>원</em>
+                        </div>
+                      </div>
+                      <div class="btn_wrap">
+                        <a href="#"><span>상품보기</span></a>
+                        <a href="#"><span>빠른가입신청</span></a>
+                      </div>
+                      <small>※ 3년 약정, 휴대폰 결합 기준, VAT 포함</small>
+                    </article>
+                  </div>
+                  <div class="sec01_slide swiper-slide">
+                    <article>
+                      <div class="img_wrap">
+                        <figure>
+                          <img
+                            src="images/main_sec01_logo02.svg"
+                            alt="LG U+ 로고"
+                          />
+                          <figcaption>LG U+ 로고</figcaption>
+                        </figure>
+                      </div>
+                      <div class="txt">
+                        <strong>500M + TV</strong>
+                        <i>
+                          +실속형 채널<br />
+                          +47만 원<br />
+                          +비밀 지원금
+                        </i>
+                        <div class="price">
+                          <b>월 78,100원</b>
+                          <div class="arrow"></div>
+                          <em>월 <span>34,100</span>원</em>
+                        </div>
+                      </div>
+                      <div class="btn_wrap">
+                        <a href="#"><span>상품보기</span></a>
+                        <a href="#"><span>빠른가입신청</span></a>
+                      </div>
+                      <small>※ 3년 약정, 휴대폰 결합 기준, VAT 포함</small>
+                    </article>
+                  </div>
+                  <div class="sec01_slide swiper-slide">
+                    <article>
+                      <div class="img_wrap">
+                        <figure>
+                          <img
+                            src="images/main_sec01_logo03.svg"
+                            alt="KT로고"
+                          />
+                          <figcaption>KT로고</figcaption>
+                        </figure>
+                      </div>
+                      <div class="txt">
+                        <strong>500M + TV</strong>
+                        <i>
+                          +모든 G채널<br />
+                          +45만 원<br />
+                          +비밀 지원금
+                        </i>
+                        <div class="price">
+                          <b>월 72,930원</b>
+                          <div class="arrow"></div>
+                          <em>월 <span>44,000</span>원</em>
+                        </div>
+                      </div>
+                      <div class="btn_wrap">
+                        <a href="#"><span>상품보기</span></a>
+                        <a href="#"><span>빠른가입신청</span></a>
+                      </div>
+                      <small>※ 3년 약정, 휴대폰 결합 기준, VAT 포함</small>
+                    </article>
+                  </div>
+                  <div class="sec01_slide swiper-slide">
+                    <article>
+                      <div class="img_wrap">
+                        <figure>
+                          <img
+                            src="images/main_sec01_logo04.svg"
+                            alt="KT스카이라이프 로고"
+                          />
+                          <figcaption>KT스카이라이프 로고</figcaption>
+                        </figure>
+                      </div>
+                      <div class="txt">
+                        <strong>200M + TV</strong>
+                        <i>
+                          +플러스 IPTV 채널<br />
+                          +45만 원<br />
+                          +비밀 지원금
+                        </i>
+                        <div class="price">
+                          <b>월 58,300원</b>
+                          <div class="arrow"></div>
+                          <em>월 <span>33,000</span>원</em>
+                        </div>
+                      </div>
+                      <div class="btn_wrap">
+                        <a href="#"><span>상품보기</span></a>
+                        <a href="#"><span>빠른가입신청</span></a>
+                      </div>
+                      <small>※ 3년 약정, 휴대폰 결합 기준, VAT 포함</small>
+                    </article>
+                  </div>
+                  <div class="sec01_slide swiper-slide">
+                    <article>
+                      <div class="img_wrap">
+                        <figure>
+                          <img
+                            src="images/main_sec01_logo05.svg"
+                            alt="LG헬로비젼 로고"
+                          />
+                          <figcaption>LG헬로비젼 로고</figcaption>
+                        </figure>
+                      </div>
+                      <div class="txt">
+                        <strong>1G + TV</strong>
+                        <i>
+                          +프로 라이트 IPTV 채널<br />
+                          +40만 원<br />
+                          +비밀 지원금
+                        </i>
+                        <div class="price">
+                          <b>월 66,000원</b>
+                          <div class="arrow"></div>
+                          <em>월 <span>35,640</span>원</em>
+                        </div>
+                      </div>
+                      <div class="btn_wrap">
+                        <a href="#"><span>상품보기</span></a>
+                        <a href="#"><span>빠른가입신청</span></a>
+                      </div>
+                      <small>※ 3년 약정, 휴대폰 결합 기준, VAT 포함</small>
+                    </article>
+                  </div>
+                  <div class="sec01_slide swiper-slide">
+                    <article>
+                      <div class="img_wrap">
+                        <figure>
+                          <img
+                            src="images/main_sec01_logo01.svg"
+                            alt="sk텔레콤 로고"
+                          />
+                          <figcaption>sk텔레콤 로고</figcaption>
+                        </figure>
+                      </div>
+                      <div class="txt">
+                        <strong>500M + TV</strong>
+                        <i>
+                          +스탠다드 채널<br />
+                          +47만 원<br />
+                          +비밀 지원금
+                        </i>
+                        <div class="price">
+                          <b>월 71,500원</b>
+                          <div class="arrow"></div>
+                          <em>월 <span>35,200</span>원</em>
+                        </div>
+                      </div>
+                      <div class="btn_wrap">
+                        <a href="#"><span>상품보기</span></a>
+                        <a href="#"><span>빠른가입신청</span></a>
+                      </div>
+                      <small>※ 3년 약정, 휴대폰 결합 기준, VAT 포함</small>
+                    </article>
+                  </div>
+                  <div class="sec01_slide swiper-slide">
+                    <article>
+                      <div class="img_wrap">
+                        <figure>
+                          <img
+                            src="images/main_sec01_logo02.svg"
+                            alt="LG U+ 로고"
+                          />
+                          <figcaption>LG U+ 로고</figcaption>
+                        </figure>
+                      </div>
+                      <div class="txt">
+                        <strong>500M + TV</strong>
+                        <i>
+                          +실속형 채널<br />
+                          +47만 원<br />
+                          +비밀 지원금
+                        </i>
+                        <div class="price">
+                          <b>월 78,100원</b>
+                          <div class="arrow"></div>
+                          <em>월 <span>34,100</span>원</em>
+                        </div>
+                      </div>
+                      <div class="btn_wrap">
+                        <a href="#"><span>상품보기</span></a>
+                        <a href="#"><span>빠른가입신청</span></a>
+                      </div>
+                      <small>※ 3년 약정, 휴대폰 결합 기준, VAT 포함</small>
+                    </article>
+                  </div>
+                  <div class="sec01_slide swiper-slide">
+                    <article>
+                      <div class="img_wrap">
+                        <figure>
+                          <img
+                            src="images/main_sec01_logo03.svg"
+                            alt="KT로고"
+                          />
+                          <figcaption>KT로고</figcaption>
+                        </figure>
+                      </div>
+                      <div class="txt">
+                        <strong>500M + TV</strong>
+                        <i>
+                          +모든 G채널<br />
+                          +45만 원<br />
+                          +비밀 지원금
+                        </i>
+                        <div class="price">
+                          <b>월 72,930원</b>
+                          <div class="arrow"></div>
+                          <em>월 <span>44,000</span>원</em>
+                        </div>
+                      </div>
+                      <div class="btn_wrap">
+                        <a href="#"><span>상품보기</span></a>
+                        <a href="#"><span>빠른가입신청</span></a>
+                      </div>
+                      <small>※ 3년 약정, 휴대폰 결합 기준, VAT 포함</small>
+                    </article>
+                  </div>
+                  <div class="sec01_slide swiper-slide">
+                    <article>
+                      <div class="img_wrap">
+                        <figure>
+                          <img
+                            src="images/main_sec01_logo04.svg"
+                            alt="KT스카이라이프 로고"
+                          />
+                          <figcaption>KT스카이라이프 로고</figcaption>
+                        </figure>
+                      </div>
+                      <div class="txt">
+                        <strong>200M + TV</strong>
+                        <i>
+                          +플러스 IPTV 채널<br />
+                          +45만 원<br />
+                          +비밀 지원금
+                        </i>
+                        <div class="price">
+                          <b>월 58,300원</b>
+                          <div class="arrow"></div>
+                          <em>월 <span>33,000</span>원</em>
+                        </div>
+                      </div>
+                      <div class="btn_wrap">
+                        <a href="#"><span>상품보기</span></a>
+                        <a href="#"><span>빠른가입신청</span></a>
+                      </div>
+                      <small>※ 3년 약정, 휴대폰 결합 기준, VAT 포함</small>
+                    </article>
+                  </div>
+                  <div class="sec01_slide swiper-slide">
+                    <article>
+                      <div class="img_wrap">
+                        <figure>
+                          <img
+                            src="images/main_sec01_logo05.svg"
+                            alt="LG헬로비젼 로고"
+                          />
+                          <figcaption>LG헬로비젼 로고</figcaption>
+                        </figure>
+                      </div>
+                      <div class="txt">
+                        <strong>1G + TV</strong>
+                        <i>
+                          +프로 라이트 IPTV 채널<br />
+                          +40만 원<br />
+                          +비밀 지원금
+                        </i>
+                        <div class="price">
+                          <b>월 66,000원</b>
+                          <div class="arrow"></div>
+                          <em>월 <span>35,640</span>원</em>
+                        </div>
+                      </div>
+                      <div class="btn_wrap">
+                        <a href="#"><span>상품보기</span></a>
+                        <a href="#"><span>빠른가입신청</span></a>
+                      </div>
+                      <small>※ 3년 약정, 휴대폰 결합 기준, VAT 포함</small>
+                    </article>
+                  </div>
+                </div>
+              </div>
+              <!--//sec01_slider -->
+            </div>
+            <!--//sec01_slider_wrap -->
+          </div>
+          <!--//inner -->
+        </section>
+        <!--//section01 -->
+        <section id="section02">
+          <div class="inner">
+            <div class="sec02_txt">
+              <h2 class="tit">가입 절차</h2>
+              <em
+                >인터넷 가입, 복잡하게 느껴지시나요?<br />신속하고 정확하게
+                처리해 드립니다.</em
+              >
+            </div>
+            <article>
+              <ol>
+                <li>
+                  <figure>
+                    <img
+                      src="images/main_sec02_icon01_pc.png "
+                      alt="가입상담 아이콘"
+                    />
+                    <figcaption>가입상담 아이콘</figcaption>
+                  </figure>
+                  <i>STEP 01</i>
+                  <div class="txt">
+                    <em>가입상담</em>
+                    <p>1:1 전문상담사<br />부담 없는 착한 설명</p>
+                  </div>
+                </li>
+                <li>
+                  <figure>
+                    <img
+                      src="images/main_sec02_icon02_pc.png "
+                      alt="본사 긴급접수 아이콘"
+                    />
+                    <figcaption>본사 긴급접수 아이콘</figcaption>
+                  </figure>
+                  <i>STEP 02</i>
+                  <div class="txt">
+                    <em>본사 긴급접수</em>
+                    <p>상담 후 2시간 이내</p>
+                  </div>
+                </li>
+                <li>
+                  <figure>
+                    <img
+                      src="images/main_sec02_icon03_pc.png "
+                      alt="설치 일정 조율 아이콘"
+                    />
+                    <figcaption>설치 일정 조율 아이콘</figcaption>
+                  </figure>
+                  <i>STEP 03</i>
+                  <div class="txt">
+                    <em>설치 일정 조율</em>
+                    <p>상담 후 3시간 이내</p>
+                  </div>
+                </li>
+                <li>
+                  <figure>
+                    <img
+                      src="images/main_sec02_icon04_pc.png "
+                      alt="설치완료 아이콘"
+                    />
+                    <figcaption>설치완료 아이콘</figcaption>
+                  </figure>
+                  <i>STEP 04</i>
+                  <div class="txt">
+                    <em>설치완료</em>
+                    <p>신청 후 1~2일 소요</p>
+                  </div>
+                </li>
+                <li>
+                  <figure>
+                    <img
+                      src="images/main_sec02_icon05_pc.png "
+                      alt="현금입금 아이콘"
+                    />
+                    <figcaption>설치 후 당일지급 아이콘</figcaption>
+                  </figure>
+                  <i>STEP 05</i>
+                  <div class="txt">
+                    <em>설치 후 당일지급</em>
+                    <p>
+                      설치 완료 확인 후<br />지원금은 당일 지급을 원칙으로
+                      합니다.
+                    </p>
+                  </div>
+                </li>
+              </ol>
+            </article>
+          </div>
+          <!--//inner -->
+        </section>
+        <!--//section02 -->
+        <section id="section03">
+          <div class="inner">
+            <h2>
+              혜담을 <br />
+              <strong>선택할 수밖에 없는 이유?</strong>
+            </h2>
+            <ul>
+              <li>
+                <article>
+                  <figure>
+                    <img src="images/main_sec03_icon01_pc.svg" alt="" />
+                    <figcaption>
+                      매월 3,000건 이상 처리, 누락 사고 ‘0건’의 신뢰도 이미지
+                    </figcaption>
+                  </figure>
+                  <div class="txt">
+                    <em>매월 3,000건 이상 처리, 누락 사고 ‘0건’의 신뢰도</em>
+                    <p>
+                      혜담은 매달 3,000건이 넘는 접수를 진행하지만 지원금 누락
+                      사고는 단 한 번도 없었습니다. 정확한 내부 검수 시스템으로
+                      안내드린 금액을 100% 정확하게 지급합니다.
+                    </p>
+                  </div>
+                </article>
+              </li>
+              <li>
+                <article>
+                  <figure>
+                    <img src="images/main_sec03_icon02_pc.svg" alt="" />
+                    <figcaption>
+                      설치 당일 바로 지급되는 빠른 지원금 이미지
+                    </figcaption>
+                  </figure>
+                  <div class="txt">
+                    <em>설치 당일 바로 지급되는 빠른 지원금</em>
+                    <p>
+                      설치가 완료되면 당일 바로 입금을 원칙으로 합니다. 또한
+                      안내 금액과 실제 지급 금액이 다를 경우 차액의 120%를
+                      보상하는 안전 정책을 운영합니다. 고객님이 가장 유리한
+                      혜택을 받아 가실 수 있도록 끝까지 책임집니다.
+                    </p>
+                  </div>
+                </article>
+              </li>
+              <li>
+                <article>
+                  <figure>
+                    <img src="images/main_sec03_icon03_pc.svg" alt="" />
+                    <figcaption>불필요한 부가상품 권유 No! 이미지</figcaption>
+                  </figure>
+                  <div class="txt">
+                    <em>불필요한 부가상품 권유 No!</em>
+                    <p>
+                      혜담은 필요 없는 부가 서비스를 절대 권유하지 않습니다.
+                      설치 이후 불필요한 비용이 발생하지 않도록 실제로 도움이
+                      되는 구성만 안내드립니다.
+                    </p>
+                  </div>
+                </article>
+              </li>
+              <li>
+                <article>
+                  <figure>
+                    <img src="images/main_sec03_icon04_pc.svg" alt="" />
+                    <figcaption>
+                      10년 이상 경력의 유선 전문 상담팀 이미지
+                    </figcaption>
+                  </figure>
+                  <div class="txt">
+                    <em>10년 이상 경력의 유선 전문 상담팀</em>
+                    <p>
+                      유선통신 상담 경력 10년 이상의 베테랑 상담진이 고객님의
+                      상황을 세밀하게 분석합니다. 가장 유리한 통신사 · 요금제 ·
+                      혜택 조합을 정확하게 추천드립니다.
+                    </p>
+                  </div>
+                </article>
+              </li>
+            </ul>
+          </div>
+          <!--//inner -->
+        </section>
+        <!--//section03 -->
+        <section id="section04">
+          <div class="inner">
+            <div class="sec04_con_wrap">
+              <div class="tit">
+                <em>지연 없는 <span>빠른 처리, 실시간 데이터</span></em>
+                <h2>지금도 계속 개통되고 있어요</h2>
+              </div>
+              <div class="item">
+                <article class="sec04_con">
+                  <strong>실시간 <span>신청</span> 현황</strong>
+                  <div class="slide_top">
+                    <em>접수일</em>
+                    <em>이름</em>
+                    <em>신청현황</em>
+                  </div>
+                  <div class="sec04_slide_wrap">
+                    <div class="sec04_slide swiper">
+                      <div class="swiper-wrapper">
+                        <div class="sec04_item swiper-slide">
+                          <div class="txt">
+                            <b>2025-12-02</b>
+                            <b>홍길동</b>
+                            <b>완료</b>
+                          </div>
+                        </div>
+                        <div class="sec04_item swiper-slide">
+                          <div class="txt">
+                            <b>2025-12-02</b>
+                            <b>홍길동</b>
+                            <b>완료</b>
+                          </div>
+                        </div>
+                        <div class="sec04_item swiper-slide">
+                          <div class="txt">
+                            <b>2025-12-02</b>
+                            <b>홍길동</b>
+                            <b>완료</b>
+                          </div>
+                        </div>
+                        <div class="sec04_item swiper-slide">
+                          <div class="txt">
+                            <b>2025-12-02</b>
+                            <b>홍길동</b>
+                            <b>완료</b>
+                          </div>
+                        </div>
+                        <div class="sec04_item swiper-slide">
+                          <div class="txt">
+                            <b>2025-12-02</b>
+                            <b>홍길동</b>
+                            <b>완료</b>
+                          </div>
+                        </div>
+                        <div class="sec04_item swiper-slide">
+                          <div class="txt">
+                            <b>2025-12-02</b>
+                            <b>홍길동</b>
+                            <b>완료</b>
+                          </div>
+                        </div>
+                        <div class="sec04_item swiper-slide">
+                          <div class="txt">
+                            <b>2025-12-02</b>
+                            <b>홍길동</b>
+                            <b>완료</b>
+                          </div>
+                        </div>
+                        <div class="sec04_item swiper-slide">
+                          <div class="txt">
+                            <b>2025-12-02</b>
+                            <b>홍길동</b>
+                            <b>완료</b>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!--//sec04_slide -->
+                  </div>
+                  <!--//sec04_slide_wrap -->
+                </article>
+                <article class="sec04_con">
+                  <strong>실시간 <span>입금</span> 현황</strong>
+                  <div class="slide_top">
+                    <em>접수일</em>
+                    <em>이름</em>
+                    <em>신청현황</em>
+                  </div>
+                  <div class="sec04_slide_wrap">
+                    <div class="sec04_slide swiper">
+                      <div class="swiper-wrapper">
+                        <div class="sec04_item swiper-slide">
+                          <div class="txt">
+                            <b>2025-12-02</b>
+                            <b>홍길동</b>
+                            <b>완료</b>
+                          </div>
+                        </div>
+                        <div class="sec04_item swiper-slide">
+                          <div class="txt">
+                            <b>2025-12-02</b>
+                            <b>홍길동</b>
+                            <b>완료</b>
+                          </div>
+                        </div>
+                        <div class="sec04_item swiper-slide">
+                          <div class="txt">
+                            <b>2025-12-02</b>
+                            <b>홍길동</b>
+                            <b>완료</b>
+                          </div>
+                        </div>
+                        <div class="sec04_item swiper-slide">
+                          <div class="txt">
+                            <b>2025-12-02</b>
+                            <b>홍길동</b>
+                            <b>완료</b>
+                          </div>
+                        </div>
+                        <div class="sec04_item swiper-slide">
+                          <div class="txt">
+                            <b>2025-12-02</b>
+                            <b>홍길동</b>
+                            <b>완료</b>
+                          </div>
+                        </div>
+                        <div class="sec04_item swiper-slide">
+                          <div class="txt">
+                            <b>2025-12-02</b>
+                            <b>홍길동</b>
+                            <b>완료</b>
+                          </div>
+                        </div>
+                        <div class="sec04_item swiper-slide">
+                          <div class="txt">
+                            <b>2025-12-02</b>
+                            <b>홍길동</b>
+                            <b>완료</b>
+                          </div>
+                        </div>
+                        <div class="sec04_item swiper-slide">
+                          <div class="txt">
+                            <b>2025-12-02</b>
+                            <b>홍길동</b>
+                            <b>완료</b>
+                          </div>
+                        </div>
+                        <div class="sec04_item swiper-slide">
+                          <div class="txt">
+                            <b>2025-12-02</b>
+                            <b>홍길동</b>
+                            <b>완료</b>
+                          </div>
+                        </div>
+                        <div class="sec04_item swiper-slide">
+                          <div class="txt">
+                            <b>2025-12-02</b>
+                            <b>홍길동</b>
+                            <b>완료</b>
+                          </div>
+                        </div>
+                        <div class="sec04_item swiper-slide">
+                          <div class="txt">
+                            <b>2025-12-02</b>
+                            <b>홍길동</b>
+                            <b>완료</b>
+                          </div>
+                        </div>
+                        <div class="sec04_item swiper-slide">
+                          <div class="txt">
+                            <b>2025-12-02</b>
+                            <b>홍길동</b>
+                            <b>완료</b>
+                          </div>
+                        </div>
+                        <div class="sec04_item swiper-slide">
+                          <div class="txt">
+                            <b>2025-12-02</b>
+                            <b>홍길동</b>
+                            <b>완료</b>
+                          </div>
+                        </div>
+                        <div class="sec04_item swiper-slide">
+                          <div class="txt">
+                            <b>2025-12-02</b>
+                            <b>홍길동</b>
+                            <b>완료</b>
+                          </div>
+                        </div>
+                        <div class="sec04_item swiper-slide">
+                          <div class="txt">
+                            <b>2025-12-02</b>
+                            <b>홍길동</b>
+                            <b>완료</b>
+                          </div>
+                        </div>
+                        <div class="sec04_item swiper-slide">
+                          <div class="txt">
+                            <b>2025-12-02</b>
+                            <b>홍길동</b>
+                            <b>완료</b>
+                          </div>
+                        </div>
+                        <div class="sec04_item swiper-slide">
+                          <div class="txt">
+                            <b>2025-12-02</b>
+                            <b>홍길동</b>
+                            <b>완료</b>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!--//sec04_slide -->
+                  </div>
+                  <!--//sec04_slide_wrap -->
+                </article>
+              </div>
+            </div>
+            <!--//sec04_con_wrap -->
+          </div>
+          <!--//inner -->
+        </section>
+        <!--//section04 -->
+        <section id="section05">
+          <div class="inner">
+            <div class="sub_form_wrap">
+              <div class="tit">
+                <h2>
+                  지금보다<br />
+                  <span>얼마나 더 혜택</span>을 받을 수 있을까요?
+                </h2>
+                <em>혜담을 통해 실제 지원금과 요금을 정확히 안내받아보세요.</em>
+                <strong>
+                  혜담은 매 월 3,000건 이상의 접수 경험을 기반으로,
+                  <br />고객님께 가장 유리한 조건만 빠르고 정확하게
+                  안내드립니다.
+                </strong>
+              </div>
+              <div class="sub_form">
+                <ul>
+                  <li>
+                    <label>어떤 고민이 있으신가요?</label>
+                    <div class="form_item">
+                      <select>
+                        <option
+                          hidden=""
+                          disabled="disabled"
+                          selected="selected"
+                          value=""
+                        >
+                          선택해주세요
+                        </option>
+                        <option value="선택해주세요">선택해주세요1</option>
+                        <option value="선택해주세요">선택해주세요2</option>
+                      </select>
+                    </div>
+                  </li>
+                  <li>
+                    <label>이름</label>
+                    <div class="form_item">
+                      <input type="text" />
+                    </div>
+                  </li>
+                  <li>
+                    <label>연락처</label>
+                    <div class="form_item">
+                      <input type="tel" />
+                    </div>
+                    <p>
+                      ※ 정확한 지원금 안내를 위해 연락 가능한 번호를
+                      입력해주세요.
+                    </p>
+                  </li>
+                  <li>
+                    <label>어떤 방법으로 연락드릴까요?</label>
+                    <div class="form_item">
+                      <select>
+                        <option
+                          hidden=""
+                          disabled="disabled"
+                          selected="selected"
+                          value=""
+                        >
+                          선택해주세요
+                        </option>
+                        <option value="선택해주세요">선택해주세요1</option>
+                        <option value="선택해주세요">선택해주세요2</option>
+                      </select>
+                    </div>
+                  </li>
+                </ul>
+                <div class="agreement">
+                  <label>
+                    <input type="checkbox" />
+                    <span>개인정보 수집·이용 동의 문구</span>
+                  </label>
+                  <p>
+                    혜담은 상담 진행을 위해 최소한의 개인정보만 수집하며, 해당
+                    정보는 상담 목적 외에는 사용되지 않습니다.
+                  </p>
+                </div>
+                <button class="submit">
+                  <span>상담 신청하기</span>
+                </button>
+              </div>
+              <ul class="chk_list">
+                <li>
+                  <div class="icon"></div>
+                  <em> 설치 완료 시 <span>당일 입금</span> 원칙 </em>
+                </li>
+                <li>
+                  <div class="icon"></div>
+                  <em> 불필요한 부가상품 <span>절대 권유하지 않음</span> </em>
+                </li>
+                <li>
+                  <div class="icon"></div>
+                  <em>
+                    단 1원도 빠지지 않는 <span>정확한 지원금 안내</span>
+                  </em>
+                </li>
+                <li>
+                  <div class="icon"></div>
+                  <em>
+                    <span>매 월 3,000건 이상</span> 진행한 전문 상담팀 제공
+                  </em>
+                </li>
+              </ul>
+            </div>
+            <!--//sub_form_wrap -->
+          </div>
+          <!--//inner -->
+        </section>
+        <!--//section05 -->
+        <section id="section06">
+          <div class="inner">
+            <figure>
+              <img src="images/sec06_img_pc.png" alt="" />
+              <figcaption></figcaption>
+            </figure>
+          </div>
+          <!--//inner -->
+        </section>
+        <!--//section06 -->
+        <section id="section07">
+          <div class="inner">
+            <div class="tit">
+              <em>고객님들이 직접 증명한 Hyedam 만족도</em>
+              <h2>조작 없는 <span>찐 후기</span>, 바로 확인하세요.</h2>
+            </div>
+            <div class="sec07_list swiper">
+              <div class="swiper-wrapper">
+                <div class="review swiper-slide">
+                  <article>
+                    <div class="star">
+                      <div class="icon"></div>
+                      <em>5.0</em>
+                    </div>
+                    <p>
+                      부모님댁에 몇 년동안 헬로비전 이용하다가 급하게 인터넷
+                      와이파이 설치가 필요해서 문의드렸는데 다음날 바로 설치!
+                      빠르고 깔끔했습니다.
+                    </p>
+                    <i>최*지 / 100M + 헬로tv · <span>2024.07.12</span></i>
+                  </article>
+                </div>
+                <div class="review swiper-slide">
+                  <article>
+                    <div class="star">
+                      <div class="icon"></div>
+                      <em>5.0</em>
+                    </div>
+                    <p>
+                      부모님댁에 몇 년동안 헬로비전 이용하다가 급하게 인터넷
+                      와이파이 설치가 필요해서 문의드렸는데 다음날 바로 설치!
+                      빠르고 깔끔했습니다.
+                    </p>
+                    <i>최*지 / 100M + 헬로tv · <span>2024.07.12</span></i>
+                  </article>
+                </div>
+                <div class="review swiper-slide">
+                  <article>
+                    <div class="star">
+                      <div class="icon"></div>
+                      <em>5.0</em>
+                    </div>
+                    <p>
+                      부모님댁에 몇 년동안 헬로비전 이용하다가 급하게 인터넷
+                      와이파이 설치가 필요해서 문의드렸는데 다음날 바로 설치!
+                      빠르고 깔끔했습니다.
+                    </p>
+                    <i>최*지 / 100M + 헬로tv · <span>2024.07.12</span></i>
+                  </article>
+                </div>
+                <div class="review swiper-slide">
+                  <article>
+                    <div class="star">
+                      <div class="icon"></div>
+                      <em>5.0</em>
+                    </div>
+                    <p>
+                      부모님댁에 몇 년동안 헬로비전 이용하다가 급하게 인터넷
+                      와이파이 설치가 필요해서 문의드렸는데 다음날 바로 설치!
+                      빠르고 깔끔했습니다.
+                    </p>
+                    <i>최*지 / 100M + 헬로tv · <span>2024.07.12</span></i>
+                  </article>
+                </div>
+                <div class="review swiper-slide">
+                  <article>
+                    <div class="star">
+                      <div class="icon"></div>
+                      <em>5.0</em>
+                    </div>
+                    <p>
+                      부모님댁에 몇 년동안 헬로비전 이용하다가 급하게 인터넷
+                      와이파이 설치가 필요해서 문의드렸는데 다음날 바로 설치!
+                      빠르고 깔끔했습니다.
+                    </p>
+                    <i>최*지 / 100M + 헬로tv · <span>2024.07.12</span></i>
+                  </article>
+                </div>
+                <div class="review swiper-slide">
+                  <article>
+                    <div class="star">
+                      <div class="icon"></div>
+                      <em>5.0</em>
+                    </div>
+                    <p>
+                      부모님댁에 몇 년동안 헬로비전 이용하다가 급하게 인터넷
+                      와이파이 설치가 필요해서 문의드렸는데 다음날 바로 설치!
+                      빠르고 깔끔했습니다.
+                    </p>
+                    <i>최*지 / 100M + 헬로tv · <span>2024.07.12</span></i>
+                  </article>
+                </div>
+                <div class="review swiper-slide">
+                  <article>
+                    <div class="star">
+                      <div class="icon"></div>
+                      <em>5.0</em>
+                    </div>
+                    <p>
+                      부모님댁에 몇 년동안 헬로비전 이용하다가 급하게 인터넷
+                      와이파이 설치가 필요해서 문의드렸는데 다음날 바로 설치!
+                      빠르고 깔끔했습니다.
+                    </p>
+                    <i>최*지 / 100M + 헬로tv · <span>2024.07.12</span></i>
+                  </article>
+                </div>
+                <div class="review swiper-slide">
+                  <article>
+                    <div class="star">
+                      <div class="icon"></div>
+                      <em>5.0</em>
+                    </div>
+                    <p>
+                      부모님댁에 몇 년동안 헬로비전 이용하다가 급하게 인터넷
+                      와이파이 설치가 필요해서 문의드렸는데 다음날 바로 설치!
+                      빠르고 깔끔했습니다.
+                    </p>
+                    <i>최*지 / 100M + 헬로tv · <span>2024.07.12</span></i>
+                  </article>
+                </div>
+                <div class="review swiper-slide">
+                  <article>
+                    <div class="star">
+                      <div class="icon"></div>
+                      <em>5.0</em>
+                    </div>
+                    <p>
+                      부모님댁에 몇 년동안 헬로비전 이용하다가 급하게 인터넷
+                      와이파이 설치가 필요해서 문의드렸는데 다음날 바로 설치!
+                      빠르고 깔끔했습니다.
+                    </p>
+                    <i>최*지 / 100M + 헬로tv · <span>2024.07.12</span></i>
+                  </article>
+                </div>
+                <div class="review swiper-slide">
+                  <article>
+                    <div class="star">
+                      <div class="icon"></div>
+                      <em>5.0</em>
+                    </div>
+                    <p>
+                      부모님댁에 몇 년동안 헬로비전 이용하다가 급하게 인터넷
+                      와이파이 설치가 필요해서 문의드렸는데 다음날 바로 설치!
+                      빠르고 깔끔했습니다.
+                    </p>
+                    <i>최*지 / 100M + 헬로tv · <span>2024.07.12</span></i>
+                  </article>
+                </div>
+                <div class="review swiper-slide">
+                  <article>
+                    <div class="star">
+                      <div class="icon"></div>
+                      <em>5.0</em>
+                    </div>
+                    <p>
+                      부모님댁에 몇 년동안 헬로비전 이용하다가 급하게 인터넷
+                      와이파이 설치가 필요해서 문의드렸는데 다음날 바로 설치!
+                      빠르고 깔끔했습니다.
+                    </p>
+                    <i>최*지 / 100M + 헬로tv · <span>2024.07.12</span></i>
+                  </article>
+                </div>
+                <div class="review swiper-slide">
+                  <article>
+                    <div class="star">
+                      <div class="icon"></div>
+                      <em>5.0</em>
+                    </div>
+                    <p>
+                      부모님댁에 몇 년동안 헬로비전 이용하다가 급하게 인터넷
+                      와이파이 설치가 필요해서 문의드렸는데 다음날 바로 설치!
+                      빠르고 깔끔했습니다.
+                    </p>
+                    <i>최*지 / 100M + 헬로tv · <span>2024.07.12</span></i>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div class="fix_form_wrap">
+          <div class="fix_form">
+            <div class="inner">
+              <div class="txt">
+                <p>내가 받을 수 있는 최대 혜택은 얼마나 될까?</p>
+                <em>지금 바로 맞춤 요금 상담 받아보세요!</em>
+              </div>
+              <div class="fix_item">
+                <input type="text" placeholder="이름" />
+                <input type="tel" placeholder="연락처" />
+                <div class="btn_wrap">
+                  <button>
+                    <span>빠른 견적 신청!</span>
+                  </button>
+                  <div class="agreement">
+                    <label>
+                      <input type="checkbox" />
+                      <span>개인정보 수집 및 활용 동의</span>
+                    </label>
+                    <a href="#" target="_blank">보기</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="quick_menu">
+          <ul>
+            <li>
+              <a href="#">
+                <figure>
+                  <img src="images/quick_icon01.svg" alt="카카오톡 아이콘" />
+                  <figcaption>카카오톡 아이콘</figcaption>
+                </figure>
+                <em>카톡문의</em>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <figure>
+                  <img src="images/quick_icon02.svg" alt="카카오톡 아이콘" />
+                  <figcaption>카카오톡 아이콘</figcaption>
+                </figure>
+                <em>빠르게<br />견적받기</em>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <figure>
+                  <img src="images/quick_icon03.svg" alt="카카오톡 아이콘" />
+                  <figcaption>카카오톡 아이콘</figcaption>
+                </figure>
+                <em>유튜브</em>
+              </a>
+            </li>
+          </ul>
+          <button class="scroll_top">TOP<span></span>↑</button>
+        </div>
+      </main>
+      <!--//main -->
+      <footer id="footer">
+        <div class="f_top">
+          <div class="inner">
+            <strong>대표전화</strong>
+            <a href="tel:1588-2637">1588-2637</a>
+            <div class="txt">
+              <p>
+                <em>영업시간안내</em><br />
+                평일 10:00 ~ 18:00│점심 13:00 ~ 14:00 <span>│</span>휴무 :
+                일요일, 국가지정공휴일
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="f_bot">
+          <div class="inner">
+            <a class="foot_logo" href="#">
+              <figure>
+                <img src="images/footer_logo_pc.svg" alt="" />
+                <figcaption>혜담 푸터 로고</figcaption>
+              </figure>
+            </a>
+            <address>
+              <a href="#">회사소개</a>│<a href="#">이용약관</a>│<a href="#"
+                >개인정보처리방침</a
+              >│<a href="#">사업자정보확인</a><br />
+              <br />
+              주식회사 혜담│대표 : 김재일│사업자등록번호 : 307-88-03380<br />
+              사업자등록주소 : 서울특별시 영등포구 영등포로 150
+              생각공장│대표번호 : 1588-2637 (유료)│메일 : marketing@ludam.net<br />
+              <br />
+              개인정보책임관리자 : 배세열
+            </address>
+            <p class="copyright">ⓒ 2025 HYEDAM.All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <!--//wrap -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <!-- <script type="text/javascript" src="css/js/smoothwheel.js"></script> -->
+    <script>
+      const $dates = $(".review span");
+      const today = new Date();
+      const maxDays = 5;
 
-            function formatDate(date) {
-                const y = date.getFullYear();
-                const m = String(date.getMonth() + 1).padStart(2, '0');
-                const d = String(date.getDate()).padStart(2, '0');
-                return `${y}.${m}.${d}`;
-            }
+      function formatDate(date) {
+        const y = date.getFullYear();
+        const m = String(date.getMonth() + 1).padStart(2, "0");
+        const d = String(date.getDate()).padStart(2, "0");
+        return `${y}.${m}.${d}`;
+      }
 
-            let dateList = [];
+      let dateList = [];
 
-            //앞 2개는 오늘
-            for (let i = 0; i < Math.min(2, $dates.length); i++) {
-                dateList.push(new Date(today));
-            }
+      //앞 2개는 오늘
+      for (let i = 0; i < Math.min(2, $dates.length); i++) {
+        dateList.push(new Date(today));
+      }
 
-            //나머지는 랜덤 (0~5일 전)
-            for (let i = 2; i < $dates.length; i++) {
-                const randomDays = Math.floor(Math.random() * (maxDays + 1));
-                const d = new Date(today);
-                d.setDate(today.getDate() - randomDays);
-                dateList.push(d);
-            }
+      //나머지는 랜덤 (0~5일 전)
+      for (let i = 2; i < $dates.length; i++) {
+        const randomDays = Math.floor(Math.random() * (maxDays + 1));
+        const d = new Date(today);
+        d.setDate(today.getDate() - randomDays);
+        dateList.push(d);
+      }
 
-            // 최신 → 과거 정렬
-            dateList.sort((a, b) => b - a);
+      // 최신 → 과거 정렬
+      dateList.sort((a, b) => b - a);
 
-            // 적용
-            $dates.each(function (idx) {
-                $(this).text(formatDate(dateList[idx]));
-            });
+      // 적용
+      $dates.each(function (idx) {
+        $(this).text(formatDate(dateList[idx]));
+      });
 
-            let fix_top = $('.fix_form_wrap').offset().top;
-            let win_height = $(window).height();
-            let s_top = $('html').scroll();
-            let formHeight = $('.fix_form').outerHeight()
-            if(s_top + win_height - formHeight >= fix_top){
-                $('.fix_form').css('position','relative');
-            }else{
-                $('.fix_form').css('position','fixed');
-            }
-            $(window).on('scroll', function () {
-                s_top = $('html').scrollTop();
-                console.log(s_top)
-                console.log(fix_top)
-                if(s_top + win_height - formHeight >= fix_top){
-                    $('.fix_form').css('position','relative');
-                }else{
-                    $('.fix_form').css('position','fixed');
-                }
-            });
-            $('#gnb ul li').on('mouseenter',function(){
-                $(this).find('.info').stop(true).fadeIn(300);
-            }); 
-            $('#gnb ul li').on('mouseleave',function(){
-                $(this).find('.info').fadeOut(300);
-            });
-            var swiper = new Swiper("#visual_wrap .swiper", {
-                loop: true,
-                effect:'fade',
-                autoplay: {
-                    delay: 3000,
-                    disableOnInteraction: false
-                },
-                
-            });
-            var swiper = new Swiper(".sec01_slider_wrap .swiper", {
-                loop:true,
-                observer: true,
-                observeParents: true,
-                loopAdditionalSlides: 2,
-                autoplay: {
-                    delay: 3000,
-                    disableOnInteraction: false
-                },
-                breakpoints: {
-                    1025: {
-                        slidesPerView: 2,
-                        spaceBetween: 20
-                    },
-                    768: {
-                        slidesPerView: 2.5,
-                        spaceBetween: 20
-                    },
-                    320:{
-                        slidesPerView: 1,
-                        spaceBetween: 10,
-                        centeredSlides: true,
-                    },
-                }
-            });
-            var swiper = new Swiper(".sec04_slide_wrap .swiper", {
-                direction: "vertical",
-                slidesPerView: 6,
-                loop:true,
-                autoplay: {
-                    delay: 3000,
-                    disableOnInteraction: false
-                }
-            });
+      let fix_top = $(".fix_form_wrap").offset().top;
+      let win_height = $(window).height();
+      let s_top = $("html").scroll();
+      let formHeight = $(".fix_form").outerHeight();
+      if (s_top + win_height - formHeight >= fix_top) {
+        $(".fix_form").css("position", "relative");
+      } else {
+        $(".fix_form").css("position", "fixed");
+      }
+      $(window).on("scroll", function () {
+        s_top = $("html").scrollTop();
+        console.log(s_top);
+        console.log(fix_top);
+        if (s_top + win_height - formHeight >= fix_top) {
+          $(".fix_form").css("position", "relative");
+        } else {
+          $(".fix_form").css("position", "fixed");
+        }
+      });
+      $("#gnb ul li").on("mouseenter", function () {
+        $(this).find(".info").stop(true).fadeIn(300);
+      });
+      $("#gnb ul li").on("mouseleave", function () {
+        $(this).find(".info").fadeOut(300);
+      });
+      var swiper = new Swiper("#visual_wrap .swiper", {
+        loop: true,
+        effect: "fade",
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+      });
+      var swiper = new Swiper(".sec01_slider_wrap .swiper", {
+        loop: true,
+        observer: true,
+        observeParents: true,
+        loopAdditionalSlides: 2,
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+        breakpoints: {
+          1025: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 2.5,
+            spaceBetween: 20,
+          },
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            centeredSlides: true,
+          },
+        },
+      });
+      var swiper = new Swiper(".sec04_slide_wrap .swiper", {
+        direction: "vertical",
+        slidesPerView: 6,
+        loop: true,
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+      });
 
-            var swiper = new Swiper("#section07 .swiper", {
-                loop:true,
-                spaceBetween: 25,
-                observer: true,
-                observeParents: true,
-                centeredSlides: true,
-                loopAdditionalSlides: 2,
-                autoplay: {
-                    delay: 3000,
-                    disableOnInteraction: false
-                },
-                breakpoints: {
-                    1025: {
-                        slidesPerView: 3,
-                        spaceBetween: 20
-                    },
-                    768: {
-                        slidesPerView: 3,
-                        spaceBetween: 20
-                    },
-                    320:{
+      var swiper = new Swiper("#section07 .swiper", {
+        loop: true,
+        spaceBetween: 25,
+        observer: true,
+        observeParents: true,
+        centeredSlides: true,
+        loopAdditionalSlides: 2,
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+        breakpoints: {
+          1025: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+          },
+          320: {},
+        },
+      });
 
-                    },
-                }
-            });
-            
-            $('.scroll_top').on('click', function (e) {
-                e.preventDefault();
+      $(".scroll_top").on("click", function (e) {
+        e.preventDefault();
 
-                $('html, body').animate({
-                    scrollTop: 0
-                }, 500); // 0.5초
-            });
+        $("html, body").animate(
+          {
+            scrollTop: 0,
+          },
+          500
+        ); // 0.5초
+      });
 
-            $('.faq .txt01 em').click(function () {
-                $(this)
-                    .parents('li')
-                    .find('.txt02')
-                    .stop(true)
-                    .slideToggle();
-            });
-            $('.sec04_con .slide_type01')
-                .eq(0)
-                .show();
-            $('#section04 .sec04_tab_btn a').on('click', function () {
-                $('#section04 .sec04_tab_btn a')
-                    .removeClass('on')
-                    .eq($(this).index())
-                    .addClass('on');
-                $('.sec04_con .slide_type01')
-                    .hide()
-                    .eq($(this).index())
-                    .show();
-            });
-
-            
-        </script>
-    </body>
-
+      $(".faq .txt01 em").click(function () {
+        $(this).parents("li").find(".txt02").stop(true).slideToggle();
+      });
+      $(".sec04_con .slide_type01").eq(0).show();
+      $("#section04 .sec04_tab_btn a").on("click", function () {
+        $("#section04 .sec04_tab_btn a")
+          .removeClass("on")
+          .eq($(this).index())
+          .addClass("on");
+        $(".sec04_con .slide_type01").hide().eq($(this).index()).show();
+      });
+    </script>
+  </body>
 </html>

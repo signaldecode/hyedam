@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- App favicon -->
+    <link
+      rel="icon"
+      href="../../images/favicon_size04.svg"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="../../fonts/pretendard/pretendard.css" />
+    <link rel="stylesheet" href="../../css/style_pc.css" />
+    <link rel="stylesheet" href="../../css/style_tab.css" />
+    <link rel="stylesheet" href="../../css/style_mob.css" />
+    <link rel="stylesheet" href="../../css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../../styles/internet.css" />
+    <link rel="stylesheet" href="../../styles/internet_tab.css" />
+    <link rel="stylesheet" href="../../styles/internet_mob.css" />
+    <script src="../../js/internet.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body>
+    <div id="wrap">
+      <header id="header">
+        <div class="inner">
+          <h1>
+            <a href="#">
+              <figure>
+                <img src="../../images/header_logo_pc.svg" alt="혜담로고" />
+                <figcaption>혜담로고</figcaption>
+              </figure>
+            </a>
+          </h1>
+          <nav id="gnb">
+            <ul>
+              <li>
+                <a href="#">KT</a>
+                <div class="info">
+                  <em>(비교원 요금) 월 요금 : 1,100원</em>
+                  <em>(서울통신) 유심 : 1100원</em>
+                </div>
+              </li>
+              <li>
+                <a href="#">LG</a>
+                <div class="info">
+                  <em>(비교원 요금) 월 요금 : 1,100원</em>
+                  <em>(서울통신) 유심 : 1100원</em>
+                </div>
+              </li>
+              <li>
+                <a href="#">SK</a>
+                <div class="info">
+                  <em>(비교원 요금) 월 요금 : 1,100원</em>
+                  <em>(서울통신) 유심 : 1100원</em>
+                </div>
+              </li>
+              <li>
+                <a href="#">알뜰인터넷</a>
+                <div class="info">
+                  <em>(비교원 요금) 월 요금 : 1,100원</em>
+                  <em>(서울통신) 유심 : 1100원</em>
+                </div>
+              </li>
+              <li>
+                <a href="#">회사소개</a>
+              </li>
+            </ul>
+          </nav>
+          <!--nav-->
+          <a href="#" class="call">
+            <figure>
+              <img src="../../images/header_icon01_pc.svg" alt="전화 아이콘" />
+              <figcaption>전화 아이콘</figcaption>
+            </figure>
+            <em>1588-2637</em>
+          </a>
+        </div>
+        <!--inner-->
+      </header>
+      <div id="mob_header">
+        <a class="mob_header" href="#">
+          <figure>
+            <img src="../../images/header_logo_pc.svg" alt="" />
+            <figcaption></figcaption>
+          </figure>
+        </a>
+        <button></button>
+      </div>
+      <main>
+        <div id="visual_wrap">
+          <div class="visual_slide swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <figure>
+                  <figcaption>kT</figcaption>
+                  <img src="#" alt="KT" />
+                  <div
+                    class="pc_img"
+                    style="
+                      height: 777px;
+                      background: #ddd center/cover no-repeat;
+                    "
+                  ></div>
+                </figure>
+              </div>
+            </div>
+          </div>
+          <!--visual_slide-->
+        </div>
+        <section id="prod">
+          <div class="tab_wrap">
+            <button class="tab_btn" data-tab="internet_only">
+              <span>인터넷 단독</span>
+              <img
+                src="../../images/icons/sub_internetIcon.svg"
+                alt="인터넷 단독"
+              />
+            </button>
+            <button class="tab_btn" data-tab="internet_tv">
+              <span>인터넷+TV</span>
+              <img src="../../images/icons/sub_tvIcon.svg" alt="인터넷+TV" />
+            </button>
+            <button class="tab_btn" data-tab="internet_sim">
+              <span>인터넷+유심</span>
+              <img src="../../images/icons/sub_simIcon.svg" alt="인터넷+유심" />
+            </button>
+          </div>
+          <div class="prod_wrap">
+            <h1></h1>
+            <div class="prod_check_wrap">
+              <div class="check_item">
+                <input id="wifi" type="checkbox" class="check_input">
+                <label for="wifi" class="prod_item">
+                  <span class="check_icon"><img src="../../images/icons/sub_check.svg" alt="체크" /></span>
+                  <span>WiFi</span>
+                </label>
+                </div>
+                <div class="check_item">
+                  <input id="phone" type="checkbox" class="check_input">
+                  <label for="phone" class="prod_item">
+                    <span class="check_icon"><img src="../../images/icons/sub_check.svg" alt="체크" /></span>
+                    <span>휴대폰 결합</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="card_wrap">
+              <article class="plan_card">
+              </article>
+            </div>
+            <span class="noti_text">
+              ※ 월 요금은 3년 약정 기준입니다.<br/>※ 부가세 포함 기준입니다.
+            </span>
+            <div class="more_btn_wrap">
+              인터넷+TV 상품 더보기
+              <img src="../../images/icons/sub_arrow.svg" alt="인터넷+TV 상품 더보기" />
+            </div>
+          </div>
+        </section>
+      </main>
+      <!--//main -->
+      <footer id="footer">
+        <div class="f_bot">
+          <div class="inner">
+            <a class="foot_logo" href="#">
+              <figure>
+                <img src="images/footer_logo_pc.svg" alt="" />
+                <figcaption>혜담 푸터 로고</figcaption>
+              </figure>
+            </a>
+            <address>
+              <a href="#">회사소개</a>│<a href="#">이용약관</a>│<a href="#"
+                >개인정보처리방침</a
+              >│<a href="#">사업자정보확인</a><br />
+              <br />
+              주식회사 혜담│대표 : 김재일│사업자등록번호 : 307-88-03380<br />
+              사업자등록주소 : 서울특별시 영등포구 영등포로 150
+              생각공장│대표번호 : 1588-2637 (유료)│메일 : marketing@ludam.net<br />
+              <br />
+              개인정보책임관리자 : 배세열
+            </address>
+            <p class="copyright">ⓒ 2025 HYEDAM.All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <!--//wrap -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <!-- <script type="text/javascript" src="css/js/smoothwheel.js"></script> -->
+    <script>
+      const $dates = $(".review span");
+      const today = new Date();
+      const maxDays = 5;
+
+      function formatDate(date) {
+        const y = date.getFullYear();
+        const m = String(date.getMonth() + 1).padStart(2, "0");
+        const d = String(date.getDate()).padStart(2, "0");
+        return `${y}.${m}.${d}`;
+      }
+
+      let dateList = [];
+
+      //앞 2개는 오늘
+      for (let i = 0; i < Math.min(2, $dates.length); i++) {
+        dateList.push(new Date(today));
+      }
+
+      //나머지는 랜덤 (0~5일 전)
+      for (let i = 2; i < $dates.length; i++) {
+        const randomDays = Math.floor(Math.random() * (maxDays + 1));
+        const d = new Date(today);
+        d.setDate(today.getDate() - randomDays);
+        dateList.push(d);
+      }
+
+      // 최신 → 과거 정렬
+      dateList.sort((a, b) => b - a);
+
+      // 적용
+      $dates.each(function (idx) {
+        $(this).text(formatDate(dateList[idx]));
+      });
+
+      let fix_top = $(".fix_form_wrap").offset().top;
+      let win_height = $(window).height();
+      let s_top = $("html").scroll();
+      let formHeight = $(".fix_form").outerHeight();
+      if (s_top + win_height - formHeight >= fix_top) {
+        $(".fix_form").css("position", "relative");
+      } else {
+        $(".fix_form").css("position", "fixed");
+      }
+      $(window).on("scroll", function () {
+        s_top = $("html").scrollTop();
+        console.log(s_top);
+        console.log(fix_top);
+        if (s_top + win_height - formHeight >= fix_top) {
+          $(".fix_form").css("position", "relative");
+        } else {
+          $(".fix_form").css("position", "fixed");
+        }
+      });
+      $("#gnb ul li").on("mouseenter", function () {
+        $(this).find(".info").stop(true).fadeIn(300);
+      });
+      $("#gnb ul li").on("mouseleave", function () {
+        $(this).find(".info").fadeOut(300);
+      });
+      var swiper = new Swiper("#visual_wrap .swiper", {
+        loop: true,
+        effect: "fade",
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+      });
+      var swiper = new Swiper(".sec01_slider_wrap .swiper", {
+        loop: true,
+        observer: true,
+        observeParents: true,
+        loopAdditionalSlides: 2,
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+        breakpoints: {
+          1025: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 2.5,
+            spaceBetween: 20,
+          },
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            centeredSlides: true,
+          },
+        },
+      });
+      var swiper = new Swiper(".sec04_slide_wrap .swiper", {
+        direction: "vertical",
+        slidesPerView: 6,
+        loop: true,
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+      });
+
+      var swiper = new Swiper("#section07 .swiper", {
+        loop: true,
+        spaceBetween: 25,
+        observer: true,
+        observeParents: true,
+        centeredSlides: true,
+        loopAdditionalSlides: 2,
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+        breakpoints: {
+          1025: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+          },
+          320: {},
+        },
+      });
+
+      $(".scroll_top").on("click", function (e) {
+        e.preventDefault();
+
+        $("html, body").animate(
+          {
+            scrollTop: 0,
+          },
+          500
+        ); // 0.5초
+      });
+
+      $(".faq .txt01 em").click(function () {
+        $(this).parents("li").find(".txt02").stop(true).slideToggle();
+      });
+      $(".sec04_con .slide_type01").eq(0).show();
+      $("#section04 .sec04_tab_btn a").on("click", function () {
+        $("#section04 .sec04_tab_btn a")
+          .removeClass("on")
+          .eq($(this).index())
+          .addClass("on");
+        $(".sec04_con .slide_type01").hide().eq($(this).index()).show();
+      });
+    </script>
+  </body>
+</html>
