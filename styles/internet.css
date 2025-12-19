@@ -1,19 +1,18 @@
 #prod {
-  padding: 0 260px;
+  padding: 0 260px 175px 260px;
 }
 
 #prod .tab_wrap {
   width: 100%;
-  max-width: 1400px;
   display: flex;
   justify-content: center;
   gap: 25px;
   padding: 55px 0;
 }
 
-#prod .tab_btn {
+#prod .tab_wrap .tab_btn {
   border: 2px solid #e4e4e4;
-  max-width: 450px;
+  max-width: 100%;
   border-radius: 20px;
   flex: 1 1 0;
   padding: 20px 44px;
@@ -25,12 +24,33 @@
   font-weight: 600;
 }
 #prod .tab_btn.is-active {
-  border: 2px solid #0057ff;
+  border-color: #0057ff;
   color: #0057ff;
 }
+#prod .tab_wrap button .tab_icon {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background: center/contain no-repeat;
+}
 
-#prod .tab_btn img {
-  width: 33px;
+#prod .tab_wrap button .tab_icon--internet {
+  background-image: url("../../images/icons/sub_internetIcon.svg");
+}
+#prod .tab_wrap button.is-active .tab_icon--internet {
+  background-image: url("../../images/icons/sub_internet_act.svg");
+}
+#prod .tab_wrap button .tab_icon--tv {
+  background-image: url("../../images/icons/sub_tvIcon.svg");
+}
+#prod .tab_wrap button.is-active .tab_icon--tv {
+  background-image: url("../../images/icons/sub_tv_act.svg");
+}
+#prod .tab_wrap button .tab_icon--sim {
+  background-image: url("../../images/icons/sub_simIcon.svg");
+}
+#prod .tab_wrap button.is-active .tab_icon--sim {
+  background-image: url("../../images/icons/sub_sim_act.svg");
 }
 #prod .prod_wrap {
   display: flex;
@@ -130,7 +150,7 @@
   margin-bottom: 20px;
   font-size: 20px;
   font-weight: 700;
-  color: #111;
+  color: #262626;
 }
 
 .plan_price {
@@ -174,32 +194,30 @@
   gap: 12px;
   padding: 5px 0;
   font-size: 18px;
-  color: #666;
+  color: #626262;
 }
 
-.plan_row dt {
-  margin: 0;
-}
+.plan_row dt,
 .plan_row dd {
+  color: #626262;
   margin: 0;
 }
-
 .plan_row--total {
   margin-top: 6px;
   padding-top: 10px;
   border-top: 1px dashed #e7e7e7;
-  color: #333;
+  color: #626262;
   font-weight: 700;
 }
 
 .plan_note {
-  margin: 80px 0 8px 0;
-  font-size: 12px;
-  color: #888;
+  margin: 8px 0;
+  font-size: 16px;
+  color: #626262;
 }
 
 .plan_actions {
-  margin-top: 6px;
+  margin: 80px 0 8px 0;
 }
 
 .plan_btn {
@@ -235,10 +253,18 @@
   border: 1px solid tomato;
   color: #262626;
   font-size: 20px;
+  margin: 70px 0;
   font-weight: 500;
   text-decoration: none;
   transition: 0.3s;
   border-radius: 20px;
   border: 1px solid #e4e4e4;
-  margin-bottom: 250px;
+}
+.more_btn_wrap img {
+  transition: transform 0.25s ease;
+  transform-origin: center;
+}
+
+.more_btn_wrap.is-open img {
+  transform: rotate(180deg);
 }

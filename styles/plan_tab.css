@@ -1,0 +1,37 @@
+/* <= 1200px */
+@media (max-width: 1200px) {
+  #plan {
+    padding: 0 40px 140px;
+  }
+
+  #plan .tab_wrap {
+    gap: 16px;
+    padding: 40px 0;
+  }
+
+  #plan #providerTabs .tab_btn {
+    height: 76px;
+    font-size: 18px;
+    padding: 16px 20px;
+  }
+
+  #plan .speed_wrap {
+    gap: 12px;
+    height: 64px;
+    padding: 4px;
+  }
+
+  #plan #speedTabs .tab_btn {
+    font-size: 18px;
+  }
+
+  #plan .plan_table {
+    font-size: 18px;
+  }
+
+  #plan .plan_table thead th,
+  #plan .plan_table tbody td {
+    padding: 18px 0;
+    font-size: 18px;
+  }
+}

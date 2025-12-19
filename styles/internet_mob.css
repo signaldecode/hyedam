@@ -1,5 +1,51 @@
 @media (max-width: 767px) {
+  #prod {
+    padding: 0 20px 140px;
+  }
+
+  #prod .tab_wrap {
+    padding: 30px 0;
+  }
+
+  #prod .tab_wrap .tab_btn {
+    padding: 15px 20px;
+    justify-content: center;
+    font-size: 16px;
+  }
+  #prod .tab_wrap button .tab_icon {
+    display: none;
+  }
+  .prod_wrap {
+    padding: 0 20px;
+  }
+  #prod .prod_check_wrap {
+    margin-top: 20px !important;
+    justify-content: center !important;
+  }
+  #prod .prod_check_wrap .prod_item {
+    font-size: 16px;
+  }
   .card_wrap {
     grid-template-columns: 1fr;
+  }
+  #prod .plan_card {
+    padding: 30px 20px;
+  }
+  #prod .plan_card img {
+    margin-bottom: 10px;
+  }
+  #prod .plan_badge {
+    left: 20px;
+    top: 30px;
+    font-size: 14px;
+    width: 50px;
+    height: 50px;
+  }
+  #prod .plan_ribbon {
+    right: 10px;
+    top: 0;
+    font-size: 14px;
+    width: 40px;
+    height: 53px;
   }
 }

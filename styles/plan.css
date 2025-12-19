@@ -1,0 +1,125 @@
+#plan {
+  padding: 0 260px 175px 260px;
+}
+#plan .tab_wrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  padding: 55px 0;
+}
+#plan #providerTabs .tab_btn {
+  border: 2px solid #e4e4e4;
+  max-width: 100%;
+  border-radius: 20px;
+  flex: 1 1 0;
+  padding: 20px 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #262626;
+  font-size: 20px;
+  font-weight: 500;
+  height: 90px;
+}
+#plan #providerTabs .tab_btn.is-active {
+  border-color: #0057ff;
+  color: #0057ff;
+  font-weight: 700;
+}
+#plan .plan_title {
+  margin: 153px 0 55px 0;
+  font-size: 20px;
+  font-weight: 700;
+  font-size: 36px;
+  font-weight: 700;
+  color: #262626;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+#plan .speed_wrap {
+  border: 1px solid #e4e4e4;
+  background-color: rgba(244, 244, 244, 0.5);
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  height: 70px;
+  border-radius: 50px;
+  padding: 5px;
+}
+#plan #speedTabs .tab_btn {
+  border-radius: 100px;
+  color: #626262;
+  width: 100%;
+  font-size: 22px;
+  font-weight: 600;
+  -webkit-tap-highlight-color: transparent;
+}
+#plan #speedTabs .tab_btn:active {
+  transform: none;
+  filter: none;
+  opacity: 1;
+}
+
+#plan #speedTabs .tab_btn.is-active {
+  background: rgba(0, 87, 255, 0.1);
+  color: #0057ff;
+  font-weight: 700;
+}
+
+#plan #speedTabs .tab_btn {
+  appearance: none;
+  -webkit-appearance: none;
+  background: transparent;
+  border: 1px solid transparent;
+  outline: none;
+  transition: background-color 0.25s ease, border-color 0.25s ease,
+    color 0.25s ease;
+}
+
+#plan #speedTabs .tab_btn:active {
+  background: transparent;
+}
+
+/* 테이블 */
+#plan .plan_table_wrap {
+  width: 100%;
+  margin-top: 48px;
+}
+
+#plan .plan_table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  overflow: hidden;
+  border-top: 2px solid #0057ff;
+  font-size: 22px;
+}
+
+#plan .plan_table thead th {
+  padding: 22px 0;
+  background-color: rgba(0, 87, 255, 0.1);
+  color: #0057ff;
+  font-weight: 700;
+  text-align: center;
+  width: 33.333%;
+}
+
+/* 바디 */
+#plan .plan_table tbody td {
+  padding: 22px 0;
+  border-bottom: 1px solid #e4e4e4;
+  color: #262626;
+  font-size: 20px;
+  text-align: center;
+  width: 33.333%;
+}
+
+#plan .plan_note {
+  margin: 15px 0 40px 0;
+  font-size: 18px;
+  font-weight: 400;
+  color: #262626;
+  text-align: right;
+}

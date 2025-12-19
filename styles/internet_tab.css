@@ -1,4 +1,29 @@
+@media (max-width: 1600px) {
+  #prod {
+    padding: 0 40px 140px;
+  }
+
+  /* 탭 버튼 줄바꿈 허용(필요시) */
+  #prod .tab_wrap {
+    max-width: 100%;
+    gap: 16px;
+    padding: 40px 0;
+  }
+}
 @media (max-width: 1200px) {
+  /* 좌우 260px 고정 패딩 때문에 화면이 터지니 축소 */
+  #prod {
+    padding: 0 40px 140px;
+  }
+
+  /* 탭 버튼 줄바꿈 허용(필요시) */
+  #prod .tab_wrap {
+    max-width: 100%;
+    gap: 16px;
+    padding: 40px 0;
+  }
+
+  /* 카드 3열 → 2열 */
   .card_wrap {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }

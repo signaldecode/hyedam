@@ -15,10 +15,9 @@
     <link rel="stylesheet" href="../../css/style_tab.css" />
     <link rel="stylesheet" href="../../css/style_mob.css" />
     <link rel="stylesheet" href="../../css/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="../../styles/internet.css" />
-    <link rel="stylesheet" href="../../styles/internet_tab.css" />
-    <link rel="stylesheet" href="../../styles/internet_mob.css" />
-    <script src="../../js/internet.js"></script>
+    <link rel="stylesheet" href="../../styles/plan.css" />
+    <link rel="stylesheet" href="../../styles/plan_tab.css" />
+    <link rel="stylesheet" href="../../styles/plan_mob.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
@@ -114,60 +113,36 @@
               </div>
             </div>
           </div>
-          <!--visual_slide-->
-        </div>
-        <section id="prod">
-          <div class="tab_wrap">
-            <button class="tab_btn is-active" data-tab="internet_only" type="button">
-              <span>인터넷 단독</span>
-              <span class="tab_icon tab_icon--internet"></span>
-            </button>
-
-            <button class="tab_btn" data-tab="internet_tv" type="button">
-              <span>인터넷+TV</span>
-              <span class="tab_icon tab_icon--tv"></span>
-            </button>
-
-            <button class="tab_btn" data-tab="internet_sim" type="button">
-              <span>인터넷+유심</span>
-              <span class="tab_icon tab_icon--sim"></span>
-            </button>
+        <section id="plan">
+          <div
+            class="tab_wrap"
+            id="providerTabs"
+            role="tablist"
+            aria-label="통신사 선택"
+          ></div>
+          <p class="plan_title">요금 안내</p>
+          <div
+            class="speed_wrap"
+            id="speedTabs"
+            role="tablist"
+            aria-label="속도 선택"
+          ></div>
+          <div class="plan_table_wrap">
+            <table class="plan_table" aria-label="요금제 테이블">
+              <thead>
+                <tr>
+                  <th scope="col">상품</th>
+                  <th scope="col">월요금</th>
+                  <th scope="col">가입혜택</th>
+                </tr>
+              </thead>
+              <tbody id="planTableBody"></tbody>
+            </table>
           </div>
-          <div class="prod_wrap">
-            <h2></h2>
-            <div class="prod_check_wrap">
-              <div class="check_item">
-                <input id="wifi" type="checkbox" class="check_input">
-                <label for="wifi" class="prod_item">
-                  <span class="check_icon"><img src="../../images/icons/sub_check.svg" alt="체크" /></span>
-                  <span>WiFi</span>
-                </label>
-              </div>
-                <div class="check_item">
-                  <input id="phone" type="checkbox" class="check_input">
-                  <label for="phone" class="prod_item">
-                    <span class="check_icon"><img src="../../images/icons/sub_check.svg" alt="체크" /></span>
-                    <span>휴대폰 결합</span>
-                  </label>
-                </div>
-              </div>
-            </div>
-            <div class="card_wrap">
-              <article class="plan_card">
-              </article>
-            </div>
-            <span class="noti_text">
-              ※ 월 요금은 3년 약정 기준입니다.<br/>※ 부가세 포함 기준입니다.
-            </span>
-            <div class="more_btn_wrap">
-              인터넷+TV 상품 더보기
-              <img src="../../images/icons/sub_arrow.svg" alt="인터넷+TV 상품 더보기" />
-            </div>
-            <div class="card_wrap card_wrap--more" id="cardMore"></div>
-          </div>
+          <p class="plan_note">* WiFi 기본제공  * VAT 포함</p>
         </section>
+        <script src="../../js/plan.js"></script>
       </main>
-      <!--//main -->
       <footer id="footer">
         <div class="f_bot">
           <div class="inner">

@@ -1,0 +1,114 @@
+{
+  "providers": [
+    {
+      "id": "skylife",
+      "label": "sky life",
+      "speeds": [
+        {
+          "id": "100m",
+          "label": "100메가",
+          "plans": [
+            { "product": "인터넷 단독", "monthly": 22000, "benefit": "조건별 상이" },
+            { "product": "인터넷+IPTV 베이직(194채널)", "monthly": 29700, "benefit": "조건별 상이" },
+            { "product": "인터넷+IPTV 베이직(194채널) 30% 요금 할인형", "monthly": 20900, "benefit": "조건별 상이" }
+          ]
+        },
+        {
+          "id": "200m",
+          "label": "200메가",
+          "plans": [
+            { "product": "인터넷 단독", "monthly": 25300, "benefit": "조건별 상이" },
+            { "product": "인터넷+IPTV 베이직", "monthly": 31900, "benefit": "조건별 상이" },
+            { "product": "인터넷+IPTV(할인형)", "monthly": 23100, "benefit": "조건별 상이" }
+          ]
+        },
+        {
+          "id": "500m",
+          "label": "500메가",
+          "plans": [
+            { "product": "인터넷 단독", "monthly": 33000, "benefit": "조건별 상이" },
+            { "product": "인터넷+IPTV 베이직", "monthly": 37400, "benefit": "조건별 상이" },
+            { "product": "인터넷+IPTV 플러스", "monthly": 38500, "benefit": "조건별 상이" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hellovision",
+      "label": "헬로비젼",
+      "speeds": [
+        {
+          "id": "100m",
+          "label": "100메가",
+          "plans": [
+            { "product": "인터넷 단독", "monthly": 20790, "benefit": "조건별 상이" },
+            { "product": "인터넷+TV 이코노미", "monthly": 29530, "benefit": "조건별 상이" },
+            { "product": "인터넷+TV 뉴베이직", "monthly": 36460, "benefit": "조건별 상이" },
+            { "product": "인터넷+TV 프리미엄", "monthly": 38660, "benefit": "조건별 상이" }
+          ]
+        },
+        { "id": "160m", "label": "160메가", "plans": [
+            { "product": "인터넷 단독", "monthly": 26510, "benefit": "조건별 상이" },
+            { "product": "인터넷+TV 이코노미", "monthly": 34260, "benefit": "조건별 상이" },
+            { "product": "인터넷+TV 뉴베이직", "monthly": 36460, "benefit": "조건별 상이" },
+            { "product": "인터넷+TV 프리미엄", "monthly": 38660, "benefit": "조건별 상이" }
+          ]
+         },
+        {
+          "id": "500m",
+          "label": "500메가",
+          "plans":  [
+            { "product": "인터넷 단독", "monthly": 30360, "benefit": "조건별 상이" },
+            { "product": "인터넷+TV 이코노미", "monthly": 37290, "benefit": "조건별 상이" },
+            { "product": "인터넷+TV 뉴베이직", "monthly": 39490, "benefit": "조건별 상이" },
+            { "product": "인터넷+TV 프리미엄", "monthly": 43690, "benefit": "조건별 상이" }
+          ]
+        },
+        { "id": "1g", "label": "1기가", "plans": [
+            { "product": "인터넷 단독", "monthly": 31900, "benefit": "조건별 상이" },
+            { "product": "인터넷+TV 이코노미", "monthly": 38500, "benefit": "조건별 상이" },
+            { "product": "인터넷+TV 뉴베이직", "monthly": 40700, "benefit": "조건별 상이" },
+            { "product": "인터넷+TV 프리미엄", "monthly": 42900, "benefit": "조건별 상이" }
+          ]
+         }
+      ]
+    },
+    {
+      "id": "pop",
+      "label": "POP",
+      "speeds": [
+        {
+          "id": "100m",
+          "label": "100메가",
+          "plans": [
+            { "product": "인터넷 단독", "monthly": 22000, "benefit": "조건별 상이" },
+            { "product": "인터넷+IPTV 베이직(194채널)", "monthly": 29700, "benefit": "조건별 상이" },
+            { "product": "인터넷+IPTV 베이직(194채널) 30% 요금 할인형", "monthly": 20900, "benefit": "조건별 상이" }
+          ]
+        },
+        {
+          "id": "200m",
+          "label": "200메가",
+          "plans": [
+            { "product": "인터넷 단독", "monthly": 25300, "benefit": "조건별 상이" },
+            { "product": "인터넷+IPTV 베이직", "monthly": 31900, "benefit": "조건별 상이" },
+            { "product": "인터넷+IPTV(할인형)", "monthly": 23100, "benefit": "조건별 상이" }
+          ]
+        },
+        {
+          "id": "500m",
+          "label": "500메가",
+          "plans": [
+            { "product": "인터넷 단독", "monthly": 33000, "benefit": "조건별 상이" },
+            { "product": "인터넷+IPTV 베이직", "monthly": 37400, "benefit": "조건별 상이" },
+            { "product": "인터넷+IPTV 플러스", "monthly": 38500, "benefit": "조건별 상이" }
+          ]
+        }
+      ]
+    }
+  ],
+  "rules": {
+    "defaultProviderId": "skylife",
+    "defaultSpeedId": "100m"
+  }
+}
