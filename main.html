@@ -35,35 +35,35 @@
           <nav id="gnb">
             <ul>
               <li>
-                <a href="hyedam/pages/kt/ktInternet.html">KT</a>
+                <a href="pages/kt/ktInternet.html">KT</a>
                 <ul class="info">
-                  <li><a href="hyedam/pages/kt/ktInternet.html">인터넷 단독</a></li>
-                  <li><a href="hyedam/pages/kt/ktInternet.html">인터넷+TV</a></li>
+                  <li><a href="pages/kt/ktInternet.html">인터넷 단독</a></li>
+                  <li><a href="pages/kt/ktInternet.html">인터넷+TV</a></li>
                   <li><a href="pages/kt/detail.html">인터넷+유심</a></li>
                 </ul>
               </li>
               <li>
-                <a href="hyedam/pages/kt/ktInternet.html">LG</a>
+                <a href="pages/kt/ktInternet.html">LG</a>
                 <ul class="info">
-                  <li><a href="hyedam/pages/kt/ktInternet.html">인터넷 단독</a></li>
-                  <li><a href="hyedam/pages/kt/ktInternet.html">인터넷+TV</a></li>
-                  <li><a href="hyedam/pages/kt/ktInternet.html">인터넷+유심</a></li>
+                  <li><a href="pages/kt/ktInternet.html">인터넷 단독</a></li>
+                  <li><a href="pages/kt/ktInternet.html">인터넷+TV</a></li>
+                  <li><a href="pages/kt/ktInternet.html">인터넷+유심</a></li>
                 </ul>
               </li>
               <li>
-                <a href="hyedam/pages/kt/ktInternet.html">SK</a>
+                <a href="pages/kt/ktInternet.html">SK</a>
                 <ul class="info">
-                  <li><a href="hyedam/pages/kt/ktInternet.html">인터넷 단독</a></li>
-                  <li><a href="hyedam/pages/kt/ktInternet.html">인터넷+TV</a></li>
-                  <li><a href="hyedam/pages/kt/ktInternet.html">인터넷+유심</a></li>
+                  <li><a href="pages/kt/ktInternet.html">인터넷 단독</a></li>
+                  <li><a href="pages/kt/ktInternet.html">인터넷+TV</a></li>
+                  <li><a href="pages/kt/ktInternet.html">인터넷+유심</a></li>
                 </ul>
               </li>
               <li>
-                <a href="hyedam/pages/kt/ktInternet.html">알뜰인터넷</a>
+                <a href="pages/internet/plan.html">알뜰인터넷</a>
                 <ul class="info">
-                  <li><a href="hyedam/pages/kt/ktInternet.html">sky life+유심</a></li>
-                  <li><a href="hyedam/pages/kt/ktInternet.html">헬로비전</a></li>
-                  <li><a href="hyedam/pages/kt/ktInternet.html">POP</a></li>
+                  <li><a href="pages/internet/plan.html">sky life+유심</a></li>
+                  <li><a href="pages/internet/plan.html">헬로비전</a></li>
+                  <li><a href="pages/internet/plan.html">POP</a></li>
                 </ul>
               </li>
               <li>
@@ -1333,40 +1333,14 @@
       $dates.each(function (idx) {
         $(this).text(formatDate(dateList[idx]));
       });
-
-      let fix_top = $(".fix_form_wrap").offset().top;
-      let win_height = $(window).height();
-      let s_top = $("html").scroll();
-      let formHeight = $(".fix_form").outerHeight();
-      if (s_top + win_height - formHeight >= fix_top) {
-        $(".fix_form").css("position", "relative");
-      } else {
-        $(".fix_form").css("position", "fixed");
-      }
-      $(window).on("scroll", function () {
-        s_top = $("html").scrollTop();
-        console.log(s_top);
-        console.log(fix_top);
-        if (s_top + win_height - formHeight >= fix_top) {
-          $(".fix_form").css("position", "relative");
-        } else {
-          $(".fix_form").css("position", "fixed");
-        }
-      });
-      $("#gnb ul li").on("mouseenter", function () {
-        $(this).find(".info").stop(true).fadeIn(300);
-      });
-      $("#gnb ul li").on("mouseleave", function () {
-        $(this).find(".info").fadeOut(300);
-      });
       var swiper = new Swiper("#visual_wrap .swiper", {
         loop: true,
         effect: "fade",
         autoplay: {
-          delay: 3000,
-          disableOnInteraction: false,
+            delay: 3000,
+            disableOnInteraction: false,
         },
-      });
+    });
       var swiper = new Swiper(".sec01_slider_wrap .swiper", {
         loop: true,
         observer: true,
@@ -1426,16 +1400,7 @@
         },
       });
 
-      $(".scroll_top").on("click", function (e) {
-        e.preventDefault();
-
-        $("html, body").animate(
-          {
-            scrollTop: 0,
-          },
-          500
-        ); // 0.5초
-      });
+      
 
       $(".faq .txt01 em").click(function () {
         $(this).parents("li").find(".txt02").stop(true).slideToggle();
