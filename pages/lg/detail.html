@@ -4,14 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hyedom | 휴대폰 유심이동 서비스</title>
-    <base href="/hyedam/" />
+    <base href="/" />
     <link rel="stylesheet" href="fonts/pretendard/pretendard.css" />
     <link rel="stylesheet" href="css/style_pc.css" />
     <link rel="stylesheet" href="css/style_tab.css" />
     <link rel="stylesheet" href="css/style_mob.css" />
     <link rel="stylesheet" href="css/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="styles/detail.css" />
-
+    <link rel="stylesheet" href="styles/internet.css" />
+    <link rel="stylesheet" href="styles/internet_tab.css" />
+    <link rel="stylesheet" href="styles/internet_mob.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
@@ -36,27 +37,63 @@
           <nav id="gnb">
             <ul>
               <li>
-                <a href="internet.html">KT</a>
+                <a href="pages/kt/Internet.html?tab=internet_only">KT</a>
                 <ul class="info">
-                  <li><a href="internet.html">인터넷 단독</a></li>
-                  <li><a href="internet.html">인터넷+TV</a></li>
-                  <li><a href="detail.html">인터넷+유심</a></li>
+                  <li>
+                    <a href="pages/kt/Internet.html?tab=internet_only"
+                      >인터넷 단독</a
+                    >
+                  </li>
+                  <li>
+                    <a href="pages/kt/Internet.html?tab=internet_tv"
+                      >인터넷+TV</a
+                    >
+                  </li>
+                  <li>
+                    <a href="pages/kt/detail.html?tab=internet_sim"
+                      >인터넷+유심</a
+                    >
+                  </li>
                 </ul>
               </li>
               <li>
-                <a href="pages/kt/ktInternet.html">LG</a>
+                <a href="pages/lg/internet.html?tab=internet_only">LG</a>
                 <ul class="info">
-                  <li><a href="pages/kt/ktInternet.html">인터넷 단독</a></li>
-                  <li><a href="pages/kt/ktInternet.html">인터넷+TV</a></li>
-                  <li><a href="pages/kt/ktInternet.html">인터넷+유심</a></li>
+                  <li>
+                    <a href="pages/lg/internet.html?tab=internet_only"
+                      >인터넷 단독</a
+                    >
+                  </li>
+                  <li>
+                    <a href="pages/lg/internet.html?tab=internet_tv"
+                      >인터넷+TV</a
+                    >
+                  </li>
+                  <li>
+                    <a href="pages/lg/detail.html?tab=internet_sim"
+                      >인터넷+유심</a
+                    >
+                  </li>
                 </ul>
               </li>
               <li>
-                <a href="pages/kt/ktInternet.html">SK</a>
+                <a href="pages/sk/internet.html?tab=internet_only">SK</a>
                 <ul class="info">
-                  <li><a href="pages/kt/ktInternet.html">인터넷 단독</a></li>
-                  <li><a href="pages/kt/ktInternet.html">인터넷+TV</a></li>
-                  <li><a href="pages/kt/ktInternet.html">인터넷+유심</a></li>
+                  <li>
+                    <a href="pages/sk/internet.html?tab=internet_only"
+                      >인터넷 단독</a
+                    >
+                  </li>
+                  <li>
+                    <a href="pages/sk/internet.html?tab=internet_tv"
+                      >인터넷+TV</a
+                    >
+                  </li>
+                  <li>
+                    <a href="pages/sk/detail.html?tab=internet_sim"
+                      >인터넷+유심</a
+                    >
+                  </li>
                 </ul>
               </li>
               <li>
@@ -125,6 +162,31 @@
             </div>
           </div>
         </div>
+
+        <!-- 인터넷 탭 UI (페이지 이동처럼 동작) -->
+        <section id="prod">
+          <div class="tab_wrap">
+            <button class="tab_btn" data-tab="internet_only" type="button">
+              <span>인터넷 단독</span>
+              <span class="tab_icon tab_icon--internet"></span>
+            </button>
+
+            <button class="tab_btn" data-tab="internet_tv" type="button">
+              <span>인터넷+TV</span>
+              <span class="tab_icon tab_icon--tv"></span>
+            </button>
+
+            <button
+              class="tab_btn is-active"
+              data-tab="internet_sim"
+              type="button"
+            >
+              <span>인터넷+유심</span>
+              <span class="tab_icon tab_icon--sim"></span>
+            </button>
+          </div>
+        </section>
+
         <section class="section-intro">
           <div class="details_inner">
             <div class="top-badge">Hyedam</div>
@@ -501,6 +563,7 @@
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/internet.js"></script>
     <script>
       function toggleFaq(element) {
         const items = document.querySelectorAll(".faq-item");

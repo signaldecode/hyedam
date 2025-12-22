@@ -62,7 +62,7 @@
         {
           "id": "internet-2",
           "badge": "베스트",
-          "name": "인터넷 베이직 500M",
+          "name": "와이파이기본_기가슬림안심 500M",
           "ribbon": true,
           "base": {
             "finalMonthly": 39600,
@@ -93,7 +93,7 @@
 
         {
           "id": "internet-3",
-          "badge": "최대 혜택",
+          "badge": "최대 할인",
           "name": "와이파이기본_기가슬림안심 1G",
           "base": {
             "finalMonthly": 38500,
@@ -161,7 +161,7 @@
         {
           "id": "internet_tv2",
           "badge": "최저가",
-          "name": "인터넷 베이직 500M+지니 TV 모든G",
+          "name": "와이파이기본_기가슬림안심+실속형",
           "ribbon": true,
           "base": {
             "finalMonthly": 45100,
@@ -192,7 +192,7 @@
         },
          {
           "id": "internet_tv3",
-          "badge": "특별 혜택",
+          "badge": "최저가",
           "name": "와이파이기본_기가안심+실속형",
           "base": {
             "finalMonthly": 50600,
