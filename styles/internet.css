@@ -57,8 +57,13 @@
   justify-content: center;
   flex-direction: column;
   text-align: center;
+  margin-top: 150px;
 }
-
+#prod .prod_wrap h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #262626;
+}
 #prod .prod_wrap .prod_check_wrap {
   display: flex;
   align-items: center;
@@ -88,6 +93,19 @@
   font-size: 24px;
   text-align: center;
   font-weight: 700;
+}
+
+.prod_check_wrap .check_item.is-disabled .prod_item {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.prod_check_wrap .check_item.is-disabled .prod_item .check_icon {
+  background: #e4e4e4;
+}
+
+.prod_check_wrap .check_item.is-disabled .prod_item .check_icon img {
+  opacity: 0.35;
 }
 
 .check_input:checked + .prod_item .check_icon {
@@ -267,4 +285,10 @@
 
 .more_btn_wrap.is-open img {
   transform: rotate(180deg);
+}
+
+.plan_spec .plan_row:first-child dd {
+  text-decoration: line-through;
+  text-decoration-thickness: 2px;
+  text-decoration-color: currentColor;
 }
