@@ -306,6 +306,9 @@ body,
 #visual_wrap img {
   display: none;
 }
+#visual_wrap .pc_img{
+    height: 777px;
+}
 #visual_wrap .visual_txt {
   position: absolute;
   left: 0;
@@ -1309,4 +1312,10 @@ body,
   font-size: 12px;
   font-weight: 400;
   line-height: 18px;
+}
+#mob_nav{
+  display: none;
+}
+.mob_quick{
+  display: none;
 }

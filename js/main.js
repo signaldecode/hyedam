@@ -28,9 +28,23 @@
         e.preventDefault();
 
     $("html, body").animate(
-        {
-        scrollTop: 0,
-        },
-        500
-    ); // 0.5초
+            {
+            scrollTop: 0,
+            },
+            500
+        ); // 0.5초
+    });
+    $('#mob_nav em a').on('click',function(){
+        $(this).parents('.mob_menu').find('ul').stop(true).slideToggle();
+        $('#mob_nav em a').not(this).parents('.mob_menu').find('ul').stop(true).slideUp();
+    });
+    $('#mob_nav .close_btn').on('click',function(){
+        $('#mob_nav').fadeOut();
+    });
+    $('#mob_header .nav_btn').on('click',function(){
+        $('#mob_nav').fadeIn();
+    });
+    $('.quick_open').on('click',function(){
+        $(this).parents('.mob_quick').find('ul').stop(true,true).fadeToggle();
+        $(this).parents('.mob_quick').toggleClass('on');
     });
