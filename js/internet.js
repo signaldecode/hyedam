@@ -277,7 +277,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             : ""
         }
         ${ribbonHtml}
-        <img src="../../images/icons/sub_monitor.svg" alt="${tabTitle}" />
+        <img src="images/icons/sub_monitor.svg" alt="${tabTitle}" />
         <h3 class="plan_title">${card.name}</h3>
 
         <div class="plan_price">
@@ -293,7 +293,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         <div class="plan_actions">
           ${isTvTab ? `<p class="plan_note">※ 셋탑박스 임대료 포함</p>` : ""}
-          <a class="plan_btn" href="../form.html">${card.cta?.label || "상담문의"}</a>
+          <a class="plan_btn" href="pages/form.html">${card.cta?.label || "상담문의"}</a>
         </div>
       </article>
     `;

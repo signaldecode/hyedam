@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hyedom | 휴대폰 유심이동 서비스</title>
-    <base href="/" />
+    <base href="/hyedam/"/>
     <link rel="stylesheet" href="fonts/pretendard/pretendard.css" />
     <link rel="stylesheet" href="css/style_pc.css" />
     <link rel="stylesheet" href="css/style_tab.css" />
@@ -108,15 +108,15 @@
                 <a href="#">회사소개</a>
                 <ul class="info">
                   <li>
-                    <a href="hyedam/pages/kt/ktInternet.html">회사소개</a>
+                    <a href="pages/kt/ktInternet.html">회사소개</a>
                   </li>
                   <li>
-                    <a href="hyedam/pages/kt/ktInternet.html"
+                    <a href="pages/kt/ktInternet.html"
                       >통신판매업 신고증</a
                     >
                   </li>
                   <li>
-                    <a href="hyedam/pages/kt/ktInternet.html">대표자 인사말</a>
+                    <a href="pages/kt/ktInternet.html">대표자 인사말</a>
                   </li>
                 </ul>
               </li>
@@ -125,7 +125,7 @@
           <!--nav-->
           <a href="#" class="call">
             <figure>
-              <img src="../../images/header_icon01_pc.svg" alt="전화 아이콘" />
+              <img src="images/header_icon01_pc.svg" alt="전화 아이콘" />
               <figcaption>전화 아이콘</figcaption>
             </figure>
             <em>1588-2637</em>
@@ -140,7 +140,104 @@
             <figcaption></figcaption>
           </figure>
         </a>
-        <button></button>
+        <button class="nav_btn"></button>
+      </div>
+      <div id="mob_nav">
+        <div class="mob_nav_header">
+        <buttton class="close_btn"></buttton>
+        </div>
+        <div class="mob_menu">
+            <em>
+                <a href="javascript:void(0);">KT</a>
+            </em>
+            <ul class="info">
+                <li>
+                    <a href="pages/kt/Internet.html?tab=internet_only">
+                        인터넷 단독
+                    </a>
+                </li>
+                <li>
+                    <a href="pages/kt/Internet.html?tab=internet_tv">
+                        인터넷+TV
+                    </a>
+                </li>
+                <li>
+                    <a href="pages/kt/detail.html?tab=internet_sim">
+                        인터넷+유심
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="mob_menu">
+          <em>
+            <a href="javascript:void(0);">LG</a>
+          </em>
+          <ul class="info">
+            <li>
+                <a href="pages/lg/internet.html?tab=internet_only"
+                    >인터넷 단독</a
+                >
+                </li>
+                <li>
+                <a href="pages/lg/internet.html?tab=internet_tv"
+                    >인터넷+TV</a
+                >
+                </li>
+                <li>
+                <a href="pages/lg/detail.html?tab=internet_sim"
+                    >인터넷+유심</a
+                >
+            </li>
+          </ul>
+        </div>
+        <div class="mob_menu">
+          <em>
+            <a href="javascript:void(0);">SK</a>
+          </em>
+          <ul class="info">
+            <li>
+                <a href="pages/sk/internet.html?tab=internet_only"
+                    >인터넷 단독</a
+                >
+            </li>
+            <li>
+                <a href="pages/sk/internet.html?tab=internet_tv"
+                    >인터넷+TV</a
+                >
+            </li>
+            <li>
+                <a href="pages/sk/detail.html?tab=internet_sim"
+                    >인터넷+유심</a
+                >
+            </li>
+          </ul>
+        </div>
+        <div class="mob_menu">
+          <em>
+            <a href="javascript:void(0);">알뜰인터넷</a>
+          </em>
+          <ul class="info">
+            <li><a href="pages/internet/plan.html">sky life+유심</a></li>
+            <li><a href="pages/internet/plan.html">헬로비전</a></li>
+            <li><a href="pages/internet/plan.html">POP</a></li>
+          </ul>
+        </div>
+        <div class="mob_menu">
+          <em>
+            <a href="javascript:void(0);">회사소개</a>
+          </em>
+          <ul class="info">
+            <li>
+              <a href="pages/kt/ktInternet.html">회사소개</a>
+            </li>
+            <li>
+              <a href="pages/kt/ktInternet.html">통신판매업 신고증</a>
+            </li>
+            <li>
+              <a href="pages/kt/ktInternet.html">대표자 인사말</a>
+            </li>
+          </ul>
+        </div>
       </div>
       <main class="container">
         <div id="visual_wrap">
@@ -503,6 +600,7 @@
           </div>
         </div>
         <div class="quick_menu">
+          <button class="mob_qiuck"></button>
           <ul>
             <li>
               <a href="#">
@@ -516,8 +614,11 @@
             <li>
               <a href="#">
                 <figure>
-                  <img src="images/quick_icon02.svg" alt="카카오톡 아이콘" />
-                  <figcaption>카카오톡 아이콘</figcaption>
+                  <img
+                    src="images/quick_icon02.svg"
+                    alt="빠르게 견적 받기 아이콘"
+                  />
+                  <figcaption>빠르게 견적 받기 아이콘</figcaption>
                 </figure>
                 <em>빠르게<br />견적받기</em>
               </a>
@@ -525,8 +626,8 @@
             <li>
               <a href="#">
                 <figure>
-                  <img src="images/quick_icon03.svg" alt="카카오톡 아이콘" />
-                  <figcaption>카카오톡 아이콘</figcaption>
+                  <img src="images/quick_icon03.svg" alt="유튜브 아이콘" />
+                  <figcaption>유튜브 아이콘</figcaption>
                 </figure>
                 <em>유튜브</em>
               </a>
@@ -534,8 +635,56 @@
           </ul>
           <button class="scroll_top">TOP<span></span>↑</button>
         </div>
+        <div class="mob_quick">
+          <ul>
+            <li>
+              <a href="#">
+                <figure>
+                  <img src="images/quick_icon01.svg" alt="카카오톡 아이콘" />
+                  <figcaption>카카오톡 아이콘</figcaption>
+                </figure>
+                <em>카톡문의</em>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <figure>
+                  <img
+                    src="images/quick_icon02.svg"
+                    alt="빠르게 견적 받기 아이콘"
+                  />
+                  <figcaption>빠르게 견적 받기 아이콘</figcaption>
+                </figure>
+                <em>빠르게<br />견적받기</em>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <figure>
+                  <img src="images/quick_icon03.svg" alt="유튜브 아이콘" />
+                  <figcaption>유튜브 아이콘</figcaption>
+                </figure>
+                <em>유튜브</em>
+              </a>
+            </li>
+          </ul>
+          <button class="quick_open"></button>
+        </div>
       </main>
       <footer id="footer">
+        <div class="f_top">
+          <div class="inner">
+            <strong>대표전화</strong>
+            <a href="tel:1588-2637">1588-2637</a>
+            <div class="txt">
+              <p>
+                <em>영업시간안내</em><br />
+                평일 10:00 ~ 18:00│점심 13:00 ~ 14:00 <span>│</span>휴무 :
+                일요일, 국가지정공휴일
+              </p>
+            </div>
+          </div>
+        </div>
         <div class="f_bot">
           <div class="inner">
             <a class="foot_logo" href="#">
@@ -551,9 +700,9 @@
               <br />
               주식회사 혜담│대표 : 김재일│사업자등록번호 : 307-88-03380<br />
               사업자등록주소 : 서울특별시 영등포구 영등포로 150
-              생각공장│대표번호 : 1588-2637 (유료)│메일 : marketing@ludam.net<br />
+              생각공장│대표번호 : 1588-2637 (유료)│메일 : hyedam2025@gmail.com<br />
               <br />
-              개인정보책임관리자 : 배세열
+              개인정보 보호담당자 : 조하늘 │ 문의 : hyedam2025@gmail.com
             </address>
             <p class="copyright">ⓒ 2025 HYEDAM.All rights reserved.</p>
           </div>

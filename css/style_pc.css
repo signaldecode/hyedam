@@ -306,12 +306,9 @@ body,
 #visual_wrap img {
   display: none;
 }
-<<<<<<< Updated upstream
-=======
 #visual_wrap .pc_img {
   height: 777px;
 }
->>>>>>> Stashed changes
 #visual_wrap .visual_txt {
   position: absolute;
   left: 0;
@@ -1317,12 +1314,9 @@ body,
   font-weight: 400;
   line-height: 18px;
 }
-<<<<<<< Updated upstream
-=======
 #mob_nav {
   display: none;
 }
 .mob_quick {
   display: none;
 }
->>>>>>> Stashed changes
