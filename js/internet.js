@@ -3,36 +3,35 @@ const PLAN_URL = SCRIPT_EL?.dataset?.plan || "../../json/planData.json";
 const DETAIL_URL = SCRIPT_EL?.dataset?.detail || "detail.html";
 
 document.addEventListener("DOMContentLoaded", async () => {
-  const res = await fetch(PLAN_URL);
-  const plan = await res.json();
-
   // 통신사 판별
   // - 권장: 각 페이지의 <script src="...internet.js" data-provider="kt|lg|sk"> 로 명시
-  // - 현재는 data-plan 파일명 기반으로 fallback 처리
+  // - 현재는 URL 경로 > data-plan 파일명 기반으로 fallback 처리
   const PROVIDER = String(SCRIPT_EL?.dataset?.provider || "").toLowerCase();
   const inferredProvider = (() => {
+    const path = String(window.location.pathname || "").toLowerCase();
+    if (path.includes("/pages/lg/") || path.includes("/lg/")) return "lg";
+    if (path.includes("/pages/sk/") || path.includes("/sk/")) return "sk";
+    if (path.includes("/pages/kt/") || path.includes("/kt/")) return "kt";
+
     const u = String(PLAN_URL || "").toLowerCase();
     if (u.includes("plandal") || u.includes("plandatalg")) return "lg";
     if (u.includes("plandask") || u.includes("plandatask")) return "sk";
     // 기본값은 KT
     return "kt";
   })();
-  const isKt = (PROVIDER || inferredProvider) === "kt";
+  const provider = (PROVIDER || inferredProvider || "kt").toLowerCase();
+  const isKt = provider === "kt";
+  const isDetailPage = /\/detail\.html$/i.test(window.location.pathname);
+  const internetPageFile = provider === "kt" ? "Internet.html" : "internet.html";
+  const internetPagePath = isDetailPage
+    ? window.location.pathname.replace(/detail\.html$/i, internetPageFile)
+    : internetPageFile;
 
   const state = {
     tabId: "internet_only",
     showMore: false,
     opts: { wifi: false, mobile_bundle: false },
   };
-
-  // 탭 파라미터로 탭 지정 (예: ?tab=internet_tv)
-  const urlTab = new URLSearchParams(window.location.search).get("tab");
-  if (urlTab === "internet_sim") {
-    // "인터넷+유심"은 별도 페이지로 이동
-    window.location.replace(DETAIL_URL);
-    return;
-  }
-  if (urlTab === "internet_only" || urlTab === "internet_tv") state.tabId = urlTab;
 
   const els = {
     tabs: document.querySelector("#prod .tab_wrap"),
@@ -48,12 +47,72 @@ document.addEventListener("DOMContentLoaded", async () => {
     // 더보기 카드 영역
     cardsMore: document.querySelector("#prod #cardMore"),
 
-    wifi: document.querySelector('#prod .check_input#wifi'),
+    wifi: document.querySelector("#prod .check_input#wifi"),
     mobile:
-      document.querySelector('#prod .check_input#mobile_bundle') ||
-      document.querySelector('#prod .check_input#phone'),
+      document.querySelector("#prod .check_input#mobile_bundle") ||
+      document.querySelector("#prod .check_input#phone"),
 
     moreBtn: document.querySelector("#prod .more_btn_wrap"),
+  };
+
+  const setActiveTab = (tabId) => {
+    els.tabBtns()?.forEach((b) =>
+      b.classList.toggle("is-active", b.dataset.tab === tabId)
+    );
+  };
+
+  // 탭 파라미터로 탭 지정 (예: ?tab=internet_tv)
+  const urlTab = new URLSearchParams(window.location.search).get("tab");
+  const normalizedTab =
+    urlTab === "internet_only" || urlTab === "internet_tv" || urlTab === "internet_sim"
+      ? urlTab
+      : null;
+
+  // 유심 페이지 탭 클릭 시 active + 페이지 이동만 처리
+  if (isDetailPage) {
+    const initial = normalizedTab || "internet_sim";
+    setActiveTab(initial);
+
+    els.tabs?.addEventListener("click", (e) => {
+      const btn = e.target.closest(".tab_btn");
+      if (!btn) return;
+
+      const tab = btn.dataset.tab;
+      if (tab === "internet_sim") {
+        setActiveTab("internet_sim");
+        return;
+      }
+
+      window.location.href = `${internetPagePath}?tab=${tab}`;
+    });
+
+    return;
+  }
+
+  // 유심 탭하면 detail로 이동 + active 상태 전달
+  if (normalizedTab === "internet_sim") {
+    window.location.replace(`${DETAIL_URL}?tab=internet_sim`);
+    return;
+  }
+  if (normalizedTab === "internet_only" || normalizedTab === "internet_tv") state.tabId = normalizedTab;
+
+  // 여기부터는 카드 페이지
+  const res = await fetch(PLAN_URL);
+  const plan = await res.json();
+
+  const H2_TITLE = {
+    kt: {
+      internet_only: "인터넷 단독",
+      internet_tv: "인터넷+모든G",
+    },
+    lg: {
+      internet_only: "인터넷 단독",
+      internet_tv: "인터넷+IPTV",
+    },
+    sk: {
+      internet_only: "인터넷 단독",
+      internet_tv: "인터넷+IPTV",
+    },
   };
 
   const fmtWon = (n) => `${Number(n).toLocaleString("ko-KR")}원`;
@@ -100,7 +159,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         els.wifi.checked = true;
         els.wifi.disabled = true;
         state.opts.wifi = true;
-        if (wifiItem) wifiItem.classList.add("is-disabled");
+        //if (wifiItem) wifiItem.classList.add("is-disabled");
       } else {
         els.wifi.disabled = false;
         els.wifi.checked = false;
@@ -179,7 +238,9 @@ document.addEventListener("DOMContentLoaded", async () => {
     if (!els.moreBtn) return;
 
     const isTvTab = state.tabId === "internet_tv";
-    const shouldShow = isTvTab && totalCards > 3;
+    // KT만 "인터넷+TV 상품 더보기" 버튼 사용, SK는 전체 카드 항상 노출
+    const enableMore = provider === "kt";
+    const shouldShow = enableMore && isTvTab && totalCards > 3;
 
     els.moreBtn.style.display = shouldShow ? "" : "none";
     els.moreBtn.classList.toggle("is-open", state.showMore);
@@ -245,21 +306,24 @@ document.addEventListener("DOMContentLoaded", async () => {
     // 탭에 따라 옵션 UI/상태 동기화
     syncOptionAvailability();
 
-    if (els.title) els.title.textContent = tab.title;
+    const tabTitle = H2_TITLE?.[provider]?.[state.tabId] ?? tab.title;
+    if (els.title) els.title.textContent = tabTitle;
 
     const isTvTab = state.tabId === "internet_tv";
+    const enableMore = provider === "kt";
     const total = tab.cards.length;
 
-    // 기본 3개는 항상 상단 배치
-    const baseCards = isTvTab ? tab.cards.slice(0, 3) : tab.cards;
-    const baseHtml = baseCards.map((card) => renderCard(tab.title, card, isTvTab)).join("");
+    // KT: 인터넷+TV는 3개 + 더보기(최대 12개)
+    // SK: 인터넷+TV도 전체 카드 쭉 노출(더보기 버튼 없음)
+    const baseCards = enableMore && isTvTab ? tab.cards.slice(0, 3) : tab.cards;
+    const baseHtml = baseCards.map((card) => renderCard(tabTitle, card, isTvTab)).join("");
     if (els.cardsBase) els.cardsBase.innerHTML = baseHtml;
 
     // 추가 9개는 더보기 버튼 아래 배치
-    const moreCards = isTvTab ? tab.cards.slice(3, 12) : [];
+    const moreCards = enableMore && isTvTab ? tab.cards.slice(3, 12) : [];
     const moreHtml =
-      isTvTab && state.showMore
-        ? moreCards.map((card) => renderCard(tab.title, card, isTvTab)).join("")
+      enableMore && isTvTab && state.showMore
+        ? moreCards.map((card) => renderCard(tabTitle, card, isTvTab)).join("")
         : "";
     if (els.cardsMore) els.cardsMore.innerHTML = moreHtml;
 
@@ -272,14 +336,15 @@ document.addEventListener("DOMContentLoaded", async () => {
     if (!btn) return;
 
     if (btn.dataset.tab === "internet_sim") {
-      window.location.href = DETAIL_URL;
+      // "인터넷+유심" 클릭 시 detail로 이동 + active 상태 전달
+      window.location.href = `${DETAIL_URL}?tab=internet_sim`;
       return;
     }
 
     state.tabId = btn.dataset.tab;
     state.showMore = false; // 더보기 버튼 우선 false로 초기화
 
-    els.tabBtns().forEach((b) => b.classList.toggle("is-active", b === btn));
+    setActiveTab(state.tabId);
 
     // URL도 탭 상태와 동기화 (?tab=...)
     const params = new URLSearchParams(window.location.search);
@@ -310,8 +375,6 @@ document.addEventListener("DOMContentLoaded", async () => {
   });
 
   // 초기
-  els.tabBtns().forEach((b) =>
-    b.classList.toggle("is-active", b.dataset.tab === state.tabId)
-  );
+  setActiveTab(state.tabId);
   renderCards();
 });
