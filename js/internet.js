@@ -1,6 +1,6 @@
 const SCRIPT_EL = document.currentScript;
 const PLAN_URL = SCRIPT_EL?.dataset?.plan || "../../json/planData.json";
-const DETAIL_URL = SCRIPT_EL?.dataset?.detail || "detail.html";
+const DETAIL_URL = SCRIPT_EL?.dataset?.detail || "/pages/detail.html";
 
 document.addEventListener("DOMContentLoaded", async () => {
   // 통신사 판별
