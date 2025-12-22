@@ -2,7 +2,6 @@ document.addEventListener("DOMContentLoaded", async () => {
   const res = await fetch("../../json/planInternetData.json");
   const data = await res.json();
 
-
   const els = {
     providerTabs: document.querySelector("#providerTabs"),
     speedTabs: document.querySelector("#speedTabs"),
@@ -12,6 +11,43 @@ document.addEventListener("DOMContentLoaded", async () => {
   const state = {
     providerId: data.rules?.defaultProviderId || data.providers?.[0]?.id || null,
     speedId: data.rules?.defaultSpeedId || "100m",
+  };
+
+  // URL 파라미터로 탭 액티브 추가
+  const readQuery = () => {
+    const sp = new URLSearchParams(window.location.search);
+    return {
+      providerId: sp.get("provider"),
+      speedId: sp.get("speed"),
+    };
+  };
+
+  const getProviderById = (providerId) =>
+    data.providers.find((p) => p.id === providerId) || null;
+
+  const applyQueryToState = () => {
+    const q = readQuery();
+    if (q.providerId && getProviderById(q.providerId)) state.providerId = q.providerId;
+    if (q.speedId) state.speedId = q.speedId;
+  };
+
+  const syncUrl = (replace = false) => {
+    const sp = new URLSearchParams(window.location.search);
+    sp.set("provider", state.providerId || "");
+    sp.set("speed", state.speedId || "");
+    if (!state.providerId) sp.delete("provider");
+    if (!state.speedId) sp.delete("speed");
+
+    const next = `${window.location.pathname}${
+      sp.toString() ? `?${sp.toString()}` : ""
+    }${window.location.hash || ""}`;
+    const curr = `${window.location.pathname}${window.location.search}${
+      window.location.hash || ""
+    }`;
+    if (next === curr) return;
+
+    if (replace) window.history.replaceState({}, "", next);
+    else window.history.pushState({}, "", next);
   };
 
   const fmtMonthly = (n) => `${Number(n).toLocaleString("ko-KR")}`;
@@ -51,33 +87,33 @@ document.addEventListener("DOMContentLoaded", async () => {
     );
   };
 
-const renderSpeedTabs = () => {
-  const provider = getProvider();
-  if (!provider) return;
+  const renderSpeedTabs = () => {
+    const provider = getProvider();
+    if (!provider) return;
 
-  const speeds = provider.speeds || [];
+    const speeds = provider.speeds || [];
 
-  // 현재 speedId가 이 통신사에 없으면 첫 번째 speed로 보정
-  if (!speeds.some((s) => s.id === state.speedId)) {
-    state.speedId = speeds[0]?.id || "100m";
-  }
+    // 현재 speedId가 이 통신사에 없으면 첫 번째 speed로 보정
+    if (!speeds.some((s) => s.id === state.speedId)) {
+      state.speedId = speeds[0]?.id || "100m";
+    }
 
-  els.speedTabs.innerHTML = speeds
-    .map(
-      (s) => `
+    els.speedTabs.innerHTML = speeds
+      .map(
+        (s) => `
         <button class="tab_btn" type="button" role="tab" aria-selected="false" data-speed="${s.id}">
           <span>${s.label}</span>
         </button>
       `
-    )
-    .join("");
+      )
+      .join("");
 
-  setActive(
-    els.speedTabs,
-    ".tab_btn",
-    (btn) => btn.dataset.speed === state.speedId
-  );
-};
+    setActive(
+      els.speedTabs,
+      ".tab_btn",
+      (btn) => btn.dataset.speed === state.speedId
+    );
+  };
   const renderTable = () => {
     const plans = getPlans();
 
@@ -100,6 +136,7 @@ const renderSpeedTabs = () => {
     renderProviderTabs();
     renderSpeedTabs();
     renderTable();
+    syncUrl(true); // 상태 보정(특히 speedId) 이후 URL을 현재 상태로 정리
   };
 
   els.providerTabs.addEventListener("click", (e) => {
@@ -109,6 +146,7 @@ const renderSpeedTabs = () => {
     state.providerId = btn.dataset.provider;
     // 속도는 "고정 탭"이므로 유지
     renderAll();
+    syncUrl(false);
   });
 
   els.speedTabs.addEventListener("click", (e) => {
@@ -118,7 +156,16 @@ const renderSpeedTabs = () => {
     state.speedId = btn.dataset.speed;
     setActive(els.speedTabs, ".tab_btn", (b) => b.dataset.speed === state.speedId);
     renderTable();
+    syncUrl(false);
   });
 
+  // 초기: URL 파라미터로 탭 활성화
+  applyQueryToState();
   renderAll();
+
+  // 뒤로가기/앞으로가기: URL 기준으로 다시 활성화
+  window.addEventListener("popstate", () => {
+    applyQueryToState();
+    renderAll();
+  });
 });
