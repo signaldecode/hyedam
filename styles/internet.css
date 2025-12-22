@@ -35,22 +35,22 @@
 }
 
 #prod .tab_wrap button .tab_icon--internet {
-  background-image: url("../../images/icons/sub_internetIcon.svg");
+  background-image: url("../images/icons/sub_internetIcon.svg");
 }
 #prod .tab_wrap button.is-active .tab_icon--internet {
-  background-image: url("../../images/icons/sub_internet_act.svg");
+  background-image: url("../images/icons/sub_internet_act.svg");
 }
 #prod .tab_wrap button .tab_icon--tv {
-  background-image: url("../../images/icons/sub_tvIcon.svg");
+  background-image: url("../images/icons/sub_tvIcon.svg");
 }
 #prod .tab_wrap button.is-active .tab_icon--tv {
-  background-image: url("../../images/icons/sub_tv_act.svg");
+  background-image: url("../images/icons/sub_tv_act.svg");
 }
 #prod .tab_wrap button .tab_icon--sim {
-  background-image: url("../../images/icons/sub_simIcon.svg");
+  background-image: url("../images/icons/sub_simIcon.svg");
 }
 #prod .tab_wrap button.is-active .tab_icon--sim {
-  background-image: url("../../images/icons/sub_sim_act.svg");
+  background-image: url("../images/icons/sub_sim_act.svg");
 }
 #prod .prod_wrap {
   display: flex;
