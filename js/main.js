@@ -9,8 +9,9 @@
     }
     $(window).on("scroll", function () {
         s_top = $("html").scrollTop();
-        console.log(s_top);
-        console.log(fix_top);
+        win_height = $(window).height();
+        formHeight = $(".fix_form").outerHeight();
+        fix_top = $(".fix_form_wrap").offset().top;
         if (s_top + win_height - formHeight >= fix_top) {
             $(".fix_form").css("position", "relative");
         } else {
