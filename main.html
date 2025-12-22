@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <title></title>
-    <base href="/hyedam/">
+    <base href="/" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- App favicon -->
     <link rel="icon" href="images/favicon_size04.svg" type="image/x-icon" />
@@ -36,10 +36,18 @@
           <nav id="gnb">
             <ul>
               <li>
-                <a href="pages/kt/internet.html">KT</a>
+                <a href="pages/kt/Internet.html?tab=internet_only">KT</a>
                 <ul class="info">
-                  <li><a href="pages/kt/internet.html">인터넷 단독</a></li>
-                  <li><a href="pages/kt/internet.html">인터넷+TV</a></li>
+                  <li>
+                    <a href="pages/kt/Internet.html?tab=internet_only"
+                      >인터넷 단독</a
+                    >
+                  </li>
+                  <li>
+                    <a href="pages/kt/Internet.html?tab=internet_tv"
+                      >인터넷+TV</a
+                    >
+                  </li>
                   <li><a href="pages/kt/detail.html">인터넷+유심</a></li>
                 </ul>
               </li>
@@ -70,9 +78,17 @@
               <li>
                 <a href="#">회사소개</a>
                 <ul class="info">
-                  <li><a href="hyedam/pages/kt/ktInternet.html">회사소개</a></li>
-                  <li><a href="hyedam/pages/kt/ktInternet.html">통신판매업 신고증</a></li>
-                  <li><a href="hyedam/pages/kt/ktInternet.html">대표자 인사말</a></li>
+                  <li>
+                    <a href="hyedam/pages/kt/ktInternet.html">회사소개</a>
+                  </li>
+                  <li>
+                    <a href="hyedam/pages/kt/ktInternet.html"
+                      >통신판매업 신고증</a
+                    >
+                  </li>
+                  <li>
+                    <a href="hyedam/pages/kt/ktInternet.html">대표자 인사말</a>
+                  </li>
                 </ul>
               </li>
             </ul>
@@ -1338,10 +1354,10 @@
         loop: true,
         effect: "fade",
         autoplay: {
-            delay: 3000,
-            disableOnInteraction: false,
+          delay: 3000,
+          disableOnInteraction: false,
         },
-    });
+      });
       var swiper = new Swiper(".sec01_slider_wrap .swiper", {
         loop: true,
         observer: true,
@@ -1403,8 +1419,6 @@
           },
         },
       });
-
-      
 
       $(".faq .txt01 em").click(function () {
         $(this).parents("li").find(".txt02").stop(true).slideToggle();
