@@ -7,20 +7,20 @@
     } else {
         $(".fix_form").css("position", "fixed");
     }
-        $(window).on("scroll", function () {
-    s_top = $("html").scrollTop();
-    console.log(s_top);
-    console.log(fix_top);
-    if (s_top + win_height - formHeight >= fix_top) {
-        $(".fix_form").css("position", "relative");
-    } else {
-        $(".fix_form").css("position", "fixed");
-    }
+    $(window).on("scroll", function () {
+        s_top = $("html").scrollTop();
+        console.log(s_top);
+        console.log(fix_top);
+        if (s_top + win_height - formHeight >= fix_top) {
+            $(".fix_form").css("position", "relative");
+        } else {
+            $(".fix_form").css("position", "fixed");
+        }
     });
-        $("#gnb ul li").on("mouseenter", function () {
+    $("#gnb ul li").on("mouseenter", function () {
         $(this).find(".info").stop(true).fadeIn(300);
     });
-        $("#gnb ul li").on("mouseleave", function () {
+    $("#gnb ul li").on("mouseleave", function () {
         $(this).find(".info").fadeOut(300);
     });
     
