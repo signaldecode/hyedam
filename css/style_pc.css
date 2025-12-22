@@ -1,9 +1,9 @@
-
 @font-face {
-    font-family: 'SB Aggro';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroB.woff') format('woff');
-    font-weight: 700;
-    font-style: normal;
+  font-family: "SB Aggro";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroB.woff")
+    format("woff");
+  font-weight: 700;
+  font-style: normal;
 }
 
 html,
@@ -250,7 +250,7 @@ body,
 /* #gnb ul > li > a:after{content:''; position: absolute; left: 0; right: 0; bottom: 0; margin: 0 auto; width: 0; height: 3px; opacity: 0; background-color: #489AFF; transition: 0.3s;}
 #gnb ul > li:hover > a:after{width: 27px; opacity: 1;} */
 #gnb ul > li:hover > a {
-  color: #0057FF;
+  color: #0057ff;
 }
 #gnb ul > li .info {
   position: absolute;
@@ -266,7 +266,7 @@ body,
 #gnb ul > li .info li a {
   display: block;
   text-align: center;
-  min-width:240px;
+  min-width: 240px;
   padding: 18px 22px;
   font-size: 16px;
   color: #6d6d6d;
@@ -306,6 +306,12 @@ body,
 #visual_wrap img {
   display: none;
 }
+<<<<<<< Updated upstream
+=======
+#visual_wrap .pc_img {
+  height: 777px;
+}
+>>>>>>> Stashed changes
 #visual_wrap .visual_txt {
   position: absolute;
   left: 0;
@@ -1084,7 +1090,8 @@ body,
 
 .fix_form_wrap {
   position: relative;
-  background-color: #eef4ff;
+  /* 배경색 제거 */
+  background-color: transparent;
   height: 189px;
 }
 .fix_form {
@@ -1310,3 +1317,12 @@ body,
   font-weight: 400;
   line-height: 18px;
 }
+<<<<<<< Updated upstream
+=======
+#mob_nav {
+  display: none;
+}
+.mob_quick {
+  display: none;
+}
+>>>>>>> Stashed changes
