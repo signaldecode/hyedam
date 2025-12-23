@@ -1319,4 +1319,7 @@
   .hyedam-sheet-close::after {
     background: #fff;
   }
+  .hyedam-sheet{
+    display: block;
+  }
 }
