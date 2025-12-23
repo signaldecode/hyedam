@@ -1,9 +1,9 @@
-
 @font-face {
-    font-family: 'SB Aggro';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroB.woff') format('woff');
-    font-weight: 700;
-    font-style: normal;
+  font-family: "SB Aggro";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroB.woff")
+    format("woff");
+  font-weight: 700;
+  font-style: normal;
 }
 
 html,
@@ -178,6 +178,7 @@ input::-webkit-inner-spin-button {
 
 /* Firefox  */
 input[type="number"] {
+  appearance: textfield;
   -moz-appearance: textfield;
 }
 
@@ -250,7 +251,7 @@ body,
 /* #gnb ul > li > a:after{content:''; position: absolute; left: 0; right: 0; bottom: 0; margin: 0 auto; width: 0; height: 3px; opacity: 0; background-color: #489AFF; transition: 0.3s;}
 #gnb ul > li:hover > a:after{width: 27px; opacity: 1;} */
 #gnb ul > li:hover > a {
-  color: #0057FF;
+  color: #0057ff;
 }
 #gnb ul > li .info {
   position: absolute;
@@ -266,7 +267,7 @@ body,
 #gnb ul > li .info li a {
   display: block;
   text-align: center;
-  min-width:240px;
+  min-width: 240px;
   padding: 18px 22px;
   font-size: 16px;
   color: #6d6d6d;
@@ -306,8 +307,8 @@ body,
 #visual_wrap img {
   display: none;
 }
-#visual_wrap .pc_img{
-    height: 777px;
+#visual_wrap .pc_img {
+  height: 777px;
 }
 #visual_wrap .visual_txt {
   position: absolute;
@@ -1089,7 +1090,7 @@ body,
   position: relative;
   background-color: #eef4ff;
   height: 189px;
-  width:100%;
+  width: 100%;
 }
 .fix_form {
   position: fixed;
@@ -1130,7 +1131,7 @@ body,
 .fix_form .fix_item input[type="text"],
 .fix_form .fix_item input[type="tel"] {
   font-size: 22px;
-  width: calc((100% - 326px) / 2);
+  /* width: calc((100% - 326px) / 2); */
   text-align: center;
   height: 75px;
   border-radius: 10px;
@@ -1183,6 +1184,50 @@ body,
   color: #fff;
   line-height: 30px;
   text-decoration: underline;
+}
+.fix_form .fix_item .toast {
+  display: none;
+  position: absolute;
+  inset: 0;
+  background-color: rgb(255, 255, 255);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+}
+.fix_form .fix_item .toast .response-message {
+  color: #0057ff;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 30px;
+}
+
+/* 공용 토스트 알럿 */
+.hyedam-toast {
+  position: fixed;
+  left: 50%;
+  bottom: 40px;
+  transform: translateX(-50%);
+  z-index: 99999;
+  display: none;
+  max-width: min(520px, calc(100vw - 40px));
+  padding: 14px 18px;
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.85);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.hyedam-toast.is-open {
+  display: block;
+}
+
+.hyedam-toast__msg {
+  margin: 0;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.4;
+  text-align: center;
+  word-break: keep-all;
 }
 
 .quick_menu {
@@ -1314,9 +1359,9 @@ body,
   font-weight: 400;
   line-height: 18px;
 }
-#mob_nav{
+#mob_nav {
   display: none;
 }
-.mob_quick{
+.mob_quick {
   display: none;
 }

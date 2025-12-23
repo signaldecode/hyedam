@@ -1,16 +1,12 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
   <head>
     <meta charset="utf-8" />
-    <title></title>
+    <title>혜담 상담 신청</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <base href="/hyedam/"/>
+    <base href="/hyedam/" />
     <!-- App favicon -->
-    <link
-      rel="icon"
-      href="images/favicon_size04.svg"
-      type="image/x-icon"
-    />
+    <link rel="icon" href="images/favicon_size04.svg" type="image/x-icon" />
     <link rel="stylesheet" href="fonts/pretendard/pretendard.css" />
     <link rel="stylesheet" href="css/style_pc.css" />
     <link rel="stylesheet" href="css/style_tab.css" />
@@ -104,10 +100,13 @@
                 </ul>
               </li>
               <li>
-                <a href="pages/internet/plan.html?provider=skylife&speed=100m">알뜰인터넷</a>
+                <a href="pages/internet/plan.html?provider=skylife&speed=100m"
+                  >알뜰인터넷</a
+                >
                 <ul class="info">
                   <li>
-                    <a href="pages/internet/plan.html?provider=skylife&speed=100m"
+                    <a
+                      href="pages/internet/plan.html?provider=skylife&speed=100m"
                       >sky life+유심</a
                     >
                   </li>
@@ -158,33 +157,33 @@
             <figcaption></figcaption>
           </figure>
         </a>
-        <button class="nav_btn"></button>
+        <button class="nav_btn" type="button" aria-label="메뉴 열기"></button>
       </div>
       <div id="mob_nav">
         <div class="mob_nav_header">
-        <buttton class="close_btn"></buttton>
+          <button
+            class="close_btn"
+            type="button"
+            aria-label="메뉴 닫기"
+          ></button>
         </div>
         <div class="mob_menu">
-            <em>
-                <a href="javascript:void(0);">KT</a>
-            </em>
-            <ul class="info">
-                <li>
-                    <a href="pages/kt/Internet.html?tab=internet_only">
-                        인터넷 단독
-                    </a>
-                </li>
-                <li>
-                    <a href="pages/kt/Internet.html?tab=internet_tv">
-                        인터넷+TV
-                    </a>
-                </li>
-                <li>
-                    <a href="pages/kt/detail.html?tab=internet_sim">
-                        인터넷+유심
-                    </a>
-                </li>
-            </ul>
+          <em>
+            <a href="javascript:void(0);">KT</a>
+          </em>
+          <ul class="info">
+            <li>
+              <a href="pages/kt/Internet.html?tab=internet_only">
+                인터넷 단독
+              </a>
+            </li>
+            <li>
+              <a href="pages/kt/Internet.html?tab=internet_tv"> 인터넷+TV </a>
+            </li>
+            <li>
+              <a href="pages/kt/detail.html?tab=internet_sim"> 인터넷+유심 </a>
+            </li>
+          </ul>
         </div>
         <div class="mob_menu">
           <em>
@@ -192,19 +191,13 @@
           </em>
           <ul class="info">
             <li>
-                <a href="pages/lg/internet.html?tab=internet_only"
-                    >인터넷 단독</a
-                >
-                </li>
-                <li>
-                <a href="pages/lg/internet.html?tab=internet_tv"
-                    >인터넷+TV</a
-                >
-                </li>
-                <li>
-                <a href="pages/lg/detail.html?tab=internet_sim"
-                    >인터넷+유심</a
-                >
+              <a href="pages/lg/internet.html?tab=internet_only">인터넷 단독</a>
+            </li>
+            <li>
+              <a href="pages/lg/internet.html?tab=internet_tv">인터넷+TV</a>
+            </li>
+            <li>
+              <a href="pages/lg/detail.html?tab=internet_sim">인터넷+유심</a>
             </li>
           </ul>
         </div>
@@ -214,19 +207,13 @@
           </em>
           <ul class="info">
             <li>
-                <a href="pages/sk/internet.html?tab=internet_only"
-                    >인터넷 단독</a
-                >
+              <a href="pages/sk/internet.html?tab=internet_only">인터넷 단독</a>
             </li>
             <li>
-                <a href="pages/sk/internet.html?tab=internet_tv"
-                    >인터넷+TV</a
-                >
+              <a href="pages/sk/internet.html?tab=internet_tv">인터넷+TV</a>
             </li>
             <li>
-                <a href="pages/sk/detail.html?tab=internet_sim"
-                    >인터넷+유심</a
-                >
+              <a href="pages/sk/detail.html?tab=internet_sim">인터넷+유심</a>
             </li>
           </ul>
         </div>
@@ -241,15 +228,12 @@
               >
             </li>
             <li>
-              <a
-                href="pages/internet/plan.html?provider=hellovision&speed=100m"
+              <a href="pages/internet/plan.html?provider=hellovision&speed=100m"
                 >헬로비전</a
               >
             </li>
             <li>
-              <a href="pages/internet/plan.html?provider=pop&speed=100m"
-                >POP</a
-              >
+              <a href="pages/internet/plan.html?provider=pop&speed=100m">POP</a>
             </li>
           </ul>
         </div>
@@ -286,12 +270,17 @@
                   안내드립니다.
                 </strong>
               </div>
-              <div class="sub_form">
+              <form
+                id="registrationForm"
+                class="sub_form"
+                data-hyedam-form="consult"
+                novalidate
+              >
                 <ul>
                   <li>
                     <label>어떤 고민이 있으신가요?</label>
                     <div class="form_item">
-                      <select>
+                      <select id="concern" name="concern" required>
                         <option
                           hidden=""
                           disabled="disabled"
@@ -300,21 +289,26 @@
                         >
                           선택해주세요
                         </option>
-                        <option value="선택해주세요">선택해주세요1</option>
-                        <option value="선택해주세요">선택해주세요2</option>
+                        <option value="선택해주세요1">선택해주세요1</option>
+                        <option value="선택해주세요2">선택해주세요2</option>
                       </select>
                     </div>
                   </li>
                   <li>
                     <label>이름</label>
                     <div class="form_item">
-                      <input type="text" />
+                      <input type="text" id="name" name="name" required />
                     </div>
                   </li>
                   <li>
                     <label>연락처</label>
                     <div class="form_item">
-                      <input type="tel" />
+                      <input
+                        type="tel"
+                        id="phonenumber"
+                        name="phonenumber"
+                        required
+                      />
                     </div>
                     <p>
                       ※ 정확한 지원금 안내를 위해 연락 가능한 번호를
@@ -324,7 +318,11 @@
                   <li>
                     <label>어떤 방법으로 연락드릴까요?</label>
                     <div class="form_item">
-                      <select>
+                      <select
+                        id="contact_method"
+                        name="contact_method"
+                        required
+                      >
                         <option
                           hidden=""
                           disabled="disabled"
@@ -333,15 +331,20 @@
                         >
                           선택해주세요
                         </option>
-                        <option value="선택해주세요">선택해주세요1</option>
-                        <option value="선택해주세요">선택해주세요2</option>
+                        <option value="선택해주세요1">선택해주세요1</option>
+                        <option value="선택해주세요2">선택해주세요2</option>
                       </select>
                     </div>
                   </li>
                 </ul>
                 <div class="agreement">
                   <label>
-                    <input type="checkbox" />
+                    <input
+                      type="checkbox"
+                      id="consent"
+                      name="consent"
+                      required
+                    />
                     <span>개인정보 수집·이용 동의 문구</span>
                   </label>
                   <p>
@@ -349,10 +352,18 @@
                     정보는 상담 목적 외에는 사용되지 않습니다.
                   </p>
                 </div>
-                <button class="submit">
-                  <span>상담 신청하기</span>
+                <button
+                  class="submit"
+                  type="submit"
+                  id="submitBtn"
+                  aria-label="상담 신청하기"
+                >
+                  <span class="btn-text">상담 신청하기</span>
+                  <span class="btn-loading" style="display: none"
+                    >처리중...</span
+                  >
                 </button>
-              </div>
+              </form>
               <ul class="chk_list">
                 <li>
                   <div class="icon"></div>
@@ -387,60 +398,66 @@
                 <p>내가 받을 수 있는 최대 혜택은 얼마나 될까?</p>
                 <em>지금 바로 맞춤 요금 상담 받아보세요!</em>
               </div>
-              <div class="fix_item">
-                <input type="text" placeholder="이름" />
-                <input type="tel" placeholder="연락처" />
-                <div class="btn_wrap">
-                  <button>
-                    <span>빠른 견적 신청!</span>
-                  </button>
-                  <div class="agreement">
-                    <label>
-                      <input type="checkbox" />
-                      <span>개인정보 수집 및 활용 동의</span>
-                    </label>
-                    <a href="#" target="_blank">보기</a>
+              <form
+                id="fixRegistrationForm"
+                class="registration-form"
+                data-hyedam-form="estimate"
+                novalidate
+              >
+                <div class="fix_item">
+                  <input
+                    type="text"
+                    placeholder="이름"
+                    id="fix_name"
+                    name="name"
+                    required
+                  />
+                  <input
+                    type="tel"
+                    placeholder="연락처"
+                    id="fix_phonenumber"
+                    name="phonenumber"
+                    required
+                  />
+
+                  <div class="btn_wrap">
+                    <button
+                      type="submit"
+                      id="fixSubmitBtn"
+                      class="btn-submit"
+                      aria-label="빠른 견적 신청하기"
+                    >
+                      <span class="btn-text">빠른 견적 신청!</span>
+                      <span class="btn-loading" style="display: none"
+                        >처리중...</span
+                      >
+                    </button>
+
+                    <div class="agreement">
+                      <label>
+                        <input
+                          type="checkbox"
+                          id="fix_consent"
+                          name="consent"
+                          required
+                        />
+                        <span>개인정보 수집 및 활용 동의</span>
+                      </label>
+                      <a href="#" target="_blank">보기</a>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </form>
             </div>
           </div>
         </div>
 
         <div class="quick_menu">
-          <button class="mob_qiuck"></button>
-            <ul>
-              <li>
-                <a href="#">
-                  <figure>
-                    <img src="images/quick_icon01.svg" alt="카카오톡 아이콘" />
-                    <figcaption>카카오톡 아이콘</figcaption>
-                  </figure>
-                  <em>카톡문의</em>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <figure>
-                    <img src="images/quick_icon02.svg" alt="빠르게 견적 받기 아이콘" />
-                    <figcaption>빠르게 견적 받기 아이콘</figcaption>
-                  </figure>
-                  <em>빠르게<br />견적받기</em>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <figure>
-                    <img src="images/quick_icon03.svg" alt="유튜브 아이콘" />
-                    <figcaption>유튜브 아이콘</figcaption>
-                  </figure>
-                  <em>유튜브</em>
-                </a>
-              </li>
-            </ul>
-          <button class="scroll_top">TOP<span></span>↑</button>
-        </div>
-        <div class="mob_quick">
+          <button
+            class="mob_qiuck"
+            type="button"
+            aria-label="퀵 메뉴 열기"
+          ></button>
           <ul>
             <li>
               <a href="#">
@@ -454,7 +471,10 @@
             <li>
               <a href="#">
                 <figure>
-                  <img src="images/quick_icon02.svg" alt="빠르게 견적 받기 아이콘" />
+                  <img
+                    src="images/quick_icon02.svg"
+                    alt="빠르게 견적 받기 아이콘"
+                  />
                   <figcaption>빠르게 견적 받기 아이콘</figcaption>
                 </figure>
                 <em>빠르게<br />견적받기</em>
@@ -470,7 +490,48 @@
               </a>
             </li>
           </ul>
-          <button class="quick_open"></button>
+          <button class="scroll_top" type="button" aria-label="맨 위로 이동">
+            TOP<span></span>↑
+          </button>
+        </div>
+        <div class="mob_quick">
+          <ul>
+            <li>
+              <a href="#">
+                <figure>
+                  <img src="images/quick_icon01.svg" alt="카카오톡 아이콘" />
+                  <figcaption>카카오톡 아이콘</figcaption>
+                </figure>
+                <em>카톡문의</em>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <figure>
+                  <img
+                    src="images/quick_icon02.svg"
+                    alt="빠르게 견적 받기 아이콘"
+                  />
+                  <figcaption>빠르게 견적 받기 아이콘</figcaption>
+                </figure>
+                <em>빠르게<br />견적받기</em>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <figure>
+                  <img src="images/quick_icon03.svg" alt="유튜브 아이콘" />
+                  <figcaption>유튜브 아이콘</figcaption>
+                </figure>
+                <em>유튜브</em>
+              </a>
+            </li>
+          </ul>
+          <button
+            class="quick_open"
+            type="button"
+            aria-label="모바일 퀵 메뉴 열기"
+          ></button>
         </div>
       </main>
       <!--//main -->
@@ -503,7 +564,8 @@
               <br />
               주식회사 혜담│대표 : 김재일│사업자등록번호 : 307-88-03380<br />
               사업자등록주소 : 서울특별시 영등포구 영등포로 150
-              생각공장│대표번호 : 1588-2637 (유료)│메일 : hyedam2025@gmail.com<br />
+              생각공장│대표번호 : 1588-2637 (유료)│메일 :
+              hyedam2025@gmail.com<br />
               <br />
               개인정보 보호담당자 : 조하늘 │ 문의 : hyedam2025@gmail.com
             </address>
@@ -512,8 +574,14 @@
         </div>
       </footer>
     </div>
+    <!-- 공용 토스트 알럿 -->
+    <div class="hyedam-toast" id="hyedamToast" aria-live="polite" role="status">
+      <p class="hyedam-toast__msg" id="hyedamToastMsg"></p>
+    </div>
+
     <script src="js/jquery-3.7.1.min.js"></script>
-    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/google-sheet.js"></script>
+    <script src="js/form-handler.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

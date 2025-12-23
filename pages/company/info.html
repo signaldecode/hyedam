@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hyedom | 회사소개</title>
+    <title>Hyedam | 회사소개</title>
     <base href="/hyedam/" />
     <link rel="stylesheet" href="fonts/pretendard/pretendard.css" />
     <link rel="stylesheet" href="css/style_pc.css" />
@@ -296,22 +296,56 @@
                 <p>내가 받을 수 있는 최대 혜택은 얼마나 될까?</p>
                 <em>지금 바로 맞춤 요금 상담 받아보세요!</em>
               </div>
-              <div class="fix_item">
-                <input type="text" placeholder="이름" />
-                <input type="tel" placeholder="연락처" />
-                <div class="btn_wrap">
-                  <button>
-                    <span>빠른 견적 신청!</span>
-                  </button>
-                  <div class="agreement">
-                    <label>
-                      <input type="checkbox" />
-                      <span>개인정보 수집 및 활용 동의</span>
-                    </label>
-                    <a href="#" target="_blank">보기</a>
+              <form
+                id="fixRegistrationForm"
+                class="registration-form"
+                data-hyedam-form="estimate"
+                novalidate
+              >
+                <div class="fix_item">
+                  <input
+                    type="text"
+                    placeholder="이름"
+                    id="fix_name"
+                    name="name"
+                    required
+                  />
+                  <input
+                    type="tel"
+                    placeholder="연락처"
+                    id="fix_phonenumber"
+                    name="phonenumber"
+                    required
+                  />
+
+                  <div class="btn_wrap">
+                    <button
+                      type="submit"
+                      id="fixSubmitBtn"
+                      class="btn-submit"
+                      aria-label="빠른 견적 신청하기"
+                    >
+                      <span class="btn-text">빠른 견적 신청!</span>
+                      <span class="btn-loading" style="display: none"
+                        >처리중...</span
+                      >
+                    </button>
+
+                    <div class="agreement">
+                      <label>
+                        <input
+                          type="checkbox"
+                          id="fix_consent"
+                          name="consent"
+                          required
+                        />
+                        <span>개인정보 수집 및 활용 동의</span>
+                      </label>
+                      <a href="#" target="_blank">보기</a>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </form>
             </div>
           </div>
         </div>
@@ -421,8 +455,13 @@
         </div>
       </footer>
     </div>
+    <!-- 공용 토스트 알럿 -->
+    <div class="hyedam-toast" id="hyedamToast" aria-live="polite" role="status">
+      <p class="hyedam-toast__msg" id="hyedamToastMsg"></p>
+    </div>
     <script src="js/jquery-3.7.1.min.js"></script>
-    <script src="js/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/google-sheet.js"></script>
+    <script src="js/form-handler.js"></script>
   </body>
 </html>
