@@ -1245,6 +1245,11 @@ body,
   transform: translateY(-50%);
   z-index: 1000;
 }
+.quick_menu.on {
+  position: absolute;
+  top: auto;
+  bottom: 570px;
+}
 .quick_menu ul {
   display: flex;
   flex-direction: column;
@@ -1364,4 +1369,81 @@ body,
 }
 .mob_quick {
   display: none;
+}
+.form_success_wrap {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 10000000;
+}
+.form_success {
+  position: absolute;
+  width: 800px;
+  max-width: 92%;
+  background-color: #fff;
+  left: 0;
+  right: 0;
+  top: 50%;
+  text-align: center;
+  transform: translateY(-50%);
+  margin: 0 auto;
+  padding: 50px;
+  border-radius: 20px;
+}
+.form_success em {
+  display: block;
+  font-size: 30px;
+  line-height: 50px;
+  font-weight: 700;
+}
+.form_success em span {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background: url(../images/gift_icon.jpg) center / 50px auto no-repeat;
+  vertical-align: bottom;
+}
+.form_success b {
+  display: block;
+  font-size: 20px;
+  color: #222;
+  line-height: 30px;
+  margin-top: 20px;
+}
+.form_success p {
+  font-size: 15px;
+  margin-top: 30px;
+  font-weight: 500;
+}
+.form_success .btn_wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  gap: 10px;
+}
+.form_success .btn_wrap a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 30px;
+  border-radius: 10px;
+  background-color: #ddd;
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: 600;
+}
+.form_success .btn_wrap a img {
+  width: 30px;
+}
+.form_success .btn_wrap a.kakao {
+  background-color: #f9e201;
+  color: #222;
+}
+.form_success .btn_wrap a.youtube {
+  background-color: #ff0000;
+  color: #fff;
 }

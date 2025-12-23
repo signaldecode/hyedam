@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <title></title>
-    <base href="/hyedam/" />
+    <!-- <base href="/hyedam/" /> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- App favicon -->
     <link rel="icon" href="images/favicon_size04.svg" type="image/x-icon" />
@@ -1606,18 +1606,6 @@
             spaceBetween: 10,
           },
         },
-      });
-
-      $(".faq .txt01 em").click(function () {
-        $(this).parents("li").find(".txt02").stop(true).slideToggle();
-      });
-      $(".sec04_con .slide_type01").eq(0).show();
-      $("#section04 .sec04_tab_btn a").on("click", function () {
-        $("#section04 .sec04_tab_btn a")
-          .removeClass("on")
-          .eq($(this).index())
-          .addClass("on");
-        $(".sec04_con .slide_type01").hide().eq($(this).index()).show();
       });
     </script>
   </body>
