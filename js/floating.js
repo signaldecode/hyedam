@@ -218,7 +218,7 @@
   `;
 
   if (!document.getElementById(SHEET_ID)) {
-    //document.body.insertAdjacentHTML("beforeend", SHEET_HTML.trim());
+    document.body.insertAdjacentHTML("beforeend", SHEET_HTML.trim());
     if (typeof window.hyedamBindForms === "function") {
       window.hyedamBindForms(document.getElementById(SHEET_ID));
     }
