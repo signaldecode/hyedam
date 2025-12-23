@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", async () => {
-  const res = await fetch("../../json/planInternetData.json");
+  const res = await fetch("json/planInternetData.json");
   const data = await res.json();
 
   const els = {
