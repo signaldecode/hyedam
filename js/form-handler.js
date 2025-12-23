@@ -105,13 +105,24 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  const forms = Array.from(
-    document.querySelectorAll("form[data-hyedam-form], #registrationForm, #fixRegistrationForm")
-  ).filter(Boolean);
+  function bindAllForms(root = document) {
+    const forms = Array.from(
+      root.querySelectorAll("form[data-hyedam-form], #registrationForm, #fixRegistrationForm")
+    ).filter(Boolean);
 
-  if (!forms.length) return;
+    if (!forms.length) return;
 
-  forms.forEach((form) => bindForm(form));
+    forms.forEach((form) => {
+      if (form.getAttribute("data-hyedam-bound") === "1") return;
+      bindForm(form);
+      form.setAttribute("data-hyedam-bound", "1");
+    });
+  }
+
+  // 외부에서 동적 폼(바텀시트 등) 주입 후 재바인딩 할 수 있도록 노출
+  window.hyedamBindForms = bindAllForms;
+
+  bindAllForms();
 
   function bindForm(form) {
     // 입력값 정리(한글/특수문자 제거, 길이 제한 등)

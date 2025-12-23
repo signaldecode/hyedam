@@ -94,7 +94,8 @@
           </a>
         </li>
         <li>
-          <a href="#">
+          <!-- PC에선 form 페이지로 이동 -->
+          <a href="pages/form.html">
             <figure>
               <img
                 src="images/quick_icon02.svg"
@@ -135,7 +136,7 @@
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="#" data-hyedam-action="open-estimate-sheet">
             <figure>
               <img
                 src="images/quick_icon02.svg"
@@ -167,7 +168,7 @@
   //토스트 메세지 신청 완료 팝업은 form-handler.js 에서 
   const TOAST_HTML = `
     <div class="hyedam-toast" id="hyedamToast" aria-live="polite" role="status">
-      <p class="hyedam-toast__msg" id="hyedamToastMsg"></p>
+      <p class="hyedam-toast-msg" id="hyedamToastMsg"></p>
     </div>
   `;
 
@@ -179,4 +180,81 @@
   if (!document.getElementById("hyedamToast")) {
     document.body.insertAdjacentHTML("beforeend", TOAST_HTML.trim());
   }
+
+  // ===== 바텀시트(빠른 견적) =====
+  const SHEET_ID = "hyedamEstimateSheet";
+
+  const SHEET_HTML = `
+    <div class="hyedam-sheet" id="${SHEET_ID}" aria-hidden="true">
+      <div class="hyedam-sheet-backdrop" data-hyedam-action="close-estimate-sheet"></div>
+      <div class="hyedam-sheet-panel" role="dialog" aria-modal="true" aria-label="빠른 견적 신청">
+        <button type="button" class="hyedam-sheet-close" data-hyedam-action="close-estimate-sheet" aria-label="닫기"></button>
+        <div class="hyedam-sheet-head">
+          <p>내가 받을 수 있는 최대 혜택은 얼마나 될까?</p>
+          <em>지금 바로 맞춤 요금 상담 받아보세요!</em>
+        </div>
+
+        <form class="hyedam-sheet-form" data-hyedam-form="estimate" novalidate>
+          <div class="hyedam-sheet-fields">
+            <input type="text" name="name" placeholder="이름" required />
+            <input type="tel" name="phonenumber" placeholder="연락처" required />
+          </div>
+
+          <div class="hyedam-sheet-agree">
+            <label>
+              <input type="checkbox" name="consent" required />
+              <span>개인정보 수집 및 활용 동의</span>
+            </label>
+            <a href="#" target="_blank" rel="noopener">보기</a>
+          </div>
+
+          <button type="submit" class="hyedam-sheet-submit" aria-label="빠른 견적 신청하기">
+            <span class="btn-text">빠른 견적 신청!</span>
+            <span class="btn-loading" style="display:none">처리중...</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  `;
+
+  if (!document.getElementById(SHEET_ID)) {
+    document.body.insertAdjacentHTML("beforeend", SHEET_HTML.trim());
+    if (typeof window.hyedamBindForms === "function") {
+      window.hyedamBindForms(document.getElementById(SHEET_ID));
+    }
+  }
+
+  function openSheet() {
+    const sheet = document.getElementById(SHEET_ID);
+    if (!sheet) return;
+    sheet.classList.add("is-open");
+    sheet.setAttribute("aria-hidden", "false");
+  }
+
+  function closeSheet() {
+    const sheet = document.getElementById(SHEET_ID);
+    if (!sheet) return;
+    sheet.classList.remove("is-open");
+    sheet.setAttribute("aria-hidden", "true");
+    // 스크롤 복구
+    const prev = sheet.dataset.prevOverflow ?? "";
+    document.body.style.overflow = prev;
+  }
+
+  document.addEventListener("click", function (e) {
+    const opener = e.target.closest(
+      '.mob_quick [data-hyedam-action="open-estimate-sheet"]'
+    );
+    if (opener) {
+      e.preventDefault();
+      openSheet();
+      return;
+    }
+
+    const closer = e.target.closest('[data-hyedam-action="close-estimate-sheet"]');
+    if (closer) {
+      e.preventDefault();
+      closeSheet();
+    }
+  });
 })();

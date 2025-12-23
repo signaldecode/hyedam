@@ -1220,7 +1220,7 @@ body,
   display: block;
 }
 
-.hyedam-toast__msg {
+.hyedam-toast-msg {
   margin: 0;
   color: #fff;
   font-size: 14px;
