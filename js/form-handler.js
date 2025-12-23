@@ -42,7 +42,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function showToast(message) {
-    // 토스트 DOM이 없으면 최소한 alert로라도 안내
     if (!toastEl || !toastMsgEl) {
       alert(message);
       return;
@@ -82,7 +81,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 <img src="images/quick_icon01.svg" alt="">
                 카톡 상담 하러 가기
               </a>
-              <a href="#" class="popup_close">닫기</a>
+              <button aria-label="팝업 닫기" type="button" class="popup_close">닫기</button>
             </div>
           </div>
         </div>
@@ -92,28 +91,12 @@ document.addEventListener("DOMContentLoaded", function () {
     document.body.insertAdjacentHTML("beforeend", html.trim());
 
     const wrap = document.querySelector(".form_success_wrap");
-    const modal = wrap?.querySelector(".form_success");
     const closeBtn = wrap?.querySelector(".popup_close");
-
-    // 스크롤 잠금
-    const prevOverflow = document.body.style.overflow;
-    document.body.style.overflow = "hidden";
 
     const close = () => {
       if (wrap) wrap.remove();
       document.body.style.overflow = prevOverflow;
     };
-
-    // 배경 클릭 닫기
-    wrap?.addEventListener("click", (e) => {
-      e.preventDefault();
-      close();
-    });
-
-    // 팝업 내부 클릭은 닫히지 않게
-    modal?.addEventListener("click", (e) => {
-      e.stopPropagation();
-    });
 
     // 닫기 버튼
     closeBtn?.addEventListener("click", (e) => {

@@ -1376,7 +1376,8 @@ body,
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(2px);
   z-index: 10000000;
 }
 .form_success {
@@ -1425,7 +1426,8 @@ body,
   margin-top: 50px;
   gap: 10px;
 }
-.form_success .btn_wrap a {
+.form_success .btn_wrap a,
+.form_success .btn_wrap button {
   display: flex;
   align-items: center;
   gap: 10px;
