@@ -57,10 +57,8 @@
         $(this).parents('.mob_quick').find('ul').stop(true,true).fadeToggle();
         $(this).parents('.mob_quick').toggleClass('on');
     });
-    $(document).on('click','.sucsess_close,.form_success_wrap',function(){
+    // 비밀지원금 팝업: 배경 클릭으로 닫히지 않게(닫기 버튼으로만 닫기)
+    $(document).on('click','.sucsess_close,.popup_close',function(e){
+        e.preventDefault();
         $('.form_success_wrap').remove();
-    });
-
-    $(document).on('click', '.form_success', function (e) {
-    e.stopPropagation();
     });

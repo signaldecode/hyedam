@@ -77,14 +77,15 @@
 }
 #company_wrap .company_content_txt.ceo {
   /* margin: 180px auto; */
-  text-align: cnter;
+  text-align: center;
   align-items: center;
   justify-content: center;
 }
 #company_wrap .company_content_txt.ceo h3 {
   text-align: center;
   margin-top: 50px;
-  font-size: 20px;
+  font-size: 18px;
+  line-height: 32px;
   font-weight: 400;
 }
 .company_content_txt {
@@ -97,35 +98,55 @@
   gap: 36px;
 }
 .company_content_txt h2 {
-  font-size: 36px;
+  font-size: 30px;
   font-weight: 600;
   color: #262626;
   margin-bottom: 24px;
 }
 .company_content_txt h3 {
   color: #262626;
-  font-size: 26px;
+  font-size: 20px;
   font-weight: 600;
-  line-height: 50px;
+  line-height: 34px;
 }
 .company_content_txt p {
   color: #262626;
 
   font-family: Pretendard;
-  font-size: 18px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: 35px;
+  line-height: 28px;
 }
 
 @media (max-width: 768px) {
   #company_wrap .company_title {
     font-size: 28px;
   }
+  .company_content_txt h2 {
+    font-size: 24px;
+  }
+  .company_content_txt h3 {
+    font-size: 17px !important;
+    line-height: 30px;
+  }
+  .company_content_txt p {
+    font-size: 16px;
+    line-height: 26px;
+  }
 }
 
 @media (max-width: 414px) {
   #company_wrap .company_title {
     font-size: 22px;
+  }
+  .company_content_txt h2 {
+    font-size: 20px;
+  }
+  #company_wrap .company_content {
+    margin: 110px auto;
+  }
+  #company_wrap .company_content_txt.ceo h3 {
+    margin-top: 28px;
   }
 }
