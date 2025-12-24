@@ -1,6 +1,6 @@
 const GOOGLE_SHEETS_CONFIG = {
-  url: 'https://script.google.com/macros/s/AKfycbxUqy1R5Ws1MOSKoi-1iRqtmC4_bbjqGI0Uc-FKdeGSsn-xCEx4H80d4qlByDt1dsAO/exec',
-  tableName: '혜담테스트',
+  url: 'https://script.google.com/macros/s/AKfycbznDqzJc3H6X5aBq4WXigZlNckM42ztxHqx3OVEKmx9prolLDgSBM5ktjiZpARV_6Ka/exec',
+  tableName: '혜담문의',
   timeout: 10000
 };
 
