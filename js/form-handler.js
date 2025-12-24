@@ -73,11 +73,11 @@ document.addEventListener("DOMContentLoaded", function () {
             <b>혜담에서 신청 내용을 확인 후 상담 안내를 도와드릴 예정이에요.<br>(평균 1영업일 이내)</b>
             <p>상담 전, 혜담이 궁금하시다면 아래 채널을 참고해 주세요.</p>
             <div class="btn_wrap">
-              <a class="youtube" href="#">
+              <a class="youtube" href="https://youtube.com/channel/UC9dqDtma7yYg1cms_FOq4IQ?si=AkpMHf3K2HBrkSZ2">
                 <img src="images/quick_icon03.svg" alt="">
                 유튜브 구경 하러 가기
               </a>
-              <a class="kakao" href="#">
+              <a class="kakao" href="http://pf.kakao.com/_ZHxkxgn">
                 <img src="images/quick_icon01.svg" alt="">
                 카톡 상담 하러 가기
               </a>

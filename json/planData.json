@@ -195,14 +195,14 @@
           "badge": "특별 혜택",
           "name": "인터넷 에센스 1G+지니TV 모든G",
           "base": {
-            "finalMonthly": 50600,
-            "finalMonthlyText": "월 50,600원",
+            "finalMonthly": 55000,
+            "finalMonthlyText": "월 55,000원",
             "breakdown": {
               "basePrice": 81730,
-              "contractDiscount": -21890,
+              "contractDiscount": -21900,
               "bundleDiscount": 0,
-              "totalDiscount": -34430,
-              "tvDiscount": -12540
+              "totalDiscount": -9240,
+              "tvDiscount": -31140
             }
           },
           "optionAdjustments": {

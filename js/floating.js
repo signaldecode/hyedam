@@ -85,7 +85,7 @@
       ></button>
       <ul>
         <li>
-          <a href="#">
+          <a href="http://pf.kakao.com/_ZHxkxgn">
             <figure>
               <img src="images/quick_icon01.svg" alt="카카오톡 아이콘" />
               <figcaption>카카오톡 아이콘</figcaption>
@@ -107,7 +107,7 @@
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="https://youtube.com/channel/UC9dqDtma7yYg1cms_FOq4IQ?si=AkpMHf3K2HBrkSZ2">
             <figure>
               <img src="images/quick_icon03.svg" alt="유튜브 아이콘" />
               <figcaption>유튜브 아이콘</figcaption>
@@ -127,7 +127,7 @@
     <div class="mob_quick">
       <ul>
         <li>
-          <a href="#">
+          <a href="http://pf.kakao.com/_ZHxkxgn">
             <figure>
               <img src="images/quick_icon01.svg" alt="카카오톡 아이콘" />
               <figcaption>카카오톡 아이콘</figcaption>
@@ -148,7 +148,7 @@
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="https://youtube.com/channel/UC9dqDtma7yYg1cms_FOq4IQ?si=AkpMHf3K2HBrkSZ2">
             <figure>
               <img src="images/quick_icon03.svg" alt="유튜브 아이콘" />
               <figcaption>유튜브 아이콘</figcaption>
