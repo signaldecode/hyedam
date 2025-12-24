@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <title>주식회사 혜담 | 인터넷지원금</title>
-    <!-- <base href="/hyedam/" /> -->
+    <base href="/hyedam/" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- App favicon -->
     <link rel="icon" href="images/favicon_size04.svg" type="image/x-icon" />
@@ -1056,17 +1056,22 @@
                 </h2>
                 <em>혜담을 통해 실제 지원금과 요금을 정확히 안내받아보세요.</em>
                 <strong>
-                  혜담은 매 월 3,000건 이상의 접수 경험을 기반으로,
+                  혜담은 매월 3,000건 이상의 접수 경험을 기반으로,
                   <br />고객님께 가장 유리한 조건만 빠르고 정확하게
                   안내드립니다.
                 </strong>
               </div>
-              <div class="sub_form">
+              <form
+                id="registrationForm"
+                class="sub_form"
+                data-hyedam-form="consult"
+                novalidate
+              >
                 <ul>
                   <li>
-                    <label>어떤 고민이 있으신가요?</label>
+                    <label>어떤 도움이 필요하신가요?</label>
                     <div class="form_item">
-                      <select>
+                      <select id="concern" name="concern" required>
                         <option
                           hidden=""
                           disabled="disabled"
@@ -1075,21 +1080,29 @@
                         >
                           선택해주세요
                         </option>
-                        <option value="선택해주세요">선택해주세요1</option>
-                        <option value="선택해주세요">선택해주세요2</option>
+                        <option value="인터넷 월요금을 줄이고 싶어요">인터넷 월요금을 줄이고 싶어요</option>
+                        <option value="인터넷/TV설치가 필요해요">인터넷/TV설치가 필요해요</option>
+                        <option value="휴대폰 결합할인을 받고 싶어요">휴대폰 결합할인을 받고 싶어요</option>
+                        <option value="인터넷 지원금이 궁금해요">인터넷 지원금이 궁금해요</option>
+                        <option value="다른 문의사항이 있어요">다른 문의사항이 있어요</option>
                       </select>
                     </div>
                   </li>
                   <li>
                     <label>이름</label>
                     <div class="form_item">
-                      <input type="text" />
+                      <input type="text" id="name" name="name" required />
                     </div>
                   </li>
                   <li>
                     <label>연락처</label>
                     <div class="form_item">
-                      <input type="tel" />
+                      <input
+                        type="tel"
+                        id="phonenumber"
+                        name="phonenumber"
+                        required
+                      />
                     </div>
                     <p>
                       ※ 정확한 지원금 안내를 위해 연락 가능한 번호를
@@ -1097,9 +1110,13 @@
                     </p>
                   </li>
                   <li>
-                    <label>어떤 방법으로 연락드릴까요?</label>
+                    <label>어떤 방식으로 연락드릴까요?</label>
                     <div class="form_item">
-                      <select>
+                      <select
+                        id="contact_method"
+                        name="contact_method"
+                        required
+                      >
                         <option
                           hidden=""
                           disabled="disabled"
@@ -1108,15 +1125,21 @@
                         >
                           선택해주세요
                         </option>
-                        <option value="선택해주세요">선택해주세요1</option>
-                        <option value="선택해주세요">선택해주세요2</option>
+                        <option value="전화주세요(가장 빠름)">전화주세요(가장 빠름)</option>
+                        <option value="통화가 어려워요, 문자로 안내 받을게요">통화가 어려워요, 문자로 안내 받을게요</option>
+                        <option value="카카오톡으로 받고 싶어요">카카오톡으로 받고 싶어요</option>
                       </select>
                     </div>
                   </li>
                 </ul>
                 <div class="agreement">
                   <label>
-                    <input type="checkbox" />
+                    <input
+                      type="checkbox"
+                      id="consent"
+                      name="consent"
+                      required
+                    />
                     <span>개인정보 수집·이용 동의 문구</span>
                   </label>
                   <p>
@@ -1124,10 +1147,18 @@
                     정보는 상담 목적 외에는 사용되지 않습니다.
                   </p>
                 </div>
-                <button class="submit">
-                  <span>상담 신청하기</span>
+                <button
+                  class="submit"
+                  type="submit"
+                  id="submitBtn"
+                  aria-label="상담 신청하기"
+                >
+                  <span class="btn-text">내 혜택 먼저 확인하기</span>
+                  <span class="btn-loading" style="display: none"
+                    >처리중...</span
+                  >
                 </button>
-              </div>
+              </form>
               <ul class="chk_list">
                 <li>
                   <div class="icon"></div>
@@ -1146,7 +1177,7 @@
                 <li>
                   <div class="icon"></div>
                   <em>
-                    <span>매 월 3,000건 이상</span> 진행한 전문 상담팀 제공
+                    <span>매월 3,000건 이상</span> 진행한 전문 상담팀 제공
                   </em>
                 </li>
               </ul>
@@ -1478,8 +1509,8 @@
             <div class="txt">
               <p>
                 <em>영업시간안내</em><br />
-                평일 10:00 ~ 18:00│점심 13:00 ~ 14:00 <span>│</span>휴무 :
-                일요일, 국가지정공휴일
+                평일 10:00 ~ 19:00│토요일10:00 ~ 15:00 <span>│</span>휴무 :
+                일요일, 공휴일 휴무
               </p>
             </div>
           </div>
