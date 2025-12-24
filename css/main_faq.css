@@ -1,0 +1,146 @@
+.details_inner {
+  width: 100%;
+  max-width: 1400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  position: relative;
+  padding: 0 20px;
+}
+
+.section-faq-notice {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 120px 0;
+}
+.section-faq-notice {
+  background: rgba(251, 253, 255, 1);
+}
+
+.faq-list {
+  width: 100%;
+  max-width: 1400px;
+}
+
+.faq-item {
+  background: #fff;
+  border-radius: 30px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.faq-q {
+  padding: 38px 56px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.faq-a-wrap {
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.faq-a {
+  padding: 38px 56px;
+  border-top: 1px solid #f0f0f0;
+  display: flex;
+  gap: 20px;
+  font-size: 18px;
+  line-height:29px;
+  color: #444;
+}
+
+.faq-item.active .faq-a-wrap {
+  max-height: 300px;
+}
+.a-label{flex:none;}
+.q-label {
+  color: #999;
+  margin-right: 15px;
+}
+.a-label {
+  color: #0057ff;
+  font-weight: 900;
+  font-size: 24px;
+}
+.arrow {
+  width: 15px;
+  height: 15px;
+  border-top: 3px solid #666;
+  border-right: 3px solid #666;
+  transform: rotate(135deg);
+  transition: 0.3s;
+}
+
+.faq-item.active .arrow {
+  transform: rotate(-45deg);
+  margin-top: 10px;
+}
+
+.bottom-faq {
+  font-size: 48px;
+  font-weight: 800;
+  margin-bottom: 60px;
+  text-align: center;
+}
+.mob_faq{
+  display: none;
+}
+@media (max-width: 1024px) {
+  .mob_faq{
+    display: block;
+  }
+  .pc_faq{
+    display: none;
+  }
+  .details_inner {
+    padding: 0 24px;
+  }
+  .section-faq-notice {
+    padding: 80px 0;
+  }
+  .faq-a{
+    padding: 20px;
+    font-size: 13px;
+    line-height: 22px
+  }
+  .main-title {
+    font-size: 36px;
+    margin-bottom: 40px;
+  }
+  .faq-q {
+    padding: 25px;
+    font-size: 18px;
+  }
+  .q-label{
+    flex: none;
+    margin-right: 7px;
+  }
+  .faq-q > span{
+    display: flex;
+  }
+  .a-label {
+    color: #0057ff;
+    font-weight: 900;
+    font-size: 16px;
+  }
+  .bottom-faq {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 414px) {
+
+  .main-title {
+    font-size: 32px;
+    width: 90%;
+  }
+}
