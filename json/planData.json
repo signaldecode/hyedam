@@ -190,7 +190,7 @@
           },
           "cta": { "label": "상담문의", "action": "contact" }
         },
-         {
+        {
           "id": "internet_tv3",
           "badge": "특별 혜택",
           "name": "인터넷 에센스 1G+지니TV 모든G",
@@ -202,7 +202,7 @@
               "contractDiscount": -21900,
               "bundleDiscount": 0,
               "totalDiscount": -9240,
-              "tvDiscount": -31140
+              "tvDiscount": -9240
             }
           },
           "optionAdjustments": {

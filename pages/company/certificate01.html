@@ -1,16 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <title>주식회사 혜담 | SK</title>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <base href="/hyedam/"/>
-    <!-- App favicon -->
-    <link
-      rel="icon"
-      href="images/favicon_size04.svg"
-      type="image/x-icon"
-    />
+    <title>Hyedam | 통신판매업신고증</title>
+    <base href="../../" />
     <link rel="stylesheet" href="fonts/pretendard/pretendard.css" />
     <link rel="stylesheet" href="css/style_pc.css" />
     <link rel="stylesheet" href="css/style_tab.css" />
@@ -19,11 +13,7 @@
     <link rel="stylesheet" href="styles/internet.css" />
     <link rel="stylesheet" href="styles/internet_tab.css" />
     <link rel="stylesheet" href="styles/internet_mob.css" />
-    <script
-      src="js/internet.js"
-      data-plan="json/planDataSk.json"
-      data-detail="pages/sk/detail.html"
-    ></script>
+    <link rel="stylesheet" href="styles/company.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
@@ -32,7 +22,6 @@
       referrerpolicy="no-referrer"
     />
   </head>
-
   <body>
     <div id="wrap">
       <header id="header">
@@ -108,10 +97,13 @@
                 </ul>
               </li>
               <li>
-                <a href="pages/internet/plan.html?provider=skylife&speed=100m">알뜰인터넷</a>
+                <a href="pages/internet/plan.html?provider=skylife&speed=100m"
+                  >알뜰인터넷</a
+                >
                 <ul class="info">
                   <li>
-                    <a href="pages/internet/plan.html?provider=skylife&speed=100m"
+                    <a
+                      href="pages/internet/plan.html?provider=skylife&speed=100m"
                       >SKY LIFE</a
                     >
                   </li>
@@ -132,13 +124,13 @@
                 <a href="pages/company/info.html">회사소개</a>
                 <ul class="info">
                   <li>
-                      <a href="pages/company/info.html">회사소개</a>
+                    <a href="pages/company/info.html">회사소개</a>
                   </li>
                   <li>
-                      <a href="pages/company/certificate01.html">통신판매업 신고증</a>
+                    <a href="pages/company/certificate01.html">통신판매업 신고증</a>
                   </li>
                   <li>
-                      <a href="pages/company/ceo.html">대표자 인사말</a>
+                    <a href="pages/company/ceo.html">대표자 인사말</a>
                   </li>
                 </ul>
               </li>
@@ -166,29 +158,25 @@
       </div>
       <div id="mob_nav">
         <div class="mob_nav_header">
-        <buttton class="close_btn"></buttton>
+          <buttton class="close_btn"></buttton>
         </div>
         <div class="mob_menu">
-            <em>
-                <a href="javascript:void(0);">KT</a>
-            </em>
-            <ul class="info">
-                <li>
-                    <a href="pages/kt/Internet.html?tab=internet_only">
-                        인터넷 단독
-                    </a>
-                </li>
-                <li>
-                    <a href="pages/kt/Internet.html?tab=internet_tv">
-                        인터넷+TV
-                    </a>
-                </li>
-                <li>
-                    <a href="pages/kt/detail.html?tab=internet_sim">
-                        인터넷+유심
-                    </a>
-                </li>
-            </ul>
+          <em>
+            <a href="javascript:void(0);">KT</a>
+          </em>
+          <ul class="info">
+            <li>
+              <a href="pages/kt/Internet.html?tab=internet_only">
+                인터넷 단독
+              </a>
+            </li>
+            <li>
+              <a href="pages/kt/Internet.html?tab=internet_tv"> 인터넷+TV </a>
+            </li>
+            <li>
+              <a href="pages/kt/detail.html?tab=internet_sim"> 인터넷+유심 </a>
+            </li>
+          </ul>
         </div>
         <div class="mob_menu">
           <em>
@@ -196,19 +184,13 @@
           </em>
           <ul class="info">
             <li>
-                <a href="pages/lg/internet.html?tab=internet_only"
-                    >인터넷 단독</a
-                >
-                </li>
-                <li>
-                <a href="pages/lg/internet.html?tab=internet_tv"
-                    >인터넷+TV</a
-                >
-                </li>
-                <li>
-                <a href="pages/lg/detail.html?tab=internet_sim"
-                    >인터넷+유심</a
-                >
+              <a href="pages/lg/internet.html?tab=internet_only">인터넷 단독</a>
+            </li>
+            <li>
+              <a href="pages/lg/internet.html?tab=internet_tv">인터넷+TV</a>
+            </li>
+            <li>
+              <a href="pages/lg/detail.html?tab=internet_sim">인터넷+유심</a>
             </li>
           </ul>
         </div>
@@ -218,19 +200,13 @@
           </em>
           <ul class="info">
             <li>
-                <a href="pages/sk/internet.html?tab=internet_only"
-                    >인터넷 단독</a
-                >
+              <a href="pages/sk/internet.html?tab=internet_only">인터넷 단독</a>
             </li>
             <li>
-                <a href="pages/sk/internet.html?tab=internet_tv"
-                    >인터넷+TV</a
-                >
+              <a href="pages/sk/internet.html?tab=internet_tv">인터넷+TV</a>
             </li>
             <li>
-                <a href="pages/sk/detail.html?tab=internet_sim"
-                    >인터넷+유심</a
-                >
+              <a href="pages/sk/detail.html?tab=internet_sim">인터넷+유심</a>
             </li>
           </ul>
         </div>
@@ -245,15 +221,12 @@
               >
             </li>
             <li>
-              <a
-                href="pages/internet/plan.html?provider=hellovision&speed=100m"
+              <a href="pages/internet/plan.html?provider=hellovision&speed=100m"
                 >헬로비전</a
               >
             </li>
             <li>
-              <a href="pages/internet/plan.html?provider=pop&speed=100m"
-                >POP</a
-              >
+              <a href="pages/internet/plan.html?provider=pop&speed=100m">POP</a>
             </li>
           </ul>
         </div>
@@ -274,59 +247,26 @@
           </ul>
         </div>
       </div>
-      <main>
-        <section id="prod">
-          <div class="tab_wrap">
-            <button class="tab_btn is-active" data-tab="internet_only" type="button">
-              <span>인터넷 단독</span>
-              <span class="tab_icon tab_icon--internet"></span>
-            </button>
-
-            <button class="tab_btn" data-tab="internet_tv" type="button">
-              <span>인터넷+TV</span>
-              <span class="tab_icon tab_icon--tv"></span>
-            </button>
-
-            <button class="tab_btn" data-tab="internet_sim" type="button">
-              <span>인터넷+유심</span>
-              <span class="tab_icon tab_icon--sim"></span>
-            </button>
-          </div>
-          <div class="prod_wrap">
-            <h2></h2>
-            <div class="prod_check_wrap">
-              <div class="check_item">
-                <input id="wifi" type="checkbox" class="check_input">
-                <label for="wifi" class="prod_item">
-                  <span class="check_icon"><img src="../../images/icons/sub_check.svg" alt="체크" /></span>
-                  <span>WiFi</span>
-                </label>
+      <main id="company_wrap">
+        <section class="company_content">
+          <div class="inner">
+            <div class="certificate_img_wrap">
+              <div class="certificate_img">
+                <figure>
+                  <img src="images/certificate01.png" alt="통신판매업신고증1" />
+                  <figcaption>통신판매업신고증1</figcaption>
+                </figure>
               </div>
-                <div class="check_item">
-                  <input id="phone" type="checkbox" class="check_input">
-                  <label for="phone" class="prod_item">
-                    <span class="check_icon"><img src="../../images/icons/sub_check.svg" alt="체크" /></span>
-                    <span>휴대폰 결합</span>
-                  </label>
-                </div>
+              <div class="certificate_img">
+                <figure>
+                  <img src="images/certificate02.png" alt="통신판매업신고증1" />
+                  <figcaption>통신판매업신고증2</figcaption>
+                </figure>
               </div>
             </div>
-            <div class="card_wrap">
-              <article class="plan_card">
-              </article>
-            </div>
-            <span class="noti_text">
-              ※ 월 요금은 3년 약정 기준입니다.<br/>※ 부가세 포함 기준입니다.
-            </span>
-            <div class="more_btn_wrap">
-              인터넷+TV 상품 더보기
-              <img src="../../images/icons/sub_arrow.svg" alt="인터넷+TV 상품 더보기" />
-            </div>
-            <div class="card_wrap card_wrap--more" id="cardMore"></div>
           </div>
         </section>
       </main>
-      <!--//main -->
       <footer id="footer">
         <div class="f_top">
           <div class="inner">
@@ -356,7 +296,8 @@
               <br />
               주식회사 혜담│대표 : 김재일│사업자등록번호 : 307-88-03380<br />
               사업자등록주소 : 서울특별시 영등포구 영등포로 150
-              생각공장│대표번호 : 1588-2637 (유료)│메일 : hyedam2025@gmail.com<br />
+              생각공장│대표번호 : 1588-2637 (유료)│메일 :
+              hyedam2025@gmail.com<br />
               <br />
               개인정보 보호담당자 : 조하늘 │ 문의 : hyedam2025@gmail.com
             </address>

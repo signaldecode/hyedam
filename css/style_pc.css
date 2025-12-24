@@ -1459,3 +1459,16 @@ body,
 .hyedam-sheet{
   display: none;
 }
+.certificate_img_wrap{
+  display: flex; 
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center; 
+  gap: 40px;
+}
+.certificate_img_wrap .certificate_img{
+  border: 1px solid #ddd;
+}
+.certificate_img_wrap .certificate_img img{
+  max-width: 100%;
+}
