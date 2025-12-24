@@ -81,27 +81,24 @@
           "id": "100m",
           "label": "100메가",
           "plans": [
-            { "product": "인터넷 단독", "monthly": 22000, "benefit": "조건별 상이" },
-            { "product": "인터넷+IPTV 베이직(194채널)", "monthly": 29700, "benefit": "조건별 상이" },
-            { "product": "인터넷+IPTV 베이직(194채널) 30% 요금 할인형", "monthly": 20900, "benefit": "조건별 상이" }
-          ]
-        },
-        {
-          "id": "200m",
-          "label": "200메가",
-          "plans": [
-            { "product": "인터넷 단독", "monthly": 25300, "benefit": "조건별 상이" },
-            { "product": "인터넷+IPTV 베이직", "monthly": 31900, "benefit": "조건별 상이" },
-            { "product": "인터넷+IPTV(할인형)", "monthly": 23100, "benefit": "조건별 상이" }
+            { "product": "100M인터넷 + POP180", "monthly": 14300, "benefit": "조건별 상이" },
+            { "product": "100M인터넷 + POP230", "monthly": 16500, "benefit": "조건별 상이" }
           ]
         },
         {
           "id": "500m",
           "label": "500메가",
           "plans": [
-            { "product": "인터넷 단독", "monthly": 33000, "benefit": "조건별 상이" },
-            { "product": "인터넷+IPTV 베이직", "monthly": 37400, "benefit": "조건별 상이" },
-            { "product": "인터넷+IPTV 플러스", "monthly": 38500, "benefit": "조건별 상이" }
+            { "product": "500M인터넷 + POP180", "monthly": 22000, "benefit": "조건별 상이" },
+            { "product": "500M인터넷 + POP230", "monthly": 24200, "benefit": "조건별 상이" }
+          ]
+        },
+        {
+          "id": "1g",
+          "label": "1기가",
+          "plans": [
+            { "product": "1G인터넷 + POP180", "monthly": 27500, "benefit": "조건별 상이" },
+            { "product": "1G인터넷 + POP230", "monthly": 29700, "benefit": "조건별 상이" }
           ]
         }
       ]
