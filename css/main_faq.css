@@ -71,7 +71,7 @@
   font-weight: 900;
   font-size: 24px;
 }
-.arrow {
+.section-faq-notice .arrow {
   width: 15px;
   height: 15px;
   border-top: 3px solid #666;
@@ -80,7 +80,7 @@
   transition: 0.3s;
 }
 
-.faq-item.active .arrow {
+.section-faq-notice .faq-item.active .arrow {
   transform: rotate(-45deg);
   margin-top: 10px;
 }
