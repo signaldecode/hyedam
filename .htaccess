@@ -1,0 +1,37 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+# 1) 루트(/)는 제일 먼저 처리 (디렉토리 예외 때문에 위로!)
+RewriteRule ^$ /hyedam/main.html [L]
+
+# 2) 그 다음에 실제 파일/폴더는 그대로 (과부하 방지)
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# ===== KT =====
+RewriteRule ^kt/internet$ /hyedam/pages/kt/Internet.html [L,QSA]
+RewriteRule ^kt/detail$   /hyedam/pages/kt/detail.html   [L,QSA]
+
+# ===== LG =====
+RewriteRule ^lg/internet$ /hyedam/pages/lg/internet.html [L,QSA]
+RewriteRule ^lg/detail$   /hyedam/pages/lg/detail.html   [L,QSA]
+
+# ===== SK =====
+RewriteRule ^sk/internet$ /hyedam/pages/sk/internet.html [L,QSA]
+RewriteRule ^sk/detail$   /hyedam/pages/sk/detail.html   [L,QSA]
+
+# ===== 인터넷 요금제(쿼리 유지) =====
+RewriteRule ^internet/plan$ /hyedam/pages/internet/plan.html [L,QSA]
+
+# ===== Company =====
+RewriteRule ^company/info$          /hyedam/pages/company/info.html          [L,QSA]
+RewriteRule ^company/ceo$           /hyedam/pages/company/ceo.html           [L,QSA]
+RewriteRule ^company/certificate01$ /hyedam/pages/company/certificate01.html [L,QSA]
+RewriteRule ^company/certificate02$ /hyedam/pages/company/certificate02.html [L,QSA]
+RewriteRule ^company/certificate03$ /hyedam/pages/company/certificate03.html [L,QSA]
+
+# ===== Form =====
+RewriteRule ^form$ /hyedam/pages/form.html [L,QSA]
+
+</IfModule>
