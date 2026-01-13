@@ -95,7 +95,7 @@
         </li>
         <li>
           <!-- PC에선 form 페이지로 이동 -->
-          <a href="pages/form.html">
+          <a href="/form">
             <figure>
               <img
                 src="images/quick_icon02.svg"
@@ -258,3 +258,4 @@
     }
   });
 })();
+

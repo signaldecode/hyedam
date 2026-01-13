@@ -199,7 +199,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // ✅ 전환 이벤트: 성공했을 때만 1회 발사
         window.dataLayer = window.dataLayer || [];
         window.dataLayer.push({
-          event: "generate_lead",
+          event: "generate_lead_event02",
           form_type: data.form_type || "estimate",   // 선택: 구분용
           page_path: data.page_path || location.pathname
         });

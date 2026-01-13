@@ -34,4 +34,10 @@ RewriteRule ^company/certificate03$ /hyedam/pages/company/certificate03.html [L,
 # ===== Form =====
 RewriteRule ^form$ /hyedam/pages/form.html [L,QSA]
 
+# ===== event01 =====
+RewriteRule ^event01$ /hyedam/event01.html [L,QSA]
+
+# ===== event02 =====
+RewriteRule ^event02$ /hyedam/event02.html [L,QSA]
+
 </IfModule>

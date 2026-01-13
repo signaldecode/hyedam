@@ -1,31 +1,4 @@
-    let fix_top = $(".fix_form_wrap").offset().top;
-    let win_height = $(window).height();
-    let s_top = $("html").scroll();
-    let formHeight = $(".fix_form").outerHeight();
-    if (s_top + win_height - formHeight >= fix_top) {
-        $(".fix_form").css("position", "relative");
-    } else {
-        $(".fix_form").css("position", "fixed");
-    }
-    $(window).on("scroll", function () {
-        s_top = $("html").scrollTop();
-        win_height = $(window).height();
-        formHeight = $(".fix_form").outerHeight();
-        fix_top = $(".fix_form_wrap").offset().top;
-        if (s_top + win_height - formHeight >= fix_top) {
-            $(".fix_form").css("position", "relative");
-        } else {
-            $(".fix_form").css("position", "fixed");
-        }
-        console.log(s_top);
-        console.log(fix_top);
-        if(s_top + win_height > fix_top){
-            $('.quick_menu').addClass('on');
-        }else{
-            $('.quick_menu').removeClass('on');
-        }
 
-    });
     $("#gnb ul li").on("mouseenter", function () {
         $(this).find(".info").stop(true).fadeIn(300);
     });

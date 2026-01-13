@@ -184,7 +184,7 @@
     text-align: center;
     font-weight: 700;
   }
-  #section02 .sec02_txt em {
+  #section02 .sec02_txt h3 {
     display: block;
     margin-top: 10px;
     color: #262626;
@@ -340,7 +340,7 @@
   #section03 ul li .txt {
     padding-left: 30px;
   }
-  #section03 ul li .txt em {
+  #section03 ul li .txt h3 {
     display: block;
     color: #fff;
     font-size: 22px;
@@ -416,7 +416,7 @@
     height: 100%;
     background-color: #ddd;
   }
-  #section04 article strong {
+  #section04 article h3 {
     display: block;
     font-size: 24px;
     color: #262626;
@@ -425,7 +425,7 @@
     margin-bottom: 27px;
     font-weight: 700;
   }
-  #section04 article strong span {
+  #section04 article h3 span {
     color: #368efb;
     font-weight: 700;
   }

@@ -1,6 +1,12 @@
 const SCRIPT_EL = document.currentScript;
 const PLAN_URL = SCRIPT_EL?.dataset?.plan || "../../json/planData.json";
-const DETAIL_URL = SCRIPT_EL?.dataset?.detail || "detail.html";
+const DETAIL_URL =
+  SCRIPT_EL?.dataset?.detail ||
+  `/${(
+    String(SCRIPT_EL?.dataset?.provider || "").toLowerCase() ||
+    (String(window.location.pathname || "").toLowerCase().includes("/lg/") ? "lg" :
+     String(window.location.pathname || "").toLowerCase().includes("/sk/") ? "sk" : "kt")
+  )}/detail`;
 
 document.addEventListener("DOMContentLoaded", async () => {
   // 통신사 판별
@@ -21,7 +27,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   })();
   const provider = (PROVIDER || inferredProvider || "kt").toLowerCase();
   const isKt = provider === "kt";
-  const isDetailPage = /\/detail\.html$/i.test(window.location.pathname);
+  const isDetailPage = /\/detail(\.html)?$/i.test(window.location.pathname);
   const internetPageFile = provider === "kt" ? "Internet.html" : "internet.html";
   const internetPagePath = isDetailPage
     ? window.location.pathname.replace(/detail\.html$/i, internetPageFile)
@@ -293,7 +299,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         <div class="plan_actions">
           ${isTvTab ? `<p class="plan_note">※ 셋탑박스 임대료 포함</p>` : ""}
-          <a class="plan_btn" href="pages/form.html">${card.cta?.label || "상담문의"}</a>
+          <a class="plan_btn" href="/form">${card.cta?.label || "상담문의"}</a>
         </div>
       </article>
     `;
